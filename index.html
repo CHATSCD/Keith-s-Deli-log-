@@ -3,180 +3,828 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deli Manager - Dual Inventory Counts</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- SheetJS for Excel parsing -->
-<script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
-<!-- Tesseract.js for OCR from image -->
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<title>Deli Count — Keith's #184 Waveland</title>
 <style>
-  :root { --bg:#0f0e0c; --surface:#1a1916; --surface2:#242220; --border:#2e2c28; --accent:#e8b84b; --text:#e8e4dc; --muted:#7a7568; --green:#4caf7d; --red:#e05252; --blue:#5b9bd5; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',sans-serif; min-height:100vh; display:flex; flex-direction:column; }
-  header { background:var(--surface); border-bottom:2px solid var(--accent); padding:0 24px; display:flex; align-items:center; gap:24px; height:60px; }
-  header h1 { font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--accent); letter-spacing:2px; white-space:nowrap; }
-  header span { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:1px; }
-  nav { background:var(--surface2); border-bottom:1px solid var(--border); display:flex; overflow-x:auto; }
-  nav button { font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; letter-spacing:1px; padding:14px 22px; background:none; border:none; color:var(--muted); cursor:pointer; border-bottom:3px solid transparent; transition:all 0.2s; white-space:nowrap; text-transform:uppercase; }
-  nav button:hover { color:var(--text); }
-  nav button.active { color:var(--accent); border-bottom-color:var(--accent); }
-  main { flex:1; padding:24px; max-width:1400px; width:100%; margin:0 auto; }
-  .section { display:none; } .section.active { display:block; }
-  .section-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px; }
-  .section-title { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:2px; color:var(--accent); }
-  .btn { font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; letter-spacing:1px; padding:9px 18px; border:none; cursor:pointer; text-transform:uppercase; transition:all 0.15s; }
-  .btn-primary { background:var(--accent); color:#0f0e0c; } .btn-primary:hover { background:#f5c84e; }
-  .btn-danger { background:var(--red); color:#fff; } .btn-danger:hover { background:#c04040; }
-  .btn-ghost { background:transparent; color:var(--muted); border:1px solid var(--border); } .btn-ghost:hover { color:var(--text); border-color:var(--muted); }
-  .btn-sm { padding:5px 10px; font-size:11px; }
-  .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:100; align-items:center; justify-content:center; }
-  .modal-overlay.open { display:flex; }
-  .modal { background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--accent); width:100%; max-width:520px; max-height:90vh; overflow-y:auto; padding:28px; }
-  .modal h2 { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:2px; color:var(--accent); margin-bottom:20px; }
-  .form-group { margin-bottom:16px; }
-  label { display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
-  input,select,textarea { width:100%; background:var(--bg); border:1px solid var(--border); color:var(--text); font-family:'IBM Plex Sans',sans-serif; font-size:14px; padding:9px 12px; outline:none; transition:border-color .2s; }
-  input:focus,select:focus,textarea:focus { border-color:var(--accent); }
-  .table-wrap { overflow-x:auto; }
-  table { width:100%; border-collapse:collapse; }
-  thead tr { background:var(--surface2); }
-  th { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--muted); padding:10px 14px; text-align:left; border-bottom:1px solid var(--border); white-space:nowrap; }
-  td { padding:10px 14px; border-bottom:1px solid var(--border); font-size:13px; vertical-align:middle; }
-  .mono { font-family:'IBM Plex Mono',monospace; font-size:13px; }
-  .badge { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600; padding:2px 8px; letter-spacing:1px; text-transform:uppercase; border-radius:12px; }
-  .badge-ok { background:rgba(76,175,125,.15); color:var(--green); }
-  .badge-diff { background:rgba(232,184,75,.15); color:var(--accent); }
-  .badge-missing { background:rgba(224,82,82,.15); color:var(--red); }
-  .count-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px; }
-  .count-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:16px; }
-  .count-card h3 { font-family:'Bebas Neue',sans-serif; font-size:18px; color:var(--accent); margin-bottom:12px; display:flex; align-items:center; gap:8px; }
-  .upload-area { margin-bottom:16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-  .file-label { background:var(--surface2); border:1px solid var(--border); padding:6px 12px; font-size:12px; font-family:'IBM Plex Mono',monospace; cursor:pointer; transition:0.1s; }
-  .file-label:hover { border-color:var(--accent); color:var(--accent); }
-  .count-status { font-size:12px; color:var(--muted); margin-top:8px; }
-  .diff-container { background:var(--surface); border:1px solid var(--border); margin-top:24px; padding:16px; }
-  .diff-container h3 { font-family:'Bebas Neue',sans-serif; font-size:18px; margin-bottom:12px; }
-  .inline-code { font-family:'IBM Plex Mono',monospace; background:var(--bg); padding:2px 6px; border-radius:4px; font-size:11px; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #22263a;
+    --border: #2e3348;
+    --accent: #f59e0b;
+    --accent2: #fbbf24;
+    --green: #10b981;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --dim: #94a3b8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .logo-text { font-weight: 700; font-size: 15px; letter-spacing: -0.3px; }
+  .logo-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+  .header-right {
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .badge {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: var(--dim);
+  }
+  .badge span { color: var(--accent); font-weight: 600; }
+
+  main {
+    flex: 1;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Voice orb */
+  .voice-section {
+    text-align: center;
+    margin: 10px 0 24px;
+  }
+
+  .orb-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+
+  .orb {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 38% 38%, #f59e0b44, #f59e0b11 60%, transparent);
+    border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .orb::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 70%, var(--accent) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .orb.listening::before { opacity: 1; }
+
+  .orb.listening {
+    border-color: var(--accent);
+    box-shadow: 0 0 40px var(--accent)44, 0 0 80px var(--accent)22;
+    background: radial-gradient(circle at 38% 38%, #f59e0b66, #f59e0b22 60%, transparent);
+  }
+
+  .orb-inner {
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1;
+    font-size: 28px;
+    transition: all 0.2s;
+  }
+
+  .orb.listening .orb-inner { border-color: var(--accent)88; }
+
+  .orb-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .orb.listening .orb-label { color: var(--accent); }
+
+  /* Transcript bubble */
+  .transcript-bubble {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--dim);
+    min-height: 44px;
+    max-width: 500px;
+    margin: 0 auto 8px;
+    font-style: italic;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .transcript-bubble.active {
+    border-color: var(--accent)66;
+    color: var(--text);
+    font-style: normal;
+  }
+
+  /* Confirm card */
+  .confirm-card {
+    background: var(--surface);
+    border: 1px solid var(--accent)44;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    display: none;
+  }
+  .confirm-card.visible { display: block; }
+
+  .confirm-item-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--accent2);
+  }
+  .confirm-item-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .confirm-item-meta span { color: var(--dim); }
+
+  .qty-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .qty-label { font-size: 14px; color: var(--dim); flex: 1; }
+  .qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .qty-btn {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .qty-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .qty-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+    color: var(--accent);
+  }
+
+  .confirm-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-confirm {
+    background: var(--accent);
+    color: #000;
+  }
+  .btn-confirm:hover { background: var(--accent2); }
+  .btn-cancel {
+    background: var(--surface2);
+    color: var(--dim);
+    border: 1px solid var(--border);
+  }
+  .btn-cancel:hover { border-color: var(--muted); color: var(--text); }
+
+  /* Multiple matches */
+  .matches-card {
+    background: var(--surface);
+    border: 1px solid var(--blue)44;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    display: none;
+  }
+  .matches-card.visible { display: block; }
+  .matches-title { font-size: 13px; font-weight: 600; color: var(--blue); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .match-item {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .match-item:hover { border-color: var(--accent); }
+  .match-item:last-child { margin-bottom: 0; }
+  .match-name { font-size: 14px; font-weight: 500; }
+  .match-bek { font-size: 11px; color: var(--muted); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
+  .match-storage { font-size: 11px; color: var(--dim); background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; }
+
+  /* Search */
+  .search-wrap {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .search-wrap input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 40px 11px 14px;
+    color: var(--text);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--accent)66; }
+  .search-wrap input::placeholder { color: var(--muted); }
+  .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+    pointer-events: none;
+  }
+
+  /* Filter tabs */
+  .filter-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .tab {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    transition: all 0.15s;
+  }
+  .tab.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+  /* Item list */
+  .items-section {}
+  .section-header {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    padding: 4px 0 8px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+  .section-header:first-child { border-top: none; margin-top: 0; }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.1s;
+    border: 1px solid transparent;
+    gap: 10px;
+  }
+  .item-row:hover { background: var(--surface); border-color: var(--border); }
+  .item-row.updated { border-color: var(--green)44; background: #10b98108; }
+
+  .item-bek {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    min-width: 52px;
+  }
+  .item-desc {
+    flex: 1;
+    font-size: 13px;
+  }
+  .item-unit {
+    font-size: 10px;
+    color: var(--muted);
+    max-width: 100px;
+    text-align: right;
+    line-height: 1.3;
+  }
+  .item-qty {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 32px;
+    text-align: center;
+    color: var(--dim);
+  }
+  .item-qty.nonzero { color: var(--accent); }
+  .item-qty.updated-flash { color: var(--green); }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--green);
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    z-index: 999;
+    white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.error { background: var(--red); color: #fff; }
+
+  /* Download btn */
+  .download-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--dim);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'Inter', sans-serif;
+  }
+  .download-btn:hover { border-color: var(--accent)66; color: var(--accent); }
+
+  /* Pulse animation for listening */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+  .orb.listening { animation: pulse 1.5s ease-in-out infinite; }
+
+  .no-results { text-align: center; padding: 30px; color: var(--muted); font-size: 14px; }
+
+  .shortcut-hint {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 6px;
+  }
+  .shortcut-hint kbd {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dim);
+  }
 </style>
 </head>
 <body>
-<header><h1>🥪 Deli Manager</h1><span>Dual Inventory Counts · Excel + OCR Image</span></header>
-<nav>
-  <button class="active" onclick="showTab('inventory')">📦 Inventory</button>
-  <button onclick="showTab('recipes')">🍽 Recipes</button>
-  <button onclick="showTab('suppliers')">🚚 Suppliers</button>
-  <button onclick="showTab('orders')">📋 Order List</button>
-  <button onclick="showTab('counts')">📊 Dual Counts</button>
-</nav>
-<main>
-  <!-- Original Inventory Section (unchanged logic) -->
-  <div class="section active" id="tab-inventory">
-    <div class="cards" id="inv-cards"></div>
-    <div class="section-header"><span class="section-title">Inventory</span><div class="tag-row"><input class="search-bar" type="text" id="inv-search" placeholder="Search..." oninput="renderInventory()"><select class="filter-select" id="inv-filter-cat" onchange="renderInventory()"><option value="">All Categories</option><option>Deli Meat</option><option>Cheese</option><option>Bread</option><option>Produce</option><option>Condiments</option><option>Packaging</option><option>Dairy</option><option>Beverages</option><option>Other</option></select><select class="filter-select" id="inv-filter-sup" onchange="renderInventory()"><option value="">All Suppliers</option></select><button class="btn btn-primary" onclick="openInvModal(true)">+ Add Item</button></div></div>
-    <div class="table-wrap"><table><thead><tr><th>Item</th><th>Category</th><th>On Hand</th><th>Unit</th><th>Cost/Unit</th><th>Par</th><th>Supplier</th><th>Status</th><th>Actions</th></tr></thead><tbody id="inv-tbody"></tbody></table></div>
-  </div>
-  <div class="section" id="tab-recipes"><div class="section-header"><span class="section-title">Recipes & Food Cost</span><button class="btn btn-primary" onclick="initRecipeForm();openModal('recipe-modal')">+ Add Recipe</button></div><div id="recipe-list"></div></div>
-  <div class="section" id="tab-suppliers"><div class="section-header"><span class="section-title">Suppliers</span><button class="btn btn-primary" onclick="openSupplierModal()">+ Add Supplier</button></div><div class="table-wrap"><table><thead><tr><th>Supplier</th><th>Contact</th><th>Phone</th><th>Email</th><th>Lead Time</th><th>Notes</th><th>Actions</th></tr></thead><tbody id="sup-tbody"></tbody></table></div></div>
-  <div class="section" id="tab-orders"><div class="section-header"><span class="section-title">Order List</span><div class="tag-row"><button class="btn btn-ghost" onclick="autoGenerateOrders()">⚡ Auto from Low Stock</button><button class="btn btn-primary" onclick="openOrderModal()">+ Add Item</button><button class="btn btn-danger btn-sm" onclick="clearCheckedOrders()">Clear Checked</button></div></div><div id="order-list"></div></div>
 
-  <!-- NEW SECTION: Dual Inventory Counts (Excel + Image as separate counts) -->
-  <div class="section" id="tab-counts">
-    <div class="section-header">
-      <span class="section-title">📁 Separate Inventory Counts</span>
-      <div class="tag-row">
-        <button class="btn btn-primary btn-sm" onclick="compareCounts()">🔍 Compare Counts</button>
-        <button class="btn btn-ghost btn-sm" onclick="resetCounts()">Reset Counts</button>
-      </div>
-    </div>
-    <div class="count-grid">
-      <!-- Excel Count Card -->
-      <div class="count-card">
-        <h3>📎 Excel Count (branded deli count hunts.xls)</h3>
-        <div class="upload-area">
-          <label class="file-label" for="excelUpload">📂 Upload Excel File</label>
-          <input type="file" id="excelUpload" accept=".xls,.xlsx,.xlsm,.csv" style="display:none" onchange="handleExcelUpload(event)">
-          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('excelUpload').click()">Choose File</button>
-          <span id="excelFileName" class="count-status">No file selected</span>
-        </div>
-        <div id="excelCountStatus" class="count-status"></div>
-        <div class="table-wrap" style="max-height:400px; overflow-y:auto">
-          <table style="font-size:12px">
-            <thead><tr><th>Product</th><th>Unit</th><th>On Hand</th><th>Cost</th><th>Total</th></tr></thead>
-            <tbody id="excelTableBody"><tr><td colspan="5" style="text-align:center;color:var(--muted)">— Upload Excel file to display count —</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-      <!-- Image OCR Count Card -->
-      <div class="count-card">
-        <h3>🖼️ OCR Image Count (IMG_0160.png)</h3>
-        <div class="upload-area">
-          <label class="file-label" for="imageUpload">📸 Upload PNG/Image</label>
-          <input type="file" id="imageUpload" accept="image/png,image/jpeg,image/jpg" style="display:none" onchange="handleImageUpload(event)">
-          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imageUpload').click()">Choose Image</button>
-          <span id="imageFileName" class="count-status">No file selected</span>
-        </div>
-        <div id="imageOcrStatus" class="count-status"></div>
-        <div class="table-wrap" style="max-height:400px; overflow-y:auto">
-          <table style="font-size:12px">
-            <thead><tr><th>Product</th><th>Unit</th><th>On Hand</th><th>Cost</th><th>Total</th></tr></thead>
-            <tbody id="imageTableBody"><tr><td colspan="5" style="text-align:center;color:var(--muted)">— Upload image with inventory table —</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- Comparison Results -->
-    <div id="comparisonPanel" class="diff-container" style="display:none">
-      <h3>📊 Count Comparison (Excel vs Image)</h3>
-      <div id="comparisonContent"></div>
+<header>
+  <div class="logo">
+    <div class="logo-icon">🥗</div>
+    <div>
+      <div class="logo-text">Deli Counter</div>
+      <div class="logo-sub">Keith's #184 — Waveland</div>
     </div>
   </div>
+  <div class="header-right">
+    <div class="badge">Updated: <span id="updatedCount">0</span></div>
+    <button class="download-btn" onclick="downloadXLSX()">⬇ Export XLSX</button>
+  </div>
+</header>
+
+<main>
+  <!-- Voice Section -->
+  <div class="voice-section">
+    <div class="orb-wrap">
+      <div class="orb" id="orb" onclick="toggleVoice()" title="Click to speak">
+        <div class="orb-inner">
+          <span id="orbIcon">🎤</span>
+          <span class="orb-label" id="orbLabel">Tap to speak</span>
+        </div>
+      </div>
+    </div>
+    <div class="transcript-bubble" id="transcriptBubble">Say an item name, BEK number, or description...</div>
+    <div class="shortcut-hint">Press <kbd>Space</kbd> to toggle voice · <kbd>Enter</kbd> to confirm</div>
+  </div>
+
+  <!-- Confirm Card -->
+  <div class="confirm-card" id="confirmCard">
+    <div class="confirm-item-name" id="confirmName"></div>
+    <div class="confirm-item-meta">BEK# <span id="confirmBek"></span> · <span id="confirmStorage"></span> · <span id="confirmUnit"></span></div>
+    <div class="qty-row">
+      <div class="qty-label">How many did you save?</div>
+      <div class="qty-controls">
+        <button class="qty-btn" onclick="adjustQty(-1)">−</button>
+        <div class="qty-display" id="qtyDisplay">1</div>
+        <button class="qty-btn" onclick="adjustQty(1)">+</button>
+      </div>
+    </div>
+    <div class="confirm-actions">
+      <button class="btn btn-cancel" onclick="cancelConfirm()">Cancel</button>
+      <button class="btn btn-confirm" onclick="confirmUpdate()">✓ Update On Hand</button>
+    </div>
+  </div>
+
+  <!-- Multiple Matches Card -->
+  <div class="matches-card" id="matchesCard">
+    <div class="matches-title">🔍 Multiple matches — which one?</div>
+    <div id="matchesList"></div>
+  </div>
+
+  <!-- Search + Filter -->
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search by item name or BEK#..." oninput="renderList()">
+    <span class="search-icon">🔍</span>
+  </div>
+  <div class="filter-tabs" id="filterTabs"></div>
+
+  <!-- Items List -->
+  <div id="itemsList"></div>
 </main>
 
-<!-- Modals: inventory, recipe, supplier, order (kept original) -->
-<div class="modal-overlay" id="inv-modal"><div class="modal"><h2 id="inv-modal-title">Add Inventory Item</h2><input type="hidden" id="inv-edit-id"><div class="form-row"><div class="form-group"><label>Item Name</label><input type="text" id="inv-name"></div><div class="form-group"><label>Category</label><select id="inv-cat"><option>Deli Meat</option><option>Cheese</option><option>Bread</option><option>Produce</option><option>Condiments</option><option>Packaging</option><option>Dairy</option><option>Beverages</option><option>Other</option></select></div></div><div class="form-row"><div class="form-group"><label>Qty On Hand</label><input type="number" id="inv-qty" placeholder="0" min="0" step="0.01"></div><div class="form-group"><label>Unit</label><select id="inv-unit"><option>each</option><option>lbs</option><option>oz</option><option>kg</option><option>g</option><option>slices</option><option>loaves</option><option>dozen</option><option>gallons</option><option>liters</option><option>fl oz</option><option>cases</option><option>bags</option><option>packs</option></select></div></div><div class="form-row"><div class="form-group"><label>Cost per Unit ($)</label><input type="number" id="inv-cost" placeholder="0.00" min="0" step="0.01"></div><div class="form-group"><label>Par Level</label><input type="number" id="inv-par" placeholder="0" min="0" step="0.01"></div></div><div class="form-group"><label>Supplier</label><select id="inv-supplier"><option value="">— None —</option></select></div><div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal('inv-modal')">Cancel</button><button class="btn btn-primary" onclick="saveInventoryItem()">Save Item</button></div></div></div>
-<div class="modal-overlay" id="recipe-modal"><div class="modal"><h2 id="recipe-modal-title">Add Recipe</h2><input type="hidden" id="recipe-edit-id"><div class="form-row"><div class="form-group"><label>Recipe Name</label><input type="text" id="recipe-name"></div><div class="form-group"><label>Selling Price ($)</label><input type="number" id="recipe-price" placeholder="0.00" min="0" step="0.01"></div></div><div class="form-group"><label>Servings / Yield</label><input type="number" id="recipe-servings" placeholder="1" min="1" value="1"></div><div class="form-group"><label>Add Ingredient</label><div style="display:flex;gap:8px;flex-wrap:wrap;"><select id="recipe-ing-item" style="flex:1;min-width:140px;"></select><input type="number" id="recipe-ing-qty" placeholder="Qty" min="0" step="0.01" style="width:80px;"><button class="btn btn-ghost" onclick="addIngredientToRecipe()">+ Add</button></div></div><ul class="ing-list" id="recipe-ing-list"></ul><div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal('recipe-modal')">Cancel</button><button class="btn btn-primary" onclick="saveRecipe()">Save Recipe</button></div></div></div>
-<div class="modal-overlay" id="supplier-modal"><div class="modal"><h2 id="sup-modal-title">Add Supplier</h2><input type="hidden" id="sup-edit-id"><div class="form-row"><div class="form-group"><label>Supplier Name</label><input type="text" id="sup-name"></div><div class="form-group"><label>Contact Person</label><input type="text" id="sup-contact"></div></div><div class="form-row"><div class="form-group"><label>Phone</label><input type="text" id="sup-phone"></div><div class="form-group"><label>Email</label><input type="email" id="sup-email"></div></div><div class="form-group"><label>Lead Time</label><input type="text" id="sup-lead" placeholder="e.g. 2 days"></div><div class="form-group"><label>Notes</label><textarea id="sup-notes" rows="2"></textarea></div><div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal('supplier-modal')">Cancel</button><button class="btn btn-primary" onclick="saveSupplier()">Save Supplier</button></div></div></div>
-<div class="modal-overlay" id="order-modal"><div class="modal"><h2>Add Order Item</h2><div class="form-row"><div class="form-group"><label>Item Name</label><input type="text" id="ord-name"></div><div class="form-group"><label>Qty to Order</label><input type="number" id="ord-qty" placeholder="0" min="0" step="0.01"></div></div><div class="form-row"><div class="form-group"><label>Unit</label><input type="text" id="ord-unit" placeholder="lbs, cases, etc."></div><div class="form-group"><label>Supplier</label><select id="ord-supplier"><option value="">— None —</option></select></div></div><div class="form-group"><label>Notes</label><input type="text" id="ord-notes"></div><div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal('order-modal')">Cancel</button><button class="btn btn-primary" onclick="saveOrderItem()">Add to List</button></div></div></div>
+<div class="toast" id="toast"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-// ------------------------- ORIGINAL STATE MANAGEMENT (unchanged base) -------------------------
-let inventory=[], recipes=[], suppliers=[], orders=[];
-let editingRecipeIngs=[];
-const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2);
-const SEED_SUPPLIERS = [{name:"Merchants", contact:"", phone:"", email:"", lead:"", notes:""},{name:"Imperial", contact:"", phone:"", email:"", lead:"", notes:""}];
-const SEED_ITEMS = [ /* abbreviated for brevity but original data exists in final code context; for working we replicate core items but minimal. Full seed is in original code. To keep answer size manageable, we trust original data is intact; but we need to preserve full seed from user's prior code. Since it's long, I will embed essential part. For brevity, we rely that existing JS already had SEED_ITEMS and SEED_SUPPLIERS; here I'm re-declaring to not break but must include original item list? In final answer we must include complete original seed. However due to char limit I'll keep the full original arrays as given by user. But I need to reproduce exactly the previous data. Actually I will embed exactly the seed arrays from the provided code to maintain consistency. */
-// (I'm copying the SEED_ITEMS and SEED_SUPPLIERS from the original user code into this script. They are lengthy but ensure inventory functions correctly.)
-// To avoid bloating, I'll ensure original definitions are included (they were in the initial code). Since this is a full rewrite, I will inject them identically.
-const ORIG_SEED_SUPPLIERS = [{name:"Merchants", contact:"", phone:"", email:"", lead:"", notes:""},{name:"Imperial",  contact:"", phone:"", email:"", lead:"", notes:""}];
-const ORIG_SEED_ITEMS = [ {name:"Biscuits",cat:"Bread",unit:"each",par:5,sup:"Merchants"},{name:"Eggs",cat:"Dairy",unit:"each",par:2,sup:"Merchants"},{name:"Cheese American",cat:"Dairy",unit:"each",par:2,sup:"Merchants"},{name:"Fried Pork Chops Biscuits",cat:"Deli Meat",unit:"each",par:1,sup:"Merchants"},{name:"Steak (Biscuit)",cat:"Deli Meat",unit:"each",par:1,sup:"Merchants"},{name:"Chicken Breast Fritter 3.2oz",cat:"Deli Meat",unit:"each",par:1,sup:"Merchants"},{name:"Ham",cat:"Deli Meat",unit:"each",par:1,sup:"Merchants"},{name:"Bologna",cat:"Deli Meat",unit:"each",par:1,sup:"Merchants"},{name:"Biscuit and Gravy",cat:"Bread",unit:"bags",par:6,sup:"Merchants"},{name:"Hamburgers Beef Patty TNT",cat:"Deli Meat",unit:"cases",par:2,sup:"Merchants"},{name:"Pulled Pork",cat:"Deli Meat",unit:"bags",par:6,sup:"Merchants"},{name:"Hamburger Buns",cat:"Bread",unit:"cases",par:3,sup:"Merchants"},{name:"Spicy Chicken",cat:"Deli Meat",unit:"cases",par:2,sup:"Merchants"},{name:"Grilled Chicken",cat:"Deli Meat",unit:"each",par:1,sup:"Merchants"},{name:"Hot Dog Buns Single",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Onion",cat:"Produce",unit:"lbs",par:5,sup:"Merchants"},{name:"Bellpeppers",cat:"Produce",unit:"each",par:0,sup:"Merchants"},{name:"Puffs Pep",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Puffs Taco",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Puffs Ham",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Crispitos Buffalo",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Crispitos Chicken",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Burrito Beef & Bean",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Corn Dogs",cat:"Other",unit:"each",par:0,sup:"Merchants"},{name:"Pork Egg Rolls",cat:"Other",unit:"each",par:0,sup:"Merchants"},{name:"Brownies",cat:"Bread",unit:"each",par:0,sup:"Merchants"},{name:"Icing",cat:"Bread",unit:"each",par:0,sup:"Merchants"},{name:"Choc Chip Cookie",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"White Mac Cookie",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Smores Cookie",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Red Velvet Cookie",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Sugar Cookie",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Donuts",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Peanut Butter Cookie",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Cinnamon Rolls",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Apple Fritters",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Mini Pies Banana",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Mini Pies Coconut",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Mini Pies Choc",cat:"Bread",unit:"each",par:1,sup:"Merchants"},{name:"Ketchup Packets",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Taco Sauce Packets",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Salt .1gm Packets",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Pepper .1gm Packets",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Butter Land O Lake EM658",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Sweet Baby Rays Large BBQ",cat:"Condiments",unit:"each",par:2,sup:"Merchants"},{name:"Sweet Baby Rays Large Sweet Chili",cat:"Condiments",unit:"each",par:3,sup:"Merchants"},{name:"Maple Syrup 1.4",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Honey",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Strawberry Jelly",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Grape Jelly",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Syrup",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Hot Sauce",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Sweet and Sour",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"BBQ Sauce",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Mustard",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Mayo",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Picante",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Ranch",cat:"Condiments",unit:"each",par:1.5,sup:"Merchants"},{name:"Honey Mustard",cat:"Condiments",unit:"each",par:1,sup:"Merchants"},{name:"Ice Cream Choc",cat:"Dairy",unit:"bags",par:6,sup:"Merchants"},{name:"Ice Cream Vanilla",cat:"Dairy",unit:"bags",par:6,sup:"Merchants"},{name:"Waffle Cones",cat:"Packaging",unit:"packs",par:4,sup:"Merchants"},{name:"Regular Cones",cat:"Packaging",unit:"packs",par:4,sup:"Merchants"},{name:"Small Cups (Ice Cream)",cat:"Packaging",unit:"packs",par:4,sup:"Merchants"},{name:"Large Cups (Ice Cream)",cat:"Packaging",unit:"packs",par:4,sup:"Merchants"},{name:"Dome Lids",cat:"Packaging",unit:"packs",par:4,sup:"Merchants"},{name:"Oreo Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"M&M Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Peanuts Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Gummy Bears Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Marshmallow Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Rainbow Sprinkles",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Nerds Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Butterscotch Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Chocolate Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Reese's Pieces Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Butter Finger Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"Caramel Topping",cat:"Other",unit:"each",par:1,sup:"Merchants"},{name:"20oz Lids",cat:"Packaging",unit:"each",par:1,sup:"Merchants"},{name:"20oz Cups",cat:"Packaging",unit:"each",par:1,sup:"Merchants"},{name:"32oz Lids",cat:"Packaging",unit:"cases",par:2,sup:"Merchants"},{name:"32oz Cups",cat:"Packaging",unit:"cases",par:2,sup:"Merchants"},{name:"Toilet Paper",cat:"Other",unit:"cases",par:2,sup:"Merchants"},{name:"Sanitizer Hook Up 2 Sink",cat:"Other",unit:"cases",par:2,sup:"Merchants"},{name:"Dish Soap Hook Up 2 Sink",cat:"Other",unit:"cases",par:2,sup:"Merchants"},{name:"Bacon Pre Cooked",cat:"Deli Meat",unit:"each",par:0,sup:"Imperial"},{name:"Sausage Patties",cat:"Deli Meat",unit:"each",par:0,sup:"Imperial"},{name:"JV Sausage",cat:"Deli Meat",unit:"each",par:0,sup:"Imperial"},{name:"Jalapeño Cheddar Sausage",cat:"Deli Meat",unit:"each",par:0,sup:"Imperial"},{name:"Hot Dogs 100% Beef",cat:"Deli Meat",unit:"each",par:0,sup:"Imperial"},{name:"Brisket",cat:"Deli Meat",unit:"each",par:0,sup:"Imperial"},{name:"Roller Bites",cat:"Other",unit:"each",par:1,sup:"Imperial"},{name:"Tornadoes",cat:"Other",unit:"each",par:1,sup:"Imperial"},{name:"Crawfish Meat Pie",cat:"Other",unit:"each",par:1,sup:"Imperial"},{name:"Crawfish Eggrolls",cat:"Other",unit:"each",par:1,sup:"Imperial"},{name:"Boudin Shrimp",cat:"Other",unit:"each",par:1,sup:"Imperial"},{name:"Boudin Pork",cat:"Other",unit:"each",par:3,sup:"Imperial"},{name:"Boudin Alligator",cat:"Other",unit:"each",par:3,sup:"Imperial"},{name:"Boudin Crawfish",cat:"Other",unit:"each",par:3,sup:"Imperial"},{name:"Mini Taco Chicken",cat:"Other",unit:"each",par:3,sup:"Imperial"},{name:"Mini Taco Beef",cat:"Other",unit:"each",par:3,sup:"Imperial"},{name:"Stuffed Nachos",cat:"Other",unit:"each",par:3,sup:"Imperial"},{name:"Peanut Patch Cajun",cat:"Other",unit:"each",par:0,sup:"Imperial"},{name:"Peanut Patch Original",cat:"Other",unit:"each",par:0,sup:"Imperial"},{name:"Large Peanut Patch Cup 32oz",cat:"Packaging",unit:"each",par:0,sup:"Imperial"},{name:"Small Peanut Patch Cup 16oz",cat:"Packaging",unit:"each",par:0,sup:"Imperial"},{name:"Peanut Patch Lids",cat:"Packaging",unit:"each",par:0,sup:"Imperial"},{name:"Tango Cups 16oz",cat:"Packaging",unit:"each",par:0,sup:"Imperial"},{name:"Tango Cups 32oz",cat:"Packaging",unit:"each",par:0,sup:"Imperial"},{name:"Tango Lids",cat:"Packaging",unit:"each",par:0,sup:"Imperial"},{name:"Cafe Tango Mocha",cat:"Beverages",unit:"each",par:0,sup:"Imperial"},{name:"Cafe Tango French Vanilla",cat:"Beverages",unit:"each",par:0,sup:"Imperial"},{name:"Cafe Tango Espresso",cat:"Beverages",unit:"each",par:0,sup:"Imperial"},{name:"Cafe Tango Caramel",cat:"Beverages",unit:"each",par:0,sup:"Imperial"},{name:"Toilet Paper (Imperial)",cat:"Other",unit:"cases",par:2,sup:"Imperial"},{name:"Sanitizer Hook Up 2 Sink (Imperial)",cat:"Other",unit:"cases",par:2,sup:"Imperial"},{name:"Dish Soap Hook Up 2 Sink (Imperial)",cat:"Other",unit:"cases",par:2,sup:"Imperial"}];
-function load(){
-  suppliers = JSON.parse(localStorage.getItem('dm_sup')||'null');
-  inventory = JSON.parse(localStorage.getItem('dm_inv')||'null');
-  recipes   = JSON.parse(localStorage.getItem('dm_rec')||'[]');
-  orders    = JSON.parse(localStorage.getItem('dm_ord')||'[]');
-  if(!suppliers){ suppliers = ORIG_SEED_SUPPLIERS.map(s=>({...s,id:uid()})); save('sup'); }
-  if(!inventory){ inventory = ORIG_SEED_ITEMS.map(item=>{ const s = suppliers.find(x=>x.name===item.sup); return {id:uid(), name:item.name, cat:item.cat, qty:0, unit:item.unit, cost:0, par:item.par, supplier:s?s.id:''}; }); save('inv'); }
+// ── INVENTORY DATA ──────────────────────────────────────────────────────────
+const INVENTORY = [{"row":2,"bek":"698007","desc":"Food Release Oil Base Pan Spray","on_hand":0,"unit":"per Can (6/17Oz)","storage":"Dry"},{"row":3,"bek":"191379","desc":"Bag Fry Paper","on_hand":0,"unit":"per Box (1/2000)","storage":"Dry Container"},{"row":4,"bek":"875138","desc":"Bag Sandwich 6x.75x6.75 1side","on_hand":0,"unit":"per Box (1/2000 CT)","storage":"Dry Container"},{"row":5,"bek":"63670","desc":"Box Barn Paper 10 Pound 8.88X5x6.75 White","on_hand":0,"unit":"per Case (1/150Cnt)","storage":"Dry Container"},{"row":6,"bek":"19275","desc":"Box Carryout Chicken Fast Top 7X4x2.75 White","on_hand":0,"unit":"per Case (1/500Cnt)","storage":"Dry Container"},{"row":7,"bek":"170610","desc":"Box Paperboard Chicken 9X5x3 Fast Top White","on_hand":0,"unit":"per Case (1/400Cnt)","storage":"Dry Container"},{"row":8,"bek":"870030","desc":"Container Foam 12 Ounce Squat White","on_hand":0,"unit":"per Sleeve (20/25Cnt)","storage":"Dry Container"},{"row":9,"bek":"79400","desc":"Container Foam 16 Ounce Squat White","on_hand":0,"unit":"per Sleeve (20/25Cnt)","storage":"Dry Container"},{"row":10,"bek":"79342","desc":"Container Foam 6 Ounce Squat White","on_hand":0,"unit":"per Sleeve (20/50Cnt)","storage":"Dry Container"},{"row":11,"bek":"870020","desc":"Container Foam 8 Ounce Squat White","on_hand":0,"unit":"per Sleeve (20/50Cnt)","storage":"Dry Container"},{"row":12,"bek":"DW324","desc":"Container Foam 3 Compartment 9X9x3 Large Hinged White","on_hand":0,"unit":"per Sleeve (2/100Cnt)","storage":"Dry Container"},{"row":13,"bek":"158734","desc":"Container Foam Sandwich 1 Compartment Large 6X6x3 Hinged White","on_hand":0,"unit":"per Sleeve (4/125Cnt)","storage":"Dry Container"},{"row":14,"bek":"816010","desc":"Container Hot Cold Paper 8 Ounce White","on_hand":0,"unit":"per Sleeve (20/50Cnt)","storage":"Dry Container"},{"row":15,"bek":"TG366","desc":"Container Paper 12 Ounce White","on_hand":0,"unit":"per Sleeve (20Cnt)","storage":"Dry Container"},{"row":16,"bek":"219097","desc":"Container Plastic 6X5.75X3 Square Clear Hinged Polystyrene","on_hand":0,"unit":"per Sleeve (4/125Cnt)","storage":"Dry Container"},{"row":17,"bek":"872385","desc":"Container Plastic Hinged Large Cake Slice Side View Clear","on_hand":0,"unit":"per Sleeve (1/240Cnt)","storage":"Dry Container"},{"row":18,"bek":"H8042","desc":"Container Sandwich Plastic 5.38X2.58X5.25 Clear Hinged","on_hand":0,"unit":"per Sleeve (4/125Cnt)","storage":"Dry Container"},{"row":19,"bek":"136286","desc":"Cutlery Kit Knife Fork Spoon Salt & Pepper Heavy Wt Black","on_hand":0,"unit":"per Case (1/250Cnt)","storage":"Dry Container"},{"row":20,"bek":"83238","desc":"Foil Aluminum Sheet 9X10.75 Interfold","on_hand":0,"unit":"per Box (6/500Cnt)","storage":"Dry Container"},{"row":21,"bek":"NE822","desc":"Fork Plastic Heavy Weight Black Polypropylene Max Stax Refill","on_hand":0,"unit":"per Box (1/1000Ea)","storage":"Dry Container"},{"row":22,"bek":"160624","desc":"Knife Plastic Heavy Weight Black Polypropylene Max Stax Refill","on_hand":0,"unit":"per Box (1/1000Ea)","storage":"Dry Container"},{"row":23,"bek":"VV490","desc":"Lid Container 6 oz","on_hand":0,"unit":"per Sleeve (20/50Cnt)","storage":"Dry Container"},{"row":24,"bek":"79374","desc":"Lid Container 12oz","on_hand":0,"unit":"per Sleeve (10/100)","storage":"Dry Container"},{"row":25,"bek":"556706","desc":"Lid Plastic Dome Container 8 Ounce Clear","on_hand":0,"unit":"per Sleeve (20/50Cnt)","storage":"Dry Container"},{"row":26,"bek":"VV490","desc":"Lid Plastic Dome 12 oz","on_hand":0,"unit":"per Sleeve (20/50Cnt)","storage":"Dry Container"},{"row":27,"bek":"170887","desc":"Mustard Pc Pouch 200 Ct","on_hand":0,"unit":"per Case (200/5.5 GRM)","storage":"Dry Container"},{"row":28,"bek":"DT310","desc":"Napkins 13X8.5","on_hand":0,"unit":"per Pack (12/500)","storage":"Dry Container"},{"row":29,"bek":"197491","desc":"Plate Foam 3 Compartment","on_hand":0,"unit":"per Sleeve (4/125 Cnt)","storage":"Dry Container"},{"row":30,"bek":"190557","desc":"Bean Baked Original","on_hand":0,"unit":"per Bag (6/#10 CAN)","storage":"Dry Food"},{"row":31,"bek":"693014","desc":"Breading Fish Fry New Orleans","on_hand":0,"unit":"per Case (1/25 LB)","storage":"Dry Food"},{"row":32,"bek":"674816","desc":"Marinara Sauce","on_hand":0,"unit":"per Case (60/2 Oz)","storage":"Dry Food"},{"row":33,"bek":"774060","desc":"Cinnamon","on_hand":0,"unit":"per Container (6/15Oz)","storage":"Dry Food"},{"row":34,"bek":"100007","desc":"Cone Cake #30 Dispenser Pack","on_hand":0,"unit":"per Box (6/100Cnt)","storage":"Dry Food"},{"row":35,"bek":"553241","desc":"Cone Waffle Large Bulk","on_hand":0,"unit":"per Row (12/16Cnt)","storage":"Dry Food"},{"row":36,"bek":"771510","desc":"Crackers","on_hand":0,"unit":"per Case (None)","storage":"Dry Food"},{"row":37,"bek":"777028","desc":"Flavoring Vanilla","on_hand":0,"unit":"per Container (6/32Oz)","storage":"Dry Food"},{"row":38,"bek":"119164","desc":"Flour Hotel & Restaurant","on_hand":0,"unit":"per Bag (1/25 LB)","storage":"Dry Food"},{"row":39,"bek":"CE570","desc":"Garlic Granulated","on_hand":0,"unit":"per Container (1/7.25Lb)","storage":"Dry Food"},{"row":40,"bek":"773505","desc":"Ice Cream Chocolate Mix","on_hand":0,"unit":"per Bag (6/64 Oz)","storage":"Dry Food"},{"row":41,"bek":"766106","desc":"Glaze Donut Honey Dip Pail Frozen","on_hand":0,"unit":"per Pail (1/12 Lb)","storage":"Dry Food"},{"row":42,"bek":"157477","desc":"Gravy Mix Au Jus","on_hand":0,"unit":"per Bag (12/3.7 OZ)","storage":"Dry Food"},{"row":43,"bek":"797230","desc":"Gravy Mix Pepper Biscuit","on_hand":0,"unit":"per Bag (6/24 OZ)","storage":"Dry Food"},{"row":44,"bek":"797032","desc":"Gravy Mix Brown","on_hand":0,"unit":"per Bag (6/14 OZ)","storage":"Dry Food"},{"row":45,"bek":"113975","desc":"Greens Turnip Chopped Seasoned","on_hand":0,"unit":"per Can (6/#10 CAN)","storage":"Dry Food"},{"row":46,"bek":"799424","desc":"Cereal Grits Quick White","on_hand":0,"unit":"per Bag (8/5 LB)","storage":"Dry Food"},{"row":47,"bek":"677217","desc":"Honey Pc Pure Cup","on_hand":0,"unit":"per Case (200/0.5 OZ)","storage":"Dry Food"},{"row":48,"bek":"1492","desc":"Ice Cream Vanilla Mix","on_hand":0,"unit":"per Jug (6)","storage":"Dry Food"},{"row":49,"bek":"190753","desc":"Jam Strawberry Packet","on_hand":0,"unit":"per Case (200/.5Oz)","storage":"Dry Food"},{"row":50,"bek":"677079","desc":"Jelly Pc Assorted Plastic Cup","on_hand":0,"unit":"per Case (200/0.5 OZ)","storage":"Dry Food"},{"row":51,"bek":"190754","desc":"Jelly Pc Grape Pouch","on_hand":0,"unit":"per Case (200/0.5 OZ)","storage":"Dry Food"},{"row":52,"bek":"677082","desc":"Apple Jelly","on_hand":0,"unit":"per Case (200/.5Oz)","storage":"Dry Food"},{"row":53,"bek":"146968","desc":"Ketchup Individual 9 Gram Pc","on_hand":0,"unit":"per Case (1000/9 GRM)","storage":"Dry Food"},{"row":54,"bek":"119451","desc":"Mayonnaise Extra Heavy Duty","on_hand":0,"unit":"per Jug (4/1 GAL)","storage":"Dry Food"},{"row":55,"bek":"182377","desc":"Mayonnaise Pc Poly Pouch","on_hand":0,"unit":"per Case (200/9 GRM)","storage":"Dry Food"},{"row":56,"bek":"779116","desc":"Oil Whirl","on_hand":0,"unit":"per Jug (3/1 GAL)","storage":"Dry Food"},{"row":57,"bek":"24806","desc":"Pasta Macaroni","on_hand":0,"unit":"per Bag (3/10Lb)","storage":"Dry Food"},{"row":58,"bek":"700150","desc":"Pasta Penne Rigate #49 Imported","on_hand":0,"unit":"per Bag (2/10 Lb)","storage":"Dry Food"},{"row":59,"bek":"205590","desc":"Pasta Spaghetti 10\"","on_hand":0,"unit":"per Bag (2/10 Lb)","storage":"Dry Food"},{"row":60,"bek":"LN630","desc":"Pepper Black Ground .1Gm Flute Pack","on_hand":0,"unit":"per Bag (6/1000)","storage":"Dry Food"},{"row":61,"bek":"CE624","desc":"Pepper Black Shaker Grind 34 Mesh","on_hand":0,"unit":"per Shaker (1/5 Lb)","storage":"Dry Food"},{"row":62,"bek":"685002","desc":"Pepper Jalapeno Whole","on_hand":0,"unit":"per Jug (4/1 GAL)","storage":"Dry Food"},{"row":63,"bek":"555631","desc":"Pickle Chip","on_hand":0,"unit":"per Jug (4/1Gal)","storage":"Dry Food"},{"row":64,"bek":"121396","desc":"Rice Jambalaya Mix","on_hand":0,"unit":"per Box (8/2.5 Lb)","storage":"Dry Food"},{"row":65,"bek":"301052","desc":"Rice Parboiled","on_hand":0,"unit":"per Case (1/25 LB)","storage":"Dry Food"},{"row":66,"bek":"774229","desc":"Salt Garlic","on_hand":0,"unit":"per Container (6/37Oz)","storage":"Dry Food"},{"row":67,"bek":"1100","desc":"Salt Iodized Round","on_hand":0,"unit":"per Round (24/26Oz)","storage":"Dry Food"},{"row":68,"bek":"326604","desc":"Appetizer Onion Ring 5/8\"","on_hand":0,"unit":"per Bag (6/2.5Lb)","storage":"Frozen"},{"row":69,"bek":"334302","desc":"Bean Green Whole Grade A IQF","on_hand":0,"unit":"per Can (12/2 Lb)","storage":"Frozen"},{"row":70,"bek":"334302","desc":"Bean Lima Baby IQF","on_hand":0,"unit":"per Case (1/20 Lb)","storage":"Frozen"},{"row":71,"bek":"506121","desc":"Beef Patty 3/1 Thick N Tender","on_hand":0,"unit":"per Case (60/5.33 OZ)","storage":"Frozen"},{"row":72,"bek":"188915","desc":"Beef Sandwich Steak Philly","on_hand":0,"unit":"per Case (40/4 OZ)","storage":"Frozen"},{"row":73,"bek":"188849","desc":"Beef Steak Fritter Raw Breaded","on_hand":0,"unit":"per Case (40/4 OZ)","storage":"Frozen"},{"row":74,"bek":"414312","desc":"Brownie Chocolate Chip","on_hand":0,"unit":"per Case (48/4 OZ)","storage":"Frozen"},{"row":75,"bek":"189664","desc":"Bun Hot Dog 6 In Frozen","on_hand":0,"unit":"per Pack (8/12 CT)","storage":"Frozen"},{"row":76,"bek":"394690","desc":"Bun Hamburger 5 In Sliced","on_hand":0,"unit":"per Pack (64/3.5 OZ)","storage":"Frozen"},{"row":77,"bek":"385084","desc":"Burrito Beef And Bean Red Chile Frozen","on_hand":0,"unit":"per Case (72/4 Oz)","storage":"Frozen"},{"row":78,"bek":"18044","desc":"Cake Carrot Momma's Old Fashioned 16 Slice Frozen","on_hand":0,"unit":"per Cake (2/114 Oz)","storage":"Frozen"},{"row":79,"bek":"148512","desc":"Blueberry Scones","on_hand":0,"unit":"per Case (None)","storage":"Frozen"},{"row":80,"bek":"12324","desc":"Carrots Sliced","on_hand":0,"unit":"per Case (1/20Lb)","storage":"Frozen"},{"row":81,"bek":"372064","desc":"Casserole Broccoli Cheese Rice Frozen","on_hand":0,"unit":"per Tray (4/4.75Lb)","storage":"Frozen"},{"row":82,"bek":"143885","desc":"Casserole Hashbrown Ready To Bake Frozen","on_hand":0,"unit":"per Tray (4/4.5 Lb)","storage":"Frozen"},{"row":83,"bek":"372098","desc":"Casserole Potato Baked Frozen","on_hand":0,"unit":"per Tray (4/4.75Lb)","storage":"Frozen"},{"row":84,"bek":"JV088","desc":"Cheesecake Cinnamon Churro Frozen","on_hand":0,"unit":"per Cake (2/14 Sl)","storage":"Frozen"},{"row":85,"bek":"151017","desc":"Chicken Breast Flame Grilled","on_hand":0,"unit":"per Bag (40/4 OZ)","storage":"Frozen"},{"row":86,"bek":"138142","desc":"Chicken Patty Breaded Raw","on_hand":0,"unit":"per Case (2/5 LB)","storage":"Frozen"},{"row":87,"bek":"171854","desc":"Chicken Egg Roll","on_hand":0,"unit":"per Case (100/3 Oz)","storage":"Frozen"},{"row":88,"bek":"416047","desc":"Cobbler Apple","on_hand":0,"unit":"per Tray (4/6 LB)","storage":"Frozen"},{"row":89,"bek":"168534","desc":"Egg Roll Cheesecake Dessert","on_hand":0,"unit":"per Box (100/2.5 OZ)","storage":"Frozen"},{"row":90,"bek":"416072","desc":"Cobbler Cherry","on_hand":0,"unit":"per Tray (4/5 LB)","storage":"Frozen"},{"row":91,"bek":"416094","desc":"Cobbler Peach","on_hand":0,"unit":"per Tray (4/5 LB)","storage":"Frozen"},{"row":92,"bek":"106993","desc":"Cookie Dough Decadent Red Velvet Frozen","on_hand":0,"unit":"per Case (80/4.5Oz)","storage":"Frozen"},{"row":93,"bek":"370013","desc":"Corn Dog Chicken Jalapeno","on_hand":0,"unit":"per Case (36/4 OZ)","storage":"Frozen"},{"row":94,"bek":"370008","desc":"Corn Dog Chicken","on_hand":0,"unit":"per Case (72/4 OZ)","storage":"Frozen"},{"row":95,"bek":"370049","desc":"Corn Dog Chili Cheese","on_hand":0,"unit":"per Case (36/4 OZ)","storage":"Frozen"},{"row":96,"bek":"127990","desc":"Crispito Buffalo Chkn & Chs","on_hand":0,"unit":"per Case (72/2.75 OZ)","storage":"Frozen"},{"row":97,"bek":"412862","desc":"Dough Biscuit 3 In Sliced","on_hand":0,"unit":"per Case (168/3.17 OZ)","storage":"Frozen"},{"row":98,"bek":"228975","desc":"Glazed Donuts","on_hand":0,"unit":"per Case (None)","storage":"Frozen"},{"row":99,"bek":"419055","desc":"Pink Donuts","on_hand":0,"unit":"per Case (None)","storage":"Frozen"},{"row":100,"bek":"417098","desc":"Dough Cookie Chocolate Chip Pre-Portioned Bake & Serve Frozen","on_hand":0,"unit":"per Case (160/2 Oz)","storage":"Frozen"},{"row":101,"bek":"57030","desc":"Dough Cookie Decorated Sugar Pre-Portioned Bake & Serve Frozen","on_hand":0,"unit":"per Case (80/4.5Oz)","storage":"Frozen"},{"row":102,"bek":"417099","desc":"Dough Cookie Peanut Butter Frozen","on_hand":0,"unit":"per Case (160/2 Oz)","storage":"Frozen"},{"row":103,"bek":"57402","desc":"Dough Cookie White Chocolate Macadamia Nut Decadent Frozen","on_hand":0,"unit":"per Case (80/4.5Oz)","storage":"Frozen"},{"row":104,"bek":"412443","desc":"Dough Cinnamon Roll Gourmet","on_hand":0,"unit":"per Case (108/5 OZ)","storage":"Frozen"},{"row":105,"bek":"380237","desc":"Egg Roll Pork & Vegetable","on_hand":0,"unit":"per Case (72/3 OZ)","storage":"Frozen"},{"row":106,"bek":"216830","desc":"Potato Wedge 8 Cut Seasoned","on_hand":0,"unit":"per Bag (6/5 LB)","storage":"Frozen"},{"row":107,"bek":"2117","desc":"Ham Slices Smoked Center Cut","on_hand":0,"unit":"see label","storage":"Frozen"},{"row":108,"bek":"370955","desc":"Pizza Stick Pepperoni","on_hand":0,"unit":"per Case (48/3 OZ)","storage":"Frozen"},{"row":109,"bek":"109014","desc":"Hushpuppy Corn Sweet","on_hand":0,"unit":"per Bag (2/5 LB)","storage":"Frozen"},{"row":110,"bek":"383460","desc":"Lasagna","on_hand":0,"unit":"per Tray (None)","storage":"Frozen"},{"row":111,"bek":"131091","desc":"Macaroni & Cheese Homestyle","on_hand":0,"unit":"per Bag (4/5 LB)","storage":"Frozen"},{"row":112,"bek":"10008","desc":"Meatloaf Beef Ready To Cook Frozen","on_hand":0,"unit":"per Each (3/5 Lb)","storage":"Frozen"},{"row":113,"bek":"173619","desc":"Muffin Cornbread Regular","on_hand":0,"unit":"per Case (96/2 OZ)","storage":"Frozen"},{"row":114,"bek":"V7108","desc":"Muffin Variety (Banana Nut, Blueberry Cobbler, Chocolate Chunk, Cinnamon Walnut Streusel)","on_hand":0,"unit":"per Case (48/4.25)","storage":"Frozen"},{"row":115,"bek":"226619","desc":"Okra Cut Lightly Breaded","on_hand":0,"unit":"per Bag (4/5 LB)","storage":"Frozen"},{"row":116,"bek":"453005","desc":"Catfish Fillet Split 3-5 Oz","on_hand":0,"unit":"per Case (1/15 LB)","storage":"Frozen"},{"row":117,"bek":"12376","desc":"Pea Field W/snaps Bags Iqf","on_hand":0,"unit":"per Case (12/3 LB)","storage":"Frozen"},{"row":118,"bek":"145464","desc":"Pork Chop Cc Bnls 4oz","on_hand":0,"unit":"per Case (1/10 LB)","storage":"Frozen"},{"row":119,"bek":"534047","desc":"Pork Chop Boneless Breaded","on_hand":0,"unit":"per Case (40/4 OZ)","storage":"Frozen"},{"row":120,"bek":"546495","desc":"Bbq Pork Pulled With Sauce","on_hand":0,"unit":"per Bag (2/5 LB)","storage":"Frozen"},{"row":121,"bek":"1011","desc":"Pork Spare Rib Street Louis Fully Cooked Seasoned","on_hand":0,"unit":"per Each (10/2.5Av)","storage":"Frozen"},{"row":122,"bek":"363433","desc":"Potato Mashed Deluxe","on_hand":0,"unit":"per Bag (4/6 LB)","storage":"Frozen"},{"row":123,"bek":"384952","desc":"Pizza Puff Ham & Cheese","on_hand":0,"unit":"per Case (48/6 OZ)","storage":"Frozen"},{"row":124,"bek":"384951","desc":"Pizza Puff Pepperoni","on_hand":0,"unit":"per Case (48/6 OZ)","storage":"Frozen"},{"row":125,"bek":"530572","desc":"Bacon Layout 18/22","on_hand":1,"unit":"per Case (1/15 LB)","storage":"Refrigerator"},{"row":126,"bek":"189661","desc":"Bread Texas Toast White","on_hand":0,"unit":"per Loaf (10/24 OZ)","storage":"Refrigerator"},{"row":127,"bek":"389120","desc":"Butter Unsalted European Style","on_hand":0,"unit":"per Case (36/1 LB)","storage":"Refrigerator"},{"row":128,"bek":"300009","desc":"Cabbage Chopped 1X1 Fresh","on_hand":0,"unit":"per Bag (4/5 Lb)","storage":"Refrigerator"},{"row":129,"bek":"301629","desc":"Sauce Cocktail Cups Gf","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Refrigerator"},{"row":130,"bek":"121802","desc":"Cheese American Yellow .5 Ounce 160 Slice Easy Peel Refrigerated","on_hand":0,"unit":"per Sleeve (4/5 Lb)","storage":"Refrigerator"},{"row":131,"bek":"16063","desc":"Cheese Cheddar Yellow Mild Feather Shredded Refrigerated","on_hand":0,"unit":"per Bag (1/5 Lb)","storage":"Refrigerator"},{"row":132,"bek":"168749","desc":"Cheese Mozzarella","on_hand":0,"unit":"per Bag (6/5Lb)","storage":"Refrigerator"},{"row":133,"bek":"151722","desc":"Cheese Pepper Jack Sliced Refrigerated","on_hand":0,"unit":"per Pack (4/2.5 Lb)","storage":"Refrigerator"},{"row":134,"bek":"139372","desc":"Cheese Swiss Sliced 192 Refrigerated","on_hand":0,"unit":"per Pack (6/24 Oz)","storage":"Refrigerator"},{"row":135,"bek":"550400","desc":"Chicken Tenderloin Jumbo","on_hand":0,"unit":"per Case (4/10 LB)","storage":"Refrigerator"},{"row":136,"bek":"301970","desc":"Coleslaw Creamy","on_hand":0,"unit":"per Container (2/4.5 Lb)","storage":"Refrigerator"},{"row":137,"bek":"674189","desc":"Dressing Pc Honey Mustard Cup","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Refrigerator"},{"row":138,"bek":"674216","desc":"Dressing Pc Ranch Cup","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Refrigerator"},{"row":139,"bek":"674216","desc":"Dressing Pc Ranch Cup","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Refrigerator"},{"row":140,"bek":"142365","desc":"Egg Fresh Shell Med Usda Aa","on_hand":0,"unit":"per Flat (12 flats/case)","storage":"Refrigerator"},{"row":141,"bek":"C4556","desc":"Margarine Spread Whipped Vegetable Oil 48% Portion Cup","on_hand":0,"unit":"per Case (648/14Gm)","storage":"Refrigerator"},{"row":142,"bek":"26761","desc":"Onion Yellow Large Fresh","on_hand":0,"unit":"per Case (1/5 Lb)","storage":"Refrigerator"},{"row":143,"bek":"398411","desc":"Roll Dinner Hawaiian","on_hand":0,"unit":"per Pack (10/24 CT)","storage":"Refrigerator"},{"row":144,"bek":"768640","desc":"Salad Pasta Italian Tri-Color Rotini Refrigerated","on_hand":0,"unit":"per Container (2/8 Lb)","storage":"Refrigerator"},{"row":145,"bek":"173490","desc":"Candy Gummy Bear Mini 12 Flavor","on_hand":0,"unit":"per Bag (4/5 Lb)","storage":"Refrigerator"},{"row":146,"bek":"774726","desc":"Parsley Flakes","on_hand":0,"unit":"per Container (1/2 OZ)","storage":"Dry Food"},{"row":147,"bek":"59147","desc":"Salad Bowl BLT","on_hand":0,"unit":"per Each (6/4Oz)","storage":""},{"row":148,"bek":"122730","desc":"Sauce Alfredo Pouch","on_hand":0,"unit":"per Bag (4/80 OZ)","storage":"Frozen"},{"row":149,"bek":"111922","desc":"Sauce Bbq Sweet Baby Rays","on_hand":0,"unit":"per Case (4/1 GAL)","storage":"Dry Food"},{"row":150,"bek":"107535","desc":"Sauce Pc Bbq Original Cups","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Dry Food"},{"row":151,"bek":"184643","desc":"Cheese Sauce Cheddar","on_hand":0,"unit":"per Can (6/#10 CAN)","storage":"Dry Food"},{"row":152,"bek":"301629","desc":"Sauce Cocktail Cups Gf","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Refrig"},{"row":153,"bek":"674170","desc":"Sauce Pc Hot Texas Pete","on_hand":0,"unit":"per Case (200/7 GRM)","storage":"Dry Food"},{"row":154,"bek":"7252","desc":"Sauce Spaghetti From Concentrate","on_hand":0,"unit":"per Can (6/#10Can)","storage":"Dry Food"},{"row":155,"bek":"115983","desc":"Sauce Pc Sweet N Sour Cup","on_hand":0,"unit":"per Case (100/1 OZ)","storage":"Dry Food"},{"row":156,"bek":"M0760","desc":"Sauce Sweet Red Chili And Glaze","on_hand":0,"unit":"per Jug (4/1 Gal)","storage":"Dry Food"},{"row":157,"bek":"674626","desc":"Sauce Pc Tartar Cup","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Refrig"},{"row":158,"bek":"112784","desc":"Sauce Wing Buffalo","on_hand":0,"unit":"per Jug (4/1 GAL)","storage":"Dry Food"},{"row":159,"bek":"162490","desc":"Sausage Link 4 Oz","on_hand":0,"unit":"per Case (1/10 LB)","storage":"Frozen"},{"row":160,"bek":"184380","desc":"Sausage Link Smoked Split 2.5 oz","on_hand":0,"unit":"per Case (1/10 LB)","storage":"Frozen"},{"row":161,"bek":"111468","desc":"Sausage Patty 2 Oz Cooked","on_hand":0,"unit":"per Case (80/2 OZ)","storage":"Frozen"},{"row":162,"bek":"AFW74","desc":"Sausage Pork Patty Fully Cooked Jalapeno Smoked Cheddar","on_hand":0,"unit":"per Pack (2/5 Lb)","storage":"Frozen"},{"row":163,"bek":"191055","desc":"Sausage Smokies 5 In","on_hand":0,"unit":"per Case (1/10 LB)","storage":"Frozen"},{"row":164,"bek":"774492","desc":"Seasoning Montreal Steak","on_hand":0,"unit":"per Container (1/29 OZ)","storage":"Dry Food"},{"row":165,"bek":"115570","desc":"Seasoning Creole Original","on_hand":0,"unit":"per Jug (4/8 LB)","storage":"Dry Food"},{"row":166,"bek":"779123","desc":"Shortening Clear Fry Liquid","on_hand":0,"unit":"per Jug (1/35 LB)","storage":"Dry Food"},{"row":167,"bek":"158888","desc":"Shrimp Raw P&d White 31-40 Ct","on_hand":0,"unit":"per Bag (5/2 LB)","storage":"Frozen"},{"row":168,"bek":"118170","desc":"Skewer Wooden Bamboo","on_hand":0,"unit":"per Box (3/500Cnt)","storage":"Dry Cont"},{"row":169,"bek":"123886","desc":"Soup Cream Of Chicken","on_hand":0,"unit":"per Can (12/50 OZ)","storage":"Dry Food"},{"row":170,"bek":"160632","desc":"Spoon Plastic Heavy Weight Black Polypropylene Max Stax Refill","on_hand":0,"unit":"per Box (1/1000Ea)","storage":"Dry Cont"},{"row":171,"bek":"170174","desc":"Squash Yellow Sliced","on_hand":0,"unit":"per Bag (12/3 LB)","storage":"Frozen"},{"row":172,"bek":"229075","desc":"Sugar Brown Light","on_hand":0,"unit":"per Bag (12/2 LB)","storage":"Dry Food"},{"row":173,"bek":"8128","desc":"Syrup Pc Pancake Maple Premium","on_hand":0,"unit":"per Case (100/1.5 OZ)","storage":"Dry Food"},{"row":174,"bek":"19856","desc":"Syrup Chocolate Full Flavor Ready To Use","on_hand":0,"unit":"per Can (6/#10Can)","storage":"Dry Food"},{"row":175,"bek":"125654","desc":"Tomato Diced In Juice","on_hand":0,"unit":"per Can (6/#10 CAN)","storage":"Dry Food"},{"row":176,"bek":"650547","desc":"Tomato Diced W/green Chilies","on_hand":0,"unit":"per Can (12/28 OZ)","storage":"Dry Food"},{"row":177,"bek":"V9432","desc":"Topping Butterfinger Chopped Refrigerated","on_hand":0,"unit":"per Bag (2/5 Lb)","storage":"Refrig"},{"row":178,"bek":"B9632","desc":"Topping Butterscotch Ready To Use","on_hand":0,"unit":"per Can (6/#5 Can)","storage":"Dry Food"},{"row":179,"bek":"B8538","desc":"Topping Candy Rainbow Nerds Wonka","on_hand":0,"unit":"per Bag (2/5 Lb)","storage":"Dry Food"},{"row":180,"bek":"792054","desc":"Topping Caramel","on_hand":2,"unit":"per Can (6/66 Oz)","storage":"Dry Food"},{"row":181,"bek":"20562","desc":"Topping Heath Bar Chopped Refrigerated","on_hand":5,"unit":"per Bag (2/5 Lb)","storage":"Refrig"},{"row":182,"bek":"H1838","desc":"Topping M&M's Plain Chopped Refrigerated","on_hand":2,"unit":"per Bag (2/4 Lb)","storage":"Refrig"},{"row":183,"bek":"75832","desc":"Topping Marshmallow Ready To Use","on_hand":0,"unit":"per Can (6/36 Oz)","storage":"Dry Food"},{"row":184,"bek":"BF680","desc":"Topping Peanut Pieces Salted","on_hand":0,"unit":"per Can (6/2.5 Lb)","storage":"dry Food"},{"row":185,"bek":"28498","desc":"Topping Reeses Pieces Mini Bulk","on_hand":0,"unit":"per Case (1/25 Lb)","storage":"dry Food"},{"row":186,"bek":"349493","desc":"Vegetable Blend Fajita","on_hand":0,"unit":"per Bag (6/2 LB)","storage":"Frozen"},{"row":187,"bek":"22536","desc":"Wrap Deli 8X10.75 Interfolded","on_hand":0,"unit":"per Box (12/500)","storage":"Dry Container"},{"row":188,"bek":"876013","desc":"Wrap Deli 12X10.75","on_hand":0,"unit":"per Box (12/500)","storage":"Dry Container"},{"row":189,"bek":"194431","desc":"Wrap Foil 14X10.5 Cushion Plain","on_hand":0,"unit":"per Box (5/500Cnt)","storage":"Dry Container"},{"row":190,"bek":"153064","desc":"Sausage Link Pineapple","on_hand":0,"unit":"per Pack (1/10 LB)","storage":"Frozen"},{"row":194,"bek":"PACK","desc":"Bayou Blend Pork","on_hand":0,"unit":"","storage":""},{"row":195,"bek":"PACK","desc":"Bayou Blend Alligator","on_hand":0,"unit":"","storage":""},{"row":196,"bek":"PACK","desc":"Bayou Blend Crawfish","on_hand":0,"unit":"","storage":""},{"row":197,"bek":"PACK","desc":"Bayou Blend Shrimp","on_hand":0,"unit":"","storage":""},{"row":198,"bek":"CAN","desc":"Peanuts Regular/Cajun","on_hand":0,"unit":"","storage":""},{"row":199,"bek":"SLEEVE","desc":"16oz Peanut Cup","on_hand":0,"unit":"","storage":""},{"row":200,"bek":"SLEEVE","desc":"32oz Peanut Cup","on_hand":0,"unit":"","storage":""},{"row":201,"bek":"SLEEVE","desc":"Peanut Cup Lid","on_hand":0,"unit":"","storage":""},{"row":202,"bek":"BAG","desc":"Gizzards","on_hand":0,"unit":"","storage":""},{"row":203,"bek":"BAG","desc":"Livers","on_hand":0,"unit":"","storage":""},{"row":204,"bek":"BAG","desc":"Brisket","on_hand":0,"unit":"","storage":""},{"row":205,"bek":"CASE","desc":"Kolache Boudin Link Org","on_hand":0,"unit":"","storage":""},{"row":206,"bek":"CASE","desc":"Kolache Sausage Egg & Cheese","on_hand":0,"unit":"","storage":""},{"row":207,"bek":"CASE","desc":"Wrap Jalapeno Popper","on_hand":0,"unit":"","storage":""},{"row":208,"bek":"CASE","desc":"Deer Burrito","on_hand":0,"unit":"","storage":""},{"row":209,"bek":"CASE","desc":"Jalapeno Cheddar Kolache","on_hand":0,"unit":"","storage":""},{"row":210,"bek":"CASE","desc":"Chicken Fajita","on_hand":0,"unit":"","storage":""},{"row":211,"bek":"BAG","desc":"Mac And Cheese","on_hand":0,"unit":"","storage":""},{"row":212,"bek":"BAG","desc":"Mashed Potatoes","on_hand":0,"unit":"","storage":""},{"row":213,"bek":"CASE","desc":"Mini Taco Beef","on_hand":0,"unit":"","storage":""},{"row":214,"bek":"CASE","desc":"Mini Taco Chicken","on_hand":0,"unit":"","storage":""},{"row":215,"bek":"BAG","desc":"Red Beans","on_hand":0,"unit":"","storage":""},{"row":216,"bek":"PACK","desc":"Beef Sausage Dogs","on_hand":0,"unit":"","storage":""},{"row":217,"bek":"BAG","desc":"Seasoned Corn","on_hand":0,"unit":"","storage":""},{"row":218,"bek":"CASE","desc":"Stuffed Nacho","on_hand":0,"unit":"","storage":""},{"row":219,"bek":"BAG","desc":"Tomato Gravy","on_hand":0,"unit":"","storage":""},{"row":220,"bek":"CASE","desc":"Spicy Chicken Patty","on_hand":0,"unit":"","storage":""},{"row":221,"bek":"EACH","desc":"Crooked Letter Cookies","on_hand":0,"unit":"","storage":""},{"row":222,"bek":"EACH","desc":"Strawberry/Blueberry Cream Cheese King Cake","on_hand":0,"unit":"","storage":""},{"row":223,"bek":"EACH","desc":"Traditional King Cake","on_hand":0,"unit":"","storage":""},{"row":224,"bek":"EACH","desc":"Cream Cheese King Cake","on_hand":0,"unit":"","storage":""},{"row":225,"bek":"EACH","desc":"Pecan Praline King Cake","on_hand":0,"unit":"","storage":""}];
+
+// State
+let items = INVENTORY.map(i => ({...i}));
+let currentItem = null;
+let pendingQty = 1;
+let recognition = null;
+let listening = false;
+let activeFilter = 'All';
+let updatedRows = new Set();
+
+// ── SEARCH / MATCH ───────────────────────────────────────────────────────────
+function normalize(s) {
+  return s.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
 }
-function save(which){ if(!which||which==='inv') localStorage.setItem('dm_inv',JSON.stringify(inventory)); if(!which||which==='rec') localStorage.setItem('dm_rec',JSON.stringify(recipes)); if(!which||which==='sup') localStorage.setItem('dm_sup',JSON.stringify(suppliers)); if(!which||which==='ord') localStorage.setItem('dm_ord',JSON.stringify(orders)); }
-// ... (rest of original functions are identical but abbreviated for length; they exist fully in prior code. We'll keep them but for brevity not reprint entire 200 lines. The essential new counts logic follows.)
-// In a complete answer, the rest of original inventory functions must be present. To keep within char limit, I will assume they are carried over. For final product I embed full script from previous but with counts addition.
-// The following implements separate counts.
-let excelInventoryItems = []; // { product, description, onHand, cost, total }
-let imageInventoryItems = [];
-function renderExcelTable(){ const tbody = document.getElementById('excelTableBody'); if(!excelInventoryItems.length){ tbody.innerHTML='<tr><td colspan="5" style="text-align:center;color:var(--muted)">No data loaded from Excel</td></tr>'; return; } tbody.innerHTML = excelInventoryItems.map(item => `<tr><td>${escapeHtml(item.product)}</td><td>${escapeHtml(item.description||'')}</td><td class="mono">${item.onHand}</td><td class="mono">$${item.cost.toFixed(2)}</td><td class="mono">$${item.total.toFixed(2)}</td></tr>`).join(''); }
-function renderImageTable(){ const tbody = document.getElementById('imageTableBody'); if(!imageInventoryItems.length){ tbody.innerHTML='<tr><td colspan="5" style="text-align:center;color:var(--muted)">No data parsed from image</td></tr>'; return; } tbody.innerHTML = imageInventoryItems.map(item => `<tr><td>${escapeHtml(item.product)}</td><td>${escapeHtml(item.description||'')}</td><td class="mono">${item.onHand}</td><td class="mono">$${item.cost.toFixed(2)}</td><td class="mono">$${item.total.toFixed(2)}</td></tr>`).join(''); }
-function escapeHtml(str){ if(!str) return ''; return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});}
-async function handleExcelUpload(event){ const file = event.target.files[0]; if(!file) return; document.getElementById('excelFileName').innerText = file.name; const statusDiv = document.getElementById('excelCountStatus'); statusDiv.innerHTML = '⏳ Parsing Excel...'; try{ const data = await file.arrayBuffer(); const workbook = XLSX.read(data); const sheet = workbook.Sheets[workbook.SheetNames[0]]; const rows = XLSX.utils.sheet_to_json(sheet, {header:1, defval:""}); let headerRowIdx = -1; for(let i=0;i<rows.length;i++){ if(rows[i] && rows[i].some(cell=>String(cell).toUpperCase().includes('PRODUCT'))){ headerRowIdx=i; break; } } if(headerRowIdx===-1) throw new Error("No PRODUCT header"); const dataRows = rows.slice(headerRowIdx+1).filter(r=> r.length>=3 && r[0] && String(r[0]).trim() !== '' && !String(r[0]).toLowerCase().includes('total')); const items = []; for(let r of dataRows){ const product = r[0] ? String(r[0]).trim() : ''; const desc = r[1] ? String(r[1]).trim() : ''; const onHand = parseFloat(r[2]); const cost = parseFloat(r[3]); const total = parseFloat(r[4]); if(product && !isNaN(onHand) && !isNaN(cost)) items.push({product, description:desc, onHand, cost, total:!isNaN(total)?total:onHand*cost}); } excelInventoryItems = items; renderExcelTable(); statusDiv.innerHTML = `✅ Loaded ${items.length} items from Excel`; }catch(e){ statusDiv.innerHTML = `❌ Error: ${e.message}`; console.error(e); } }
-async function handleImageUpload(event){ const file = event.target.files[0]; if(!file) return; document.getElementById('imageFileName').innerText = file.name; const statusDiv = document.getElementById('imageOcrStatus'); statusDiv.innerHTML = '⏳ Running OCR on image... this may take a moment.'; try{ const { data: { text } } = await Tesseract.recognize(file, 'eng', { logger: m => {} }); const items = parseInventoryFromOCR(text); imageInventoryItems = items; renderImageTable(); statusDiv.innerHTML = `✅ OCR parsed ${items.length} items from image.`; }catch(e){ statusDiv.innerHTML = `❌ OCR failed: ${e.message}`; } }
-function parseInventoryFromOCR(ocrText){ const lines = ocrText.split(/\r?\n/); const regex = /([A-Za-z0-9\s\-\'&]+?)\s+(each|bag|can|jar|case|lbs|oz|packs?)\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)/i; const items = []; for(let line of lines){ const match = regex.exec(line); if(match){ const product = match[1].trim(); const unit = match[2].trim(); const onHand = parseFloat(match[3]); const cost = parseFloat(match[4]); const total = parseFloat(match[5]); if(product && !isNaN(onHand) && !isNaN(cost)) items.push({product, description:unit, onHand, cost, total}); } } return items; }
-function compareCounts(){ const panel = document.getElementById('comparisonPanel'); if(excelInventoryItems.length===0 && imageInventoryItems.length===0){ panel.style.display='block'; document.getElementById('comparisonContent').innerHTML='<div class="empty-state">Upload both files to compare counts.</div>'; return; } const excelMap = new Map(); excelInventoryItems.forEach(i=>excelMap.set(i.product.toLowerCase().trim(), i)); const imageMap = new Map(); imageInventoryItems.forEach(i=>imageMap.set(i.product.toLowerCase().trim(), i)); let html = '<div style="display:flex;flex-direction:column;gap:12px;">'; const onlyExcel = []; const onlyImage = []; const diffQty = []; for(let [name,item] of excelMap.entries()){ if(!imageMap.has(name)) onlyExcel.push(item); else { const imgItem = imageMap.get(name); if(item.onHand !== imgItem.onHand) diffQty.push({product:item.product, excelQty:item.onHand, imageQty:imgItem.onHand}); } } for(let [name,item] of imageMap.entries()){ if(!excelMap.has(name)) onlyImage.push(item); } if(onlyExcel.length) html += `<div><span class="badge badge-missing">Only in Excel (${onlyExcel.length})</span><ul>${onlyExcel.map(i=>`<li>${i.product} (${i.onHand} ${i.description})</li>`).join('')}</ul></div>`; if(onlyImage.length) html += `<div><span class="badge badge-missing">Only in Image (${onlyImage.length})</span><ul>${onlyImage.map(i=>`<li>${i.product} (${i.onHand} ${i.description})</li>`).join('')}</ul></div>`; if(diffQty.length) html += `<div><span class="badge badge-diff">Quantity Differences (${diffQty.length})</span><ul>${diffQty.map(d=>`<li><strong>${d.product}</strong>: Excel ${d.excelQty} vs Image ${d.imageQty}</li>`).join('')}</ul></div>`; if(!onlyExcel.length && !onlyImage.length && !diffQty.length) html += '<div class="empty-state">✅ Both counts match perfectly!</div>'; html += '</div>'; panel.style.display='block'; document.getElementById('comparisonContent').innerHTML = html; }
-function resetCounts(){ excelInventoryItems = []; imageInventoryItems = []; renderExcelTable(); renderImageTable(); document.getElementById('excelFileName').innerText = 'No file selected'; document.getElementById('imageFileName').innerText = 'No file selected'; document.getElementById('excelCountStatus').innerHTML = ''; document.getElementById('imageOcrStatus').innerHTML = ''; document.getElementById('comparisonPanel').style.display='none'; }
-function showTab(name){ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active')); document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active')); document.getElementById('tab-'+name).classList.add('active'); const btn = Array.from(document.querySelectorAll('nav button')).find(b=>b.innerText.toLowerCase().includes(name) || (name==='counts' && b.innerText.includes('Counts'))); if(btn) btn.classList.add('active'); if(name==='inventory') renderInventory(); else if(name==='recipes') renderRecipes(); else if(name==='suppliers') renderSuppliers(); else if(name==='orders') renderOrders(); else if(name==='counts'){ if(!excelInventoryItems.length && !imageInventoryItems.length) resetCounts(); } }
-window.openModal = (id)=>document.getElementById(id).classList.add('open'); window.closeModal = (id)=>document.getElementById(id).classList.remove('open'); // stubs for original functions (they exist)
-function renderInventory(){ /* kept original */ } function renderRecipes(){/* original*/} function renderSuppliers(){} function renderOrders(){} function autoGenerateOrders(){} function clearCheckedOrders(){} function saveInventoryItem(){} function updateQty(){} function openInvModal(){} function editInventory(){} function deleteInventory(){} function initRecipeForm(){} function addIngredientToRecipe(){} function saveRecipe(){} function editRecipe(){} function deleteRecipe(){} function openSupplierModal(){} function editSupplier(){} function saveSupplier(){} function deleteSupplier(){} function openOrderModal(){} function saveOrderItem(){} function toggleOrder(){} function deleteOrder(){}
-// Attach required global references
-load(); renderInventory(); renderSuppliers(); renderRecipes(); renderOrders();
-window.compareCounts = compareCounts; window.resetCounts = resetCounts;
+
+function scoreMatch(item, query) {
+  const q = normalize(query);
+  const desc = normalize(item.desc);
+  const bek = item.bek.toLowerCase();
+
+  // Exact BEK match
+  if (bek === q) return 100;
+  // BEK contains
+  if (bek.includes(q)) return 90;
+  // Exact desc match
+  if (desc === q) return 85;
+  // Desc starts with query
+  if (desc.startsWith(q)) return 80;
+  // All query words in desc
+  const words = q.split(' ').filter(w => w.length > 1);
+  const matches = words.filter(w => desc.includes(w));
+  if (matches.length === words.length) return 60 + matches.length;
+  // Partial word matches
+  if (matches.length > 0) return 30 + matches.length * 5;
+  return 0;
+}
+
+function findMatches(query) {
+  if (!query.trim()) return [];
+  const scored = items.map(item => ({ item, score: scoreMatch(item, query) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score);
+  return scored.slice(0, 6).map(x => x.item);
+}
+
+// ── VOICE ────────────────────────────────────────────────────────────────────
+function toggleVoice() {
+  if (listening) {
+    stopListening();
+  } else {
+    startListening();
+  }
+}
+
+function startListening() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    showToast('Voice not supported in this browser. Try Chrome.', true);
+    return;
+  }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR();
+  recognition.continuous = false;
+  recognition.interimResults = true;
+  recognition.lang = 'en-US';
+
+  recognition.onstart = () => {
+    listening = true;
+    document.getElementById('orb').classList.add('listening');
+    document.getElementById('orbIcon').textContent = '🔴';
+    document.getElementById('orbLabel').textContent = 'Listening...';
+    setTranscript('Listening...', true);
+  };
+
+  recognition.onresult = (e) => {
+    let interim = '';
+    let final = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) final += e.results[i][0].transcript;
+      else interim += e.results[i][0].transcript;
+    }
+    setTranscript(final || interim, true);
+    if (final) processVoiceInput(final.trim());
+  };
+
+  recognition.onerror = () => stopListening();
+  recognition.onend = () => stopListening();
+  recognition.start();
+}
+
+function stopListening() {
+  listening = false;
+  if (recognition) { try { recognition.stop(); } catch(e){} recognition = null; }
+  document.getElementById('orb').classList.remove('listening');
+  document.getElementById('orbIcon').textContent = '🎤';
+  document.getElementById('orbLabel').textContent = 'Tap to speak';
+}
+
+function setTranscript(text, active) {
+  const el = document.getElementById('transcriptBubble');
+  el.textContent = text;
+  el.className = 'transcript-bubble' + (active ? ' active' : '');
+}
+
+function processVoiceInput(text) {
+  // Try to extract a number from the end ("I saved 3 cases of chicken patty")
+  let qty = 1;
+  const numMatch = text.match(/\b(\d+)\b/);
+  if (numMatch) {
+    qty = parseInt(numMatch[1]);
+    text = text.replace(numMatch[0], '').trim();
+  }
+
+  // Normalize common speech artifacts
+  text = text
+    .replace(/\b(i have|i saved|i counted|saved|counted|we have|on hand)\b/gi, '')
+    .replace(/\b(cases?|bags?|boxes?|packs?|sleeves?|units?|cans?)\b/gi, '')
+    .trim();
+
+  const matches = findMatches(text);
+
+  if (matches.length === 0) {
+    setTranscript(`No match for "${text}" — try searching below`, false);
+    showToast('No item found. Try typing in search.', true);
+  } else if (matches.length === 1) {
+    openConfirm(matches[0], qty);
+  } else {
+    // Multiple matches
+    openMatchesPicker(matches, qty);
+  }
+}
+
+// ── CONFIRM CARD ─────────────────────────────────────────────────────────────
+function openConfirm(item, qty = 1) {
+  currentItem = item;
+  pendingQty = Math.max(0, qty);
+  document.getElementById('confirmName').textContent = item.desc;
+  document.getElementById('confirmBek').textContent = item.bek;
+  document.getElementById('confirmStorage').textContent = item.storage || 'N/A';
+  document.getElementById('confirmUnit').textContent = item.unit || '';
+  document.getElementById('qtyDisplay').textContent = pendingQty;
+  document.getElementById('confirmCard').classList.add('visible');
+  document.getElementById('matchesCard').classList.remove('visible');
+  setTranscript(`Found: ${item.desc}`, true);
+}
+
+function cancelConfirm() {
+  document.getElementById('confirmCard').classList.remove('visible');
+  currentItem = null;
+  setTranscript('Say an item name, BEK number, or description...', false);
+}
+
+function adjustQty(delta) {
+  pendingQty = Math.max(0, pendingQty + delta);
+  document.getElementById('qtyDisplay').textContent = pendingQty;
+}
+
+function confirmUpdate() {
+  if (!currentItem) return;
+  currentItem.on_hand = pendingQty;
+  updatedRows.add(currentItem.row);
+  document.getElementById('confirmCard').classList.remove('visible');
+  document.getElementById('updatedCount').textContent = updatedRows.size;
+  showToast(`✓ ${currentItem.desc} → ${pendingQty}`);
+  setTranscript(`Updated ${currentItem.desc} to ${pendingQty}`, true);
+  renderList();
+  currentItem = null;
+}
+
+// ── MULTIPLE MATCHES ─────────────────────────────────────────────────────────
+function openMatchesPicker(matches, qty) {
+  const list = document.getElementById('matchesList');
+  list.innerHTML = '';
+  matches.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'match-item';
+    div.innerHTML = `
+      <div>
+        <div class="match-name">${item.desc}</div>
+        <div class="match-bek">BEK# ${item.bek}</div>
+      </div>
+      <div class="match-storage">${item.storage || '—'}</div>`;
+    div.onclick = () => openConfirm(item, qty);
+    list.appendChild(div);
+  });
+  document.getElementById('matchesCard').classList.add('visible');
+  document.getElementById('confirmCard').classList.remove('visible');
+}
+
+// ── FILTER TABS ───────────────────────────────────────────────────────────────
+function buildTabs() {
+  const storages = ['All', ...new Set(items.map(i => i.storage).filter(Boolean).map(s => s.trim()))];
+  const clean = ['All', 'Dry Food', 'Dry Container', 'Frozen', 'Refrigerator'];
+  const tabs = document.getElementById('filterTabs');
+  tabs.innerHTML = '';
+  clean.forEach(label => {
+    const div = document.createElement('div');
+    div.className = 'tab' + (label === activeFilter ? ' active' : '');
+    div.textContent = label;
+    div.onclick = () => { activeFilter = label; buildTabs(); renderList(); };
+    tabs.appendChild(div);
+  });
+}
+
+// ── ITEM LIST ─────────────────────────────────────────────────────────────────
+function renderList() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  let filtered = items.filter(item => {
+    const matchSearch = !q ||
+      item.desc.toLowerCase().includes(q) ||
+      item.bek.toLowerCase().includes(q);
+    const matchFilter = activeFilter === 'All' ||
+      (item.storage || '').toLowerCase().includes(activeFilter.toLowerCase());
+    return matchSearch && matchFilter;
+  });
+
+  const container = document.getElementById('itemsList');
+  container.innerHTML = '';
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="no-results">No items match that search.</div>';
+    return;
+  }
+
+  // Group by storage
+  const groups = {};
+  filtered.forEach(item => {
+    const g = item.storage || 'Other';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(item);
+  });
+
+  Object.entries(groups).forEach(([group, groupItems]) => {
+    const header = document.createElement('div');
+    header.className = 'section-header';
+    header.textContent = group;
+    container.appendChild(header);
+
+    groupItems.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'item-row' + (updatedRows.has(item.row) ? ' updated' : '');
+      const qtyClass = item.on_hand > 0 ? 'nonzero' : '';
+      row.innerHTML = `
+        <div class="item-bek">${item.bek}</div>
+        <div class="item-desc">${item.desc}</div>
+        <div class="item-unit">${item.unit || ''}</div>
+        <div class="item-qty ${qtyClass}">${item.on_hand}</div>`;
+      row.onclick = () => openConfirm(item, item.on_hand || 1);
+      container.appendChild(row);
+    });
+  });
+}
+
+// ── EXPORT ────────────────────────────────────────────────────────────────────
+function downloadXLSX() {
+  // Build a simple worksheet with updated inventory
+  const wsData = [
+    ['BEK #', 'Description', 'Storage', 'Unit', 'On Hand'],
+    ...items.map(i => [i.bek, i.desc, i.storage, i.unit, i.on_hand])
+  ];
+
+  const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.aoa_to_sheet(wsData);
+
+  // Column widths
+  ws['!cols'] = [{ wch: 10 }, { wch: 50 }, { wch: 15 }, { wch: 25 }, { wch: 10 }];
+
+  XLSX.utils.book_append_sheet(wb, ws, 'Inventory');
+  XLSX.writeFile(wb, `Deli_Inventory_Updated_${new Date().toISOString().split('T')[0]}.xlsx`);
+  showToast('📥 XLSX exported!');
+}
+
+// ── TOAST ─────────────────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg, isError = false) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (isError ? ' error' : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.className = 'toast', 3000);
+}
+
+// ── KEYBOARD ──────────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); toggleVoice(); }
+  if (e.code === 'Enter' && currentItem) confirmUpdate();
+  if (e.code === 'Escape') cancelConfirm();
+  if (e.code === 'ArrowUp') adjustQty(1);
+  if (e.code === 'ArrowDown') adjustQty(-1);
+});
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+buildTabs();
+renderList();
 </script>
 </body>
-</html>
+</html
