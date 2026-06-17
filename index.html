@@ -213,9 +213,23 @@
     align-items: center;
     gap: 8px;
   }
-  .qty-btn {
-    width: 36px; height: 36px;
+  .qty-input-confirm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 600;
+    width: 100px;
+    text-align: center;
+    color: var(--accent);
+    background: var(--surface2);
+    border: 1px solid var(--border);
     border-radius: 8px;
+    padding: 6px 4px;
+    outline: none;
+  }
+  .qty-input-confirm:focus { border-color: var(--accent); }
+  .qty-mic-btn {
+    width: 44px; height: 44px;
+    border-radius: 50%;
     background: var(--surface2);
     border: 1px solid var(--border);
     color: var(--text);
@@ -224,14 +238,11 @@
     display: flex; align-items: center; justify-content: center;
     transition: all 0.15s;
   }
-  .qty-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .qty-display {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 28px;
-    font-weight: 600;
-    min-width: 60px;
-    text-align: center;
+  .qty-mic-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .qty-mic-btn.mic-active {
+    border-color: var(--accent);
     color: var(--accent);
+    box-shadow: 0 0 12px var(--accent)66;
   }
 
   .confirm-actions {
@@ -503,9 +514,8 @@
     <div class="qty-row">
       <div class="qty-label">Saved on hand:</div>
       <div class="qty-controls">
-        <button class="qty-btn" onclick="adjustQty(-1)">−</button>
-        <div class="qty-display" id="qtyDisplay">1</div>
-        <button class="qty-btn" onclick="adjustQty(1)">+</button>
+        <input type="number" min="0" step="0.1" inputmode="decimal" class="qty-input-confirm" id="qtyInput" value="1" oninput="handleConfirmQtyInput(this.value)">
+        <button class="qty-mic-btn" id="qtyMicBtn" onclick="toggleQtyVoice()" title="Speak the quantity">🎤</button>
       </div>
     </div>
     <div class="confirm-actions">
@@ -615,10 +625,22 @@ function findMatches(query) {
 }
 
 // ── VOICE (MediaRecorder → OpenAI Whisper via /api/transcribe) ──────────────
+// voiceTarget: 'item' (main orb — identify an item) or 'qty' (qty mic — just a number)
+let voiceTarget = 'item';
+
 function toggleVoice() {
+  toggleRecording('item');
+}
+
+function toggleQtyVoice() {
+  toggleRecording('qty');
+}
+
+function toggleRecording(target) {
   if (recording) {
     stopRecording();
   } else if (!transcribing) {
+    voiceTarget = target;
     startRecording();
   }
 }
@@ -642,9 +664,14 @@ async function startRecording() {
 
     mediaRecorder.start();
     recording = true;
-    document.getElementById('orb').classList.add('listening');
-    document.getElementById('orbIcon').textContent = '🔴';
-    document.getElementById('orbLabel').textContent = 'Listening... tap to stop';
+    if (voiceTarget === 'qty') {
+      document.getElementById('qtyMicBtn').classList.add('mic-active');
+      document.getElementById('qtyMicBtn').textContent = '🔴';
+    } else {
+      document.getElementById('orb').classList.add('listening');
+      document.getElementById('orbIcon').textContent = '🔴';
+      document.getElementById('orbLabel').textContent = 'Listening... tap to stop';
+    }
     setTranscript('Listening...', true);
   } catch (err) {
     showToast('Microphone access denied or unavailable.', true);
@@ -665,8 +692,12 @@ async function handleRecordingStop() {
     return;
   }
   transcribing = true;
-  document.getElementById('orbIcon').textContent = '⏳';
-  document.getElementById('orbLabel').textContent = 'Transcribing...';
+  if (voiceTarget === 'qty') {
+    document.getElementById('qtyMicBtn').textContent = '⏳';
+  } else {
+    document.getElementById('orbIcon').textContent = '⏳';
+    document.getElementById('orbLabel').textContent = 'Transcribing...';
+  }
   setTranscript('Transcribing...', true);
 
   try {
@@ -684,6 +715,8 @@ async function handleRecordingStop() {
     if (!text) {
       setTranscript("Didn't catch that — try again", false);
       showToast('No speech detected.', true);
+    } else if (voiceTarget === 'qty') {
+      applyVoiceQty(text);
     } else {
       setTranscript(text, true);
       processVoiceInput(text);
@@ -697,9 +730,58 @@ async function handleRecordingStop() {
   }
 }
 
+function applyVoiceQty(text) {
+  const num = parseQtyFromSpeech(text);
+  if (num == null) {
+    setTranscript(`Didn't catch a number in "${text}"`, false);
+    showToast('No quantity heard. Try again.', true);
+    return;
+  }
+  document.getElementById('qtyInput').value = num;
+  handleConfirmQtyInput(num);
+  setTranscript(`Saved ${currentItem ? currentItem.desc : 'qty'} = ${num}`, true);
+}
+
+const NUM_WORDS = {
+  zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7,
+  eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13,
+  fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18,
+  nineteen: 19, twenty: 20, half: 0.5, quarter: 0.25
+};
+
+// Extracts a quantity (handles digits, decimals, "point two"/"point 3", and
+// spelled-out number words) from speech text, returning the remaining text
+// with the number removed so it can still be matched against item names.
+function extractQtyAndRest(text) {
+  let t = text.toLowerCase();
+  t = t.replace(/\bpoint\s+(\w+)/g, (m, w) => '.' + (NUM_WORDS[w] !== undefined ? NUM_WORDS[w] : w));
+
+  const m = t.match(/-?\d+(?:\.\d+)?|-?\.\d+/);
+  if (m) {
+    return { qty: Math.max(0, parseFloat(m[0])), rest: t.replace(m[0], '').trim(), found: true };
+  }
+
+  const words = t.split(/\s+/);
+  for (let i = 0; i < words.length; i++) {
+    if (NUM_WORDS[words[i]] !== undefined) {
+      const qty = NUM_WORDS[words[i]];
+      words.splice(i, 1);
+      return { qty, rest: words.join(' ').trim(), found: true };
+    }
+  }
+  return { qty: 1, rest: t, found: false };
+}
+
+function parseQtyFromSpeech(text) {
+  const result = extractQtyAndRest(text);
+  return result.found ? result.qty : null;
+}
+
 function resetOrb() {
   document.getElementById('orbIcon').textContent = '🎤';
   document.getElementById('orbLabel').textContent = 'Tap to speak';
+  document.getElementById('qtyMicBtn').classList.remove('mic-active');
+  document.getElementById('qtyMicBtn').textContent = '🎤';
 }
 
 function blobToBase64(blob) {
@@ -718,13 +800,11 @@ function setTranscript(text, active) {
 }
 
 function processVoiceInput(text) {
-  // Try to extract a number from the end ("I saved 3 cases of chicken patty")
-  let qty = 1;
-  const numMatch = text.match(/\b(\d+)\b/);
-  if (numMatch) {
-    qty = parseInt(numMatch[1]);
-    text = text.replace(numMatch[0], '').trim();
-  }
+  // Extract a number from the phrase ("I saved 3 cases of chicken patty",
+  // "point two cases of chicken patty", "0.2 cases...")
+  const extracted = extractQtyAndRest(text);
+  const qty = extracted.qty;
+  text = extracted.rest;
 
   // Normalize common speech artifacts
   text = text
@@ -757,7 +837,7 @@ function openConfirm(item, qty = 1) {
   document.getElementById('confirmSection').textContent = item.section;
   document.getElementById('confirmCategory').textContent = item.category || 'N/A';
   document.getElementById('confirmUnit').textContent = item.unit || '';
-  document.getElementById('qtyDisplay').textContent = pendingQty;
+  document.getElementById('qtyInput').value = pendingQty;
   document.getElementById('confirmCard').classList.add('visible');
   document.getElementById('matchesCard').classList.remove('visible');
   applyQty(); // auto-save the instant we have an item + qty
@@ -769,9 +849,8 @@ function closeConfirm() {
   setTranscript('Say an item name or description...', false);
 }
 
-function adjustQty(delta) {
-  pendingQty = Math.max(0, pendingQty + delta);
-  document.getElementById('qtyDisplay').textContent = pendingQty;
+function handleConfirmQtyInput(value) {
+  pendingQty = Math.max(0, parseFloat(value) || 0);
   applyQty();
 }
 
@@ -861,7 +940,7 @@ function renderList() {
       row.innerHTML = `
         <div class="item-desc">${item.desc}<div class="item-cat">${item.category && item.category !== 'General' ? item.category : ''}</div></div>
         <div class="item-unit">${item.unit || ''}</div>
-        <input type="number" min="0" step="1" inputmode="numeric" class="item-qty-input ${qtyClass}" id="qty-${item.id}" value="${item.on_hand}">`;
+        <input type="number" min="0" step="0.1" inputmode="decimal" class="item-qty-input ${qtyClass}" id="qty-${item.id}" value="${item.on_hand}">`;
       container.appendChild(row);
       const input = row.querySelector('input');
       input.addEventListener('input', () => handleQtyInput(item.id, input.value));
@@ -873,7 +952,7 @@ function renderList() {
 function handleQtyInput(id, value) {
   const item = items.find(i => i.id === id);
   if (!item) return;
-  const qty = Math.max(0, parseInt(value, 10) || 0);
+  const qty = Math.max(0, parseFloat(value) || 0);
   item.on_hand = qty;
   updatedRows.add(id);
   saveState();
@@ -920,8 +999,8 @@ document.addEventListener('keydown', e => {
   if (e.code === 'Space') { e.preventDefault(); toggleVoice(); }
   if (e.code === 'Enter' && currentItem) closeConfirm();
   if (e.code === 'Escape') closeConfirm();
-  if (e.code === 'ArrowUp') adjustQty(1);
-  if (e.code === 'ArrowDown') adjustQty(-1);
+  if (e.code === 'ArrowUp' && currentItem) handleConfirmQtyInput(document.getElementById('qtyInput').value = pendingQty + 1);
+  if (e.code === 'ArrowDown' && currentItem) handleConfirmQtyInput(document.getElementById('qtyInput').value = Math.max(0, pendingQty - 1));
 });
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
