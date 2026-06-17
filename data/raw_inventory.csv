@@ -1,0 +1,686 @@
+ITEM NAME,SECTION,CATEGORY,UNIT,COST PER UNIT,PAR,# SOURCES (of 15),CONFIDENCE
+Bread Texas Toast White,Deli,Bread,cases,$25.78,1,14,High
+Brownie Blondie,Deli,Bread,cases,$46.31,1,11,High
+Brownie Chocolate Chip 24 Slice,Deli,Bread,cases,$46.31,0.5,11,High
+Bun Hamburger 5 In Sliced,Deli,Bread,cases,$31.57,1,14,High
+Bun Hamburger White 4 In,Deli,Bread,cases,$24.89,1,11,High
+"Bun Hot Dog 6"" Hinged",Deli,Bread,packs,$3.26,5,11,High
+"Bun Plain 5""",Deli,Bread,packs,$29.01,3,11,High
+Cream Cheese Icing,Deli,Bread,packs,$5.99,2,12,High
+Donut Apple Fritter,Deli,Bread,cases,$50.67,1,11,High
+Donut Ring Homestyle Fried,Deli,Bread,cases,$38.45,1,11,High
+Dough Apple Turnover,Deli,Bread,cases,$59.30,0.3,11,High
+Dough Biscuit 3 In Sliced,Deli,Bread,cases,$53.87,5,14,High
+Dough Cookie Chocolate Chip,Deli,Bread,cases,$62.85,1,11,High
+Dough Cookie Mac Nut,Deli,Bread,cases,$93.49,1,11,High
+Dough Cookie Peanut Butter,Deli,Bread,cases,$72.76,1,11,High
+Dough Cookie Red Velvet,Deli,Bread,cases,$84.09,1,11,High
+Dough Cookie Smores,Deli,Bread,cases,$93.49,1,11,High
+Dough Cookie Sugar Preformed,Deli,Bread,cases,$67.24,1,11,High
+Dough Cookie Triple Chocolate,Deli,Bread,cases,$45.19,1,11,High
+Dough Roll Cinnamon Cinn-Sational,Deli,Bread,cases,$72.34,0.3,11,High
+Glaze Honey Dip Heat & Ice,Deli,Bread,cases,$58.84,1,11,High
+American Cheese Slices,Deli,Cheese,cases,$55.05,1,11,High
+Cheese Pepper Jack Slice .73oz,Deli,Cheese,cases,$44.18,1,11,High
+Cheese Swiss American 160 Sl,Deli,Cheese,cases,$54.82,1,11,High
+Dressing Honey Mustard Portion Cup,Deli,Condiments,cases,$28.09,1,11,High
+Dressing Pc Honey Mustard Cup,Deli,Condiments,cases,$28.23,1,14,High
+Dressing Pc Ranch Cup,Deli,Condiments,cases,$26.60,1,14,High
+Dressing Ranch Portion Control Cup,Deli,Condiments,cases,$26.35,1,11,High
+Gravy Mix Biscuit Pepper,Deli,Condiments,bags,$7.26,2,11,High
+Jam Strawberry Packet,Deli,Condiments,cases,$25.67,1,15,High
+Jelly Grape Pouch,Deli,Condiments,cases,$20.45,1,12,High
+Ketchup Fancy Foil,Deli,Condiments,cases,$26.99,1,12,High
+Mayonnaise Pc 1000/9 GRM,Deli,Condiments,cases,$22.80,1,11,High
+Mayonnaise Pouch,Deli,Condiments,cases,$16.71,1,12,High
+Mustard Yellow Portion Pack,Deli,Condiments,cases,$18.45,1,12,High
+Pan Spray Pam Saute & Grill,Deli,Condiments,each,$28.28,1,11,High
+Pepper Black Ground .1gm,Deli,Condiments,bags,$6.68,1,11,High
+Picante Sauce / Salsa Del Sol,Deli,Condiments,each,$27.08,1,11,High
+Salt Packet .5 Gram,Deli,Condiments,bags,$3.73,1,12,High
+Sauce Barbecue Original Portion Cup,Deli,Condiments,cases,$21.90,1,12,High
+Sauce Hot Sauce Pouch,Deli,Condiments,cases,$34.88,1,12,High
+Sauce Pc Hot Texas Pete,Deli,Condiments,cases,$15.33,1,14,High
+Sauce Pc Marinara Cup,Deli,Condiments,cases,$37.08,1,11,High
+Seasoning Creole Original,Deli,Condiments,each,$20.90,1,15,High
+Syrup Breakfast Maple Imitation 1.4oz,Deli,Condiments,cases,$16.18,1,11,High
+Syrup Chocolate Full Flavor Can,Deli,Condiments,each,$12.62,1,11,High
+Butter Unsalted European Style,Deli,Dairy,cases,$121.98,1,14,High
+Mix Soft Serve Chocolate,Deli,Dairy,bags,$18.97,2,11,High
+Soft Serve Chocolate 6/6 LB,Deli,Dairy,cases,$78.02,1,11,High
+Soft Serve Mix Vanilla,Deli,Dairy,cases,$82.57,1,11,High
+Soft Serve Strawberry Mix,Deli,Dairy,cases,$82.11,1,11,High
+Bacon Layout 18/22,Deli,Deli Meat,cases,$57.67,1,14,High
+Beef Patty 3/1 Thick N Tender,Deli,Deli Meat,cases,$84.52,1,14,High
+Beef Steak Fritter Raw Breaded,Deli,Deli Meat,cases,$65.87,1,14,High
+Bologna Chicken Pork Beef Slices,Deli,Deli Meat,packs,$6.80,2,11,High
+Brisket,Deli,Deli Meat,bags,$29.44,1,14,High
+Chicken Breast Fil Hot'n'spcy,Deli,Deli Meat,cases,$29.63,1,11,High
+Chicken Breast Fritter Cn 4/1,Deli,Deli Meat,cases,$40.84,1,11,High
+Chicken Breast Hot N Spicy Ckd,Deli,Deli Meat,cases,$40.84,1,11,High
+Chicken Patty Breaded Raw,Deli,Deli Meat,cases,$24.52,1,14,High
+Chicken Tender Jumbo Clipped,Deli,Deli Meat,cases,$113.27,1,11,High
+Egg Patty Homestyle Fried,Deli,Deli Meat,cases,$50.15,1,11,High
+Ham For Biscuit Slice 1.2oz,Deli,Deli Meat,packs,$12.16,1,11,High
+Hot Dog Beef,Deli,Deli Meat,each,$21.69,2,11,High
+JVL Beef Hot Dog 5:1,Deli,Deli Meat,cases,$46.40,1,11,High
+JVL Jalapeno Cheddar 5:1,Deli,Deli Meat,cases,$43.50,1,11,High
+JVL Smokey Cheddar 5:1,Deli,Deli Meat,cases,$43.50,1,11,High
+Pork Chop 4oz Boneless Center Cut,Deli,Deli Meat,cases,$55.41,1,11,High
+Pork Chop Boneless Breaded,Deli,Deli Meat,cases,$55.46,1,14,High
+Pulled Pork With BBQ Sauce,Deli,Deli Meat,bags,$19.27,3,11,High
+Sausage Patty 2 Oz Cooked,Deli,Deli Meat,cases,$47.18,1,14,High
+Sausage Patty Ex Sage 2oz Fc,Deli,Deli Meat,cases,$35.22,1,11,High
+Waffle Stuffed Sausage Egg Cheese,Deli,Deli Meat,cases,$83.08,1,11,High
+Appetizer Egg Roll Pork Crispy Frozen,Deli,Other,cases,$54.98,1,11,High
+Bavarian Almonds,Deli,Other,bags,$11.75,5,11,High
+Bavarian Cashews,Deli,Other,bags,$12.00,5,11,High
+Bavarian Pecans,Deli,Other,bags,$13.75,5,11,High
+Boudin Alligator,Deli,Other,packs,$9.88,3,11,High
+Boudin Crawfish,Deli,Other,packs,$9.09,3,11,High
+Boudin GW Alligator,Deli,Other,cases,$49.42,1,11,High
+Boudin GW Crawfish,Deli,Other,cases,$45.48,1,11,High
+Boudin GW Regular,Deli,Other,cases,$37.28,1,11,High
+Boudin GW Shrimp,Deli,Other,cases,$40.36,1,11,High
+Boudin Pork,Deli,Other,packs,$7.46,3,11,High
+Boudin Shrimp,Deli,Other,packs,$8.07,3,11,High
+Brisket Sliced Lower,Deli,Other,cases,$132.36,1,11,High
+Burrito Beef And Bean Red Chile,Deli,Other,cases,$59.89,1,11,High
+Burrito Breakfast Bacon,Deli,Other,cases,$37.33,1,11,High
+Burrito Breakfast Sausage,Deli,Other,cases,$37.33,1,11,High
+Candy Gummy Bear Mini 12 Flavor,Deli,Other,bags,$18.42,1,14,High
+Candy Gummy Worm Mini,Deli,Other,cases,$53.36,1,11,High
+Corn Dog Chicken Honey Crunch On Stick,Deli,Other,cases,$43.55,1,11,High
+Corn Dog Chicken Jalapeno,Deli,Other,cases,$28.00,1,14,High
+Corn Dog Chili Cheese,Deli,Other,cases,$27.50,0.5,14,High
+Crispito Chicken & Cheese,Deli,Other,cases,$56.11,1,11,High
+Crispito Chicken Cheese Buffalo Style,Deli,Other,cases,$56.10,1,11,High
+Crumb Cookie Oreo Medium Crunch,Deli,Other,bags,$11.09,2,11,High
+Egg Roll Chicken Sw Style,Deli,Other,cases,$77.58,1,11,High
+Egg Roll Pork & Vegetable,Deli,Other,cases,$54.98,1,14,High
+El Monterey Stuffed Nacho,Deli,Other,cases,$57.94,1,11,High
+Empanada Beef And Cheese,Deli,Other,cases,$31.17,1,11,High
+Empanada Chicken And Cheese,Deli,Other,cases,$31.17,1,11,High
+Freal Brown Sugar Latte,Deli,Other,cases,$27.28,1,10,High
+French Toast Stick Wg 1.1 Oz,Deli,Other,cases,$24.59,1,11,High
+Kolache Boudin Link,Deli,Other,cases,$69.77,1,11,High
+Kolache Jalapeno Cheddar,Deli,Other,cases,$69.77,1,11,High
+Kolache Sausage Egg Cheese,Deli,Other,cases,$69.77,1,11,High
+Meat Pie Crawfish Errols,Deli,Other,cases,$59.61,1,11,High
+Meat Pie Spicy Bulk,Deli,Other,cases,$54.49,0.5,11,High
+Mini Taco Beef,Deli,Other,cases,$27.91,4,14,High
+Mini Taco Beef Bulk,Deli,Other,cases,$28.41,1,11,High
+Mini Taco Chicken,Deli,Other,cases,$27.91,4,14,High
+Nacho Cheese Triangles Breaded,Deli,Other,cases,$58.16,1,11,High
+Peanuts Regular/Cajun,Deli,Other,each,$7.74,2,14,High
+Pizza Stick Pepperoni,Deli,Other,cases,$32.00,1,14,High
+Puff Pastry Ham And Cheese,Deli,Other,cases,$80.48,NA,11,High
+Puff Pastry Pep and Cheese,Deli,Other,cases,$70.88,1,11,High
+Puff Pastry Taco,Deli,Other,cases,$73.18,NA,11,High
+Rollerbites Buffalo Chicken,Deli,Other,cases,$60.19,1,11,High
+Rollerbites Cheeseburger,Deli,Other,cases,$31.30,1,11,High
+Sprinkle Rainbow,Deli,Other,cases,$28.46,1,11,High
+Stuffed Nachos,Deli,Other,cases,$37.28,4,11,High
+Topping Butterfinger Chopped,Deli,Other,bags,$24.51,1,11,High
+Topping Candy Rainbow Nerds,Deli,Other,bags,$27.28,1,11,High
+Topping Caramel,Deli,Other,each,$8.00,1,14,High
+Topping Marshmallow Ready To Use,Deli,Other,each,$7.66,1,14,High
+Topping Reeses Pieces Mini Bulk,Deli,Other,cases,$122.75,1,14,High
+Tornado Bacon Ched Potato Ruiz,Deli,Other,cases,$22.67,1,11,High
+Tornado Chipotle Chicken Ruiz,Deli,Other,cases,$22.67,1,11,High
+Tornado Nacho Ruiz,Deli,Other,cases,NA,1,11,High
+Tornado Pepper Jack Ched Ruiz,Deli,Other,cases,$22.67,1,11,High
+Tornado Ranch Steak Ched Ruiz,Deli,Other,cases,$25.34,1,11,High
+Tornado Salsa Egg & Cheese,Deli,Other,cases,$20.90,1,11,High
+Tornado Saus Egg & Cheese,Deli,Other,cases,$20.90,1,11,High
+Tornado Sausage Egg Ched Ruiz,Deli,Other,cases,$23.34,1,11,High
+Tornado Southwest Chicken,Deli,Other,cases,$20.90,1,11,High
+Tornado Western Chicken Ruiz,Deli,Other,cases,$23.34,1,11,High
+Tortilla Flour Pressed 12 In,Deli,Other,cases,$42.96,1,11,High
+Waffle Belgian Maple Flavored,Deli,Other,cases,$29.71,1,11,High
+Wrap Jalapeno Pork Ched,Deli,Other,cases,$93.03,1,11,High
+16oz Peanut Cup,Deli,Packaging,packs,$8.01,5,13,High
+Bag Reclosable 2 Gal 13x15.5,Deli,Packaging,cases,$14.55,1,11,High
+Cone Cake #30 Dispenser Pack,Deli,Packaging,boxes,$12.07,1,15,High
+Cone Waffle Large Bulk,Deli,Packaging,packs,$5.48,1,15,High
+Cone Wrap for Nuts,Deli,Packaging,cases,$50.00,2,11,High
+Container Foam 7 1/8X3 3/4,Deli,Packaging,packs,$2.42,1,11,High
+Container Foam 9X6x3 Large Hinged,Deli,Packaging,packs,$11.35,2,11,High
+Container Paper 12oz,Deli,Packaging,cases,$100.18,1,11,High
+Container Paper 8oz,Deli,Packaging,packs,$4.25,1,11,High
+Container Plastic 6X5.75X3 Clear Hinged,Deli,Packaging,packs,$11.51,1,11,High
+Cup Foam 32 Oz Pedestal,Deli,Packaging,cases,$59.86,1,11,High
+Foil Aluminum Sheet 9X10 Interfold,Deli,Packaging,boxes,$12.56,1,11,High
+Fork Plastic Heavy Weight Black,Deli,Packaging,packs,$4.41,1,11,High
+Keiths Superstore 20 oz Foam Cup,Deli,Packaging,cases,$53.12,1,11,High
+Label 2x3 Dissolvable,Deli,Packaging,cases,$27.21,1,11,High
+Lid Plas 12-24 Oz Straw Slot,Deli,Packaging,cases,$34.20,1,11,High
+Lid Plas 20d Trans Slotted,Deli,Packaging,cases,$46.20,1,11,High
+Peanut Patch Cup 16 Paper,Deli,Packaging,SLV,$8.15,1,11,High
+Peanut Patch Cup 32 Paper,Deli,Packaging,SLV,$10.40,1,11,High
+Peanut Patch Lid 16-32 New,Deli,Packaging,CS,$50.91,1,11,High
+Tape Register Roll Thermal,Deli,Packaging,cases,$78.24,1,11,High
+Toilet Tissue 2 Ply Jumbo Jr,Deli,Packaging,cases,$44.12,1,11,High
+Wrap Deli 12X10.75 Interfolded,Deli,Packaging,boxes,$11.66,2,11,High
+Wrap Deli 9X140,Deli,Packaging,boxes,$9.72,2,11,High
+Onion Powder,Deli,Produce,each,$17.25,1,12,High
+Onion Yellow Jumbo Fresh 5lb,Deli,Produce,cases,$9.54,0.5,11,High
+Pepper Bell Green,Deli,Produce,cases,$17.64,0.5,11,High
+Food Release Oil Base Pan Spray,Dry,NA,per Can (6/17Oz),$0.80,1,3,Low (single-store item)
+Skewer Wooden Bamboo,Dry Cont,NA,per Box (3/500Cnt),$4.41,1,3,Low (single-store item)
+Spoon Plastic Heavy Weight Black Polypropylene Max Stax Refill,Dry Cont,NA,per Box (1/1000Ea),$48.15,1,3,Low (single-store item)
+Foil Aluminum Sheet 9X10.75 Interfold,Dry Container,BOX,per Box (6/500Cnt),$2.88,1,4,Medium
+Wrap Foil 14X10.5 Cushion Plain,Dry Container,BOX,per Box (5/500Cnt),$5.93,1,4,Medium
+Box Carryout Chicken Fast Top 7X4x2.75 White,Dry Container,CASE,per Case (1/500Cnt),$109.05,1,4,Medium
+Container Plastic Hinged Large Cake Slice Side View Clear,Dry Container,CASE,per Sleeve (1/240Cnt),$104.15,1,4,Medium
+Container Foam 3 Compartment 9X9x3 Large Hinged White,Dry Container,SLEEVE,per Sleeve (2/100Cnt),$5.15,1,4,Medium
+Container Sandwich Plastic 5.38X2.58X5.25 Clear Hinged,Dry Container,SLEEVE,per Sleeve (4/125Cnt),$3.35,1,4,Medium
+Fork Plastic Heavy Weight Black Polypropylene Max Stax Refill,Dry Container,SLEEVE,per Box (1/1000Ea),$48.15,1,4,Medium
+Knife Plastic Heavy Weight Black Polypropylene Max Stax Refill,Dry Container,SLEEVE,per Box (1/1000Ea),$48.15,1,4,Medium
+Bag Fry Paper,Dry Container,NA,per Box (1/2000),$22.41,1,3,Low (single-store item)
+Bag Sandwich 6x.75x6.75 1side,Dry Container,NA,per Box (1/2000 CT),$44.53,1,3,Low (single-store item)
+Box Barn Paper 10 Pound 8.88X5x6.75 White,Dry Container,NA,per Case (1/150Cnt),$113.19,1,3,Low (single-store item)
+Box Paperboard Chicken 9X5x3 Fast Top White,Dry Container,NA,per Case (1/400Cnt),$131.34,1,3,Low (single-store item)
+Container Foam 12 Ounce Squat White,Dry Container,NA,per Sleeve (20/25Cnt),$0.07,1,3,Low (single-store item)
+Container Foam 16 Ounce Squat White,Dry Container,NA,per Sleeve (20/25Cnt),$0.08,1,3,Low (single-store item)
+Container Foam 6 Ounce Squat White,Dry Container,NA,per Sleeve (20/50Cnt),$0.10,1,3,Low (single-store item)
+Container Foam 8 Ounce Squat White,Dry Container,NA,per Sleeve (20/50Cnt),$0.12,1,3,Low (single-store item)
+Container Foam Sandwich 1 Compartment Large 6X6x3 Hinged White,Dry Container,NA,per Sleeve (4/125Cnt),$1.64,1,3,Low (single-store item)
+Container Hot Cold Paper 8 Ounce White,Dry Container,NA,per Sleeve (20/50Cnt),$0.15,1,3,Low (single-store item)
+Container Paper 12 Ounce White,Dry Container,NA,per Sleeve (20Cnt),$0.24,1,3,Low (single-store item)
+Container Plastic 6X5.75X3 Square Clear Hinged Polystyrene,Dry Container,NA,per Sleeve (4/125Cnt),$2.91,1,3,Low (single-store item)
+Cutlery Kit Knife Fork Spoon Salt & Pepper Heavy Wt Black,Dry Container,NA,per Case (1/250Cnt),$25.68,1,3,Low (single-store item)
+Lid Container 12oz,Dry Container,NA,per Sleeve (10/100),$0.30,1,3,Low (single-store item)
+Lid Container 6 oz,Dry Container,NA,per Sleeve (20/50Cnt),$0.23,1,3,Low (single-store item)
+Lid Plastic Dome 12 oz,Dry Container,NA,per Sleeve (20/50Cnt),$0.23,1,3,Low (single-store item)
+Lid Plastic Dome Container 8 Ounce Clear,Dry Container,NA,per Sleeve (20/50Cnt),$0.20,1,3,Low (single-store item)
+Mustard Pc Pouch 200 Ct,Dry Container,NA,per Case (200/5.5 GRM),$7.85,1,3,Low (single-store item)
+Napkins 13X8.5,Dry Container,NA,per Pack (12/500),$0.44,1,3,Low (single-store item)
+Plate Foam 3 Compartment,Dry Container,NA,per Sleeve (4/125 Cnt),$1.84,1,3,Low (single-store item)
+Wrap Deli 12X10.75,Dry Container,NA,per Box (12/500),$0.57,1,3,Low (single-store item)
+Wrap Deli 8X10.75 Interfolded,Dry Container,NA,per Box (12/500),$0.55,1,3,Low (single-store item)
+Gravy Mix Au Jus,Dry Food,BAG,per Bag (12/3.7 OZ),$3.64,1,4,Medium
+Gravy Mix Brown,Dry Food,BAG,per Bag (6/14 OZ),$2.78,1,4,Medium
+Pasta Penne Rigate #49 Imported,Dry Food,BAG,per Bag (2/10 Lb),$6.39,1,4,Medium
+"Pasta Spaghetti 10""",Dry Food,BAG,per Bag (2/10 Lb),$6.46,1,4,Medium
+Pepper Black Ground .1Gm Flute Pack,Dry Food,BAG,per Bag (6/1000),$1.24,1,4,Medium
+Rice Jambalaya Mix,Dry Food,BOX,per Box (8/2.5 Lb),$1.20,1,4,Medium
+Sauce Spaghetti From Concentrate,Dry Food,CAN,per Can (6/#10Can),$1.12,1,4,Medium
+Soup Cream Of Chicken,Dry Food,CAN,per Can (12/50 OZ),$5.77,1,4,Medium
+Topping Peanut Pieces Salted,dry Food,CAN,per Can (6/2.5 Lb),$2.06,1,4,Medium
+Seasoning Montreal Steak,Dry Food,CONTAINER,per Container (1/29 OZ),$14.01,1,4,Medium
+Sauce Sweet Red Chili And Glaze,Dry Food,JUG,per Jug (4/1 Gal),$4.69,1,4,Medium
+Shortening Clear Fry Liquid,Dry Food,JUG,per Jug (1/35 LB),$35.62,1,4,Medium
+Apple Jelly,Dry Food,NA,per Case (200/.5Oz),$15.28,1,3,Low (single-store item)
+Bean Baked Original,Dry Food,NA,per Bag (6/#10 CAN),$8.63,1,3,Low (single-store item)
+Breading Fish Fry New Orleans,Dry Food,NA,per Case (1/25 LB),$31.66,1,3,Low (single-store item)
+Cereal Grits Quick White,Dry Food,NA,per Bag (8/5 LB),$5.36,1,3,Low (single-store item)
+Cheese Sauce Cheddar,Dry Food,NA,per Can (6/#10 CAN),$10.80,1,3,Low (single-store item)
+Cinnamon,Dry Food,NA,per Container (6/15Oz),$2.86,1,3,Low (single-store item)
+Crackers,Dry Food,NA,per Case (None),$24.90,1,3,Low (single-store item)
+Flavoring Vanilla,Dry Food,NA,per Container (6/32Oz),$1.91,1,3,Low (single-store item)
+Flour Hotel & Restaurant,Dry Food,NA,per Bag (1/25 LB),$8.82,1,3,Low (single-store item)
+Garlic Granulated,Dry Food,NA,per Container (1/7.25Lb),$55.95,1,3,Low (single-store item)
+Glaze Donut Honey Dip Pail Frozen,Dry Food,NA,per Pail (1/12 Lb),$29.75,1,3,Low (single-store item)
+Gravy Mix Pepper Biscuit,Dry Food,NA,per Bag (6/24 OZ),$4.57,1,3,Low (single-store item)
+Greens Turnip Chopped Seasoned,Dry Food,NA,per Can (6/#10 CAN),$6.52,1,3,Low (single-store item)
+Honey Pc Pure Cup,Dry Food,NA,per Case (200/0.5 OZ),$41.75,1,3,Low (single-store item)
+Ice Cream Chocolate Mix,Dry Food,NA,per Bag (6/64 Oz),$2.33,1,3,Low (single-store item)
+Ice Cream Vanilla Mix,Dry Food,NA,per Jug (6),$2.20,1,3,Low (single-store item)
+Jelly Pc Assorted Plastic Cup,Dry Food,NA,per Case (200/0.5 OZ),$17.61,1,3,Low (single-store item)
+Jelly Pc Grape Pouch,Dry Food,NA,per Case (200/0.5 OZ),$21.11,1,3,Low (single-store item)
+Ketchup Individual 9 Gram Pc,Dry Food,NA,per Case (1000/9 GRM),$23.32,1,3,Low (single-store item)
+Marinara Sauce,Dry Food,NA,per Case (60/2 Oz),$37.92,1,3,Low (single-store item)
+Mayonnaise Extra Heavy Duty,Dry Food,NA,per Jug (4/1 GAL),$14.30,1,3,Low (single-store item)
+Mayonnaise Pc Poly Pouch,Dry Food,NA,per Case (200/9 GRM),$17.09,1,3,Low (single-store item)
+Oil Whirl,Dry Food,NA,per Jug (3/1 GAL),$13.81,1,3,Low (single-store item)
+Parsley Flakes,Dry Food,NA,per Container (1/2 OZ),$5.80,1,3,Low (single-store item)
+Pasta Macaroni,Dry Food,NA,per Bag (3/10Lb),$4.31,1,3,Low (single-store item)
+Pepper Black Shaker Grind 34 Mesh,Dry Food,NA,per Shaker (1/5 Lb),$40.00,1,3,Low (single-store item)
+Pepper Jalapeno Whole,Dry Food,NA,per Jug (4/1 GAL),$11.45,1,3,Low (single-store item)
+Pickle Chip,Dry Food,NA,per Jug (4/1Gal),$2.15,1,3,Low (single-store item)
+Rice Parboiled,Dry Food,NA,per Case (1/25 LB),$13.61,1,3,Low (single-store item)
+Salt Garlic,Dry Food,NA,per Container (6/37Oz),$2.67,1,3,Low (single-store item)
+Salt Iodized Round,Dry Food,NA,per Round (24/26Oz),$0.04,1,3,Low (single-store item)
+Sauce Bbq Sweet Baby Rays,Dry Food,NA,per Case (4/1 GAL),$55.18,1,3,Low (single-store item)
+Sauce Pc Bbq Original Cups,Dry Food,NA,per Case (100/1.5 OZ),$26.63,1,3,Low (single-store item)
+Sauce Pc Sweet N Sour Cup,Dry Food,NA,per Case (100/1 OZ),$20.31,1,3,Low (single-store item)
+Sauce Wing Buffalo,Dry Food,NA,per Jug (4/1 GAL),$15.53,1,3,Low (single-store item)
+Sugar Brown Light,Dry Food,NA,per Bag (12/2 LB),$2.88,1,3,Low (single-store item)
+Syrup Chocolate Full Flavor Ready To Use,Dry Food,NA,per Can (6/#10Can),$2.10,1,3,Low (single-store item)
+Syrup Pc Pancake Maple Premium,Dry Food,NA,per Case (100/1.5 OZ),$18.85,1,3,Low (single-store item)
+Tomato Diced In Juice,Dry Food,NA,per Can (6/#10 CAN),$5.07,1,3,Low (single-store item)
+Tomato Diced W/green Chilies,Dry Food,NA,per Can (12/28 OZ),$2.23,1,3,Low (single-store item)
+Topping Butterscotch Ready To Use,Dry Food,NA,per Can (6/#5 Can),$1.42,1,3,Low (single-store item)
+Topping Candy Rainbow Nerds Wonka,Dry Food,NA,per Bag (2/5 Lb),$13.64,1,3,Low (single-store item)
+2.5 Gall. BIB,Fountain,BIB / CO2,each,$56.23,NA,11,High
+5 Gall. BIB,Fountain,BIB / CO2,each,$107.90,NA,11,High
+Icee 5 Gall. Coke BIB,Fountain,BIB / CO2,each,$223.88,NA,11,High
+Icee 5 Gall. Flavor BIB,Fountain,BIB / CO2,each,$223.88,NA,11,High
+Cafe Tango 16oz Cups,Fountain,Cafe Tango,sl,$6.78,NA,11,High
+Cafe Tango 24oz Cups,Fountain,Cafe Tango,sl,$8.43,NA,11,High
+Cafe Tango Lids,Fountain,Cafe Tango,case,$25.30,NA,11,High
+Cafe Tango Vanilla,Fountain,Cafe Tango,bag,$13.64,NA,11,High
+16oz Coffee Cups,Fountain,Coffee,sl,$6.60,NA,11,High
+24oz Coffee Cups,Fountain,Coffee,sl,$5.20,NA,11,High
+Coffee Lids,Fountain,Coffee,sl,$7.55,NA,11,High
+Filters,Fountain,Coffee,each,$12.85,NA,11,High
+French Vanilla Capp.,Fountain,Coffee,bag,$7.44,NA,11,High
+Hot Chocolate,Fountain,Coffee,bag,$7.44,NA,11,High
+Stir Straws,Fountain,Coffee,bx,$12.45,NA,11,High
+American Classic Coffee,Fountain,Coffee Beans,case,$30.76,NA,11,High
+Intense Blend Coffee,Fountain,Coffee Beans,case,$34.76,NA,11,High
+Pecan Praline Coffee,Fountain,Coffee Beans,case,$35.76,NA,11,High
+Sugar Cookie Coffee,Fountain,Coffee Beans,case,$37.76,NA,11,High
+Whole Bean Coffee,Fountain,Coffee Beans,case,$71.04,NA,11,High
+1/2 & 1/2 Creamer Cups,Fountain,Creamer & Sweetener,bx,$16.00,NA,11,High
+Blue Sweetener,Fountain,Creamer & Sweetener,case,$50.60,NA,11,High
+Caramel Creamer Cups,Fountain,Creamer & Sweetener,bx,$20.27,NA,11,High
+Creamer Canister,Fountain,Creamer & Sweetener,each,$2.10,NA,11,High
+Creamer Packs,Fountain,Creamer & Sweetener,case,$16.00,NA,11,High
+French Vanilla Cups Creamer,Fountain,Creamer & Sweetener,bx,$20.27,NA,11,High
+Hazelnut Cups Creamer,Fountain,Creamer & Sweetener,bx,$20.27,NA,11,High
+Irish Cups Creamer,Fountain,Creamer & Sweetener,bx,$30.40,NA,11,High
+Original Creamer Cups,Fountain,Creamer & Sweetener,bx,$16.00,NA,11,High
+Pink Sweetener,Fountain,Creamer & Sweetener,case,$72.65,NA,11,High
+Sugar Packs,Fountain,Creamer & Sweetener,case,$18.45,NA,11,High
+Sweet Cream,Fountain,Creamer & Sweetener,each,$30.40,NA,11,High
+Yellow Sweetener,Fountain,Creamer & Sweetener,case,$72.65,NA,11,High
+16oz Clear Cups,Fountain,Cups & Lids,case,$34.98,NA,11,High
+16oz Cups,Fountain,Cups & Lids,sl,$4.75,NA,11,High
+16oz Lids,Fountain,Cups & Lids,sl,$5.61,NA,11,High
+20oz Cups,Fountain,Cups & Lids,sl,$2.58,NA,11,High
+20oz Lids,Fountain,Cups & Lids,sl,$1.07,NA,11,High
+24oz Cups,Fountain,Cups & Lids,sl,$5.60,NA,11,High
+24oz Lids,Fountain,Cups & Lids,sl,$5.61,NA,11,High
+32oz Cups (icee),Fountain,Cups & Lids,sl,$3.25,NA,11,High
+9oz Squat Clear Cups,Fountain,Cups & Lids,each,$0.00,NA,11,High
+Straws,Fountain,Cups & Lids,sl,$8.63,NA,11,High
+Freal Lids,Fountain,Other,case,$51.51,NA,11,High
+Pumps,Fountain,Other,each,$4.00,NA,11,High
+Potato Mashed Deluxe,Frozen,BAG,per Bag (4/6 LB),$10.74,1,4,Medium
+Vegetable Blend Fajita,Frozen,BAG,per Bag (6/2 LB),$4.66,1,4,Medium
+Cake Carrot Momma's Old Fashioned 16 Slice Frozen,Frozen,CAKE,per Cake (2/114 Oz),$27.56,1,4,Medium
+Cheesecake Cinnamon Churro Frozen,Frozen,CAKE,per Cake (2/14 Sl),$23.75,1,4,Medium
+Brownie Chocolate Chip,Frozen,CASE,per Case (48/4 OZ),$47.36,1,4,Medium
+Burrito Beef And Bean Red Chile Frozen,Frozen,CASE,per Case (72/4 Oz),$50.94,1,4,Medium
+Dough Cookie Chocolate Chip Pre-Portioned Bake & Serve Frozen,Frozen,CASE,per Case (160/2 Oz),$62.85,1,4,Medium
+Dough Cookie Peanut Butter Frozen,Frozen,CASE,per Case (160/2 Oz),$72.76,1,4,Medium
+Sausage Link 4 Oz,Frozen,CASE,per Case (1/10 LB),$45.53,1,4,Medium
+Meatloaf Beef Ready To Cook Frozen,Frozen,EACH,per Each (3/5 Lb),$8.22,1,4,Medium
+"Appetizer Onion Ring 5/8""",Frozen,NA,per Bag (6/2.5Lb),$1.50,1,3,Low (single-store item)
+Bbq Pork Pulled With Sauce,Frozen,NA,per Bag (2/5 LB),$30.28,1,3,Low (single-store item)
+Bean Green Whole Grade A IQF,Frozen,NA,per Can (12/2 Lb),$0.24,1,3,Low (single-store item)
+Bean Lima Baby IQF,Frozen,NA,per Case (1/20 Lb),$34.94,1,3,Low (single-store item)
+Beef Sandwich Steak Philly,Frozen,NA,per Case (40/4 OZ),$55.08,1,3,Low (single-store item)
+Blueberry Scones,Frozen,NA,per Case (None),$50.52,1,3,Low (single-store item)
+Bun Hot Dog 6 In Frozen,Frozen,NA,per Pack (8/12 CT),$3.18,1,3,Low (single-store item)
+Carrots Sliced,Frozen,NA,per Case (1/20Lb),$22.40,1,3,Low (single-store item)
+Casserole Broccoli Cheese Rice Frozen,Frozen,NA,per Tray (4/4.75Lb),$1.33,1,3,Low (single-store item)
+Casserole Hashbrown Ready To Bake Frozen,Frozen,NA,per Tray (4/4.5 Lb),$3.84,1,3,Low (single-store item)
+Casserole Potato Baked Frozen,Frozen,NA,per Tray (4/4.75Lb),$3.13,1,3,Low (single-store item)
+Catfish Fillet Split 3-5 Oz,Frozen,NA,per Case (1/15 LB),$98.03,1,3,Low (single-store item)
+Chicken Breast Flame Grilled,Frozen,NA,per Bag (40/4 OZ),$1.62,1,3,Low (single-store item)
+Chicken Egg Roll,Frozen,NA,per Case (100/3 Oz),$77.58,1,3,Low (single-store item)
+Cobbler Apple,Frozen,NA,per Tray (4/6 LB),$10.23,1,3,Low (single-store item)
+Cobbler Cherry,Frozen,NA,per Tray (4/5 LB),$11.65,1,3,Low (single-store item)
+Cobbler Peach,Frozen,NA,per Tray (4/5 LB),$11.15,1,3,Low (single-store item)
+Cookie Dough Decadent Red Velvet Frozen,Frozen,NA,per Case (80/4.5Oz),$84.08,1,3,Low (single-store item)
+Corn Dog Chicken,Frozen,NA,per Case (72/4 OZ),$43.77,1,3,Low (single-store item)
+Crispito Buffalo Chkn & Chs,Frozen,NA,per Case (72/2.75 OZ),$57.39,1,3,Low (single-store item)
+Dough Cinnamon Roll Gourmet,Frozen,NA,per Case (108/5 OZ),$82.74,1,3,Low (single-store item)
+Dough Cookie Decorated Sugar Pre-Portioned Bake & Serve Frozen,Frozen,NA,per Case (80/4.5Oz),$79.22,1,3,Low (single-store item)
+Dough Cookie White Chocolate Macadamia Nut Decadent Frozen,Frozen,NA,per Case (80/4.5Oz),$93.48,1,3,Low (single-store item)
+Egg Roll Cheesecake Dessert,Frozen,NA,per Box (100/2.5 OZ),$0.74,1,3,Low (single-store item)
+Glazed Donuts,Frozen,NA,per Case (None),$54.76,1,3,Low (single-store item)
+Ham Slices Smoked Center Cut,Frozen,NA,see label,NA,1,3,Low (single-store item)
+Hushpuppy Corn Sweet,Frozen,NA,per Bag (2/5 LB),$13.68,1,3,Low (single-store item)
+Lasagna,Frozen,NA,per Tray (None),$24.75,1,3,Low (single-store item)
+Macaroni & Cheese Homestyle,Frozen,NA,per Bag (4/5 LB),$13.19,1,3,Low (single-store item)
+Muffin Cornbread Regular,Frozen,NA,per Case (96/2 OZ),$32.61,1,3,Low (single-store item)
+"Muffin Variety (Banana Nut, Blueberry Cobbler, Chocolate Chunk, Cinnamon Walnut Streusel)",Frozen,NA,per Case (48/4.25),$58.06,1,3,Low (single-store item)
+Okra Cut Lightly Breaded,Frozen,NA,per Bag (4/5 LB),$9.33,1,3,Low (single-store item)
+Pea Field W/snaps Bags Iqf,Frozen,NA,per Case (12/3 LB),$57.03,1,3,Low (single-store item)
+Pink Donuts,Frozen,NA,per Case (None),$29.32,1,3,Low (single-store item)
+Pizza Puff Ham & Cheese,Frozen,NA,per Case (48/6 OZ),$80.63,1,3,Low (single-store item)
+Pizza Puff Pepperoni,Frozen,NA,per Case (48/6 OZ),$70.91,1,3,Low (single-store item)
+Pork Chop Cc Bnls 4oz,Frozen,NA,per Case (1/10 LB),$54.70,1,3,Low (single-store item)
+Pork Spare Rib Street Louis Fully Cooked Seasoned,Frozen,NA,per Each (10/2.5Av),$1.56,1,3,Low (single-store item)
+Potato Wedge 8 Cut Seasoned,Frozen,NA,per Bag (6/5 LB),$8.51,1,3,Low (single-store item)
+Sauce Alfredo Pouch,Frozen,NA,per Bag (4/80 OZ),$11.93,1,3,Low (single-store item)
+Sausage Link Pineapple,Frozen,NA,per Pack (1/10 LB),$51.37,1,3,Low (single-store item)
+Sausage Link Smoked Split 2.5 oz,Frozen,NA,per Case (1/10 LB),$48.52,1,3,Low (single-store item)
+Sausage Pork Patty Fully Cooked Jalapeno Smoked Cheddar,Frozen,NA,per Pack (2/5 Lb),$12.49,1,3,Low (single-store item)
+Sausage Smokies 5 In,Frozen,NA,per Case (1/10 LB),$47.54,1,3,Low (single-store item)
+Shrimp Raw P\&d White 31-40 Ct,Frozen,NA,per Bag (5/2 LB),$12.63,1,2,Low (single-store item)
+Squash Yellow Sliced,Frozen,NA,per Bag (12/3 LB),$4.21,1,3,Low (single-store item)
+Topping Butterfinger Chopped Refrigerated,Refrig,BAG,per Bag (2/5 Lb),$12.04,1,4,Medium
+Topping M\&M's Plain Chopped Refrigerated,Refrig,BAG,per Bag (2/4 Lb),$10.78,1,3,Low (single-store item)
+Sauce Pc Tartar Cup,Refrig,NA,per Case (100/1.5 OZ),$32.02,1,3,Low (single-store item)
+Topping Heath Bar Chopped Refrigerated,Refrig,NA,per Bag (2/5 Lb),$17.03,1,3,Low (single-store item)
+Cabbage Chopped 1X1 Fresh,Refrigerator,BAG,per Bag (4/5 Lb),$1.10,1,4,Medium
+Cheese Cheddar Yellow Mild Feather Shredded Refrigerated,Refrigerator,BAG,per Bag (1/5 Lb),$13.32,1,4,Medium
+Onion Yellow Large Fresh,Refrigerator,CASE,per Case (1/5 Lb),$7.64,1,4,Medium
+Coleslaw Creamy,Refrigerator,CONTAINER,per Container (2/4.5 Lb),$4.95,1,4,Medium
+Roll Dinner Hawaiian,Refrigerator,PACK,per Pack (10/24 CT),$5.92,1,4,Medium
+Cheese American Yellow .5 Ounce 160 Slice Easy Peel Refrigerated,Refrigerator,SLEEVE,per Sleeve (4/5 Lb),$3.34,1,4,Medium
+Cheese Mozzarella,Refrigerator,NA,per Bag (6/5Lb),$2.34,1,3,Low (single-store item)
+Cheese Pepper Jack Sliced Refrigerated,Refrigerator,NA,per Pack (4/2.5 Lb),$2.28,1,3,Low (single-store item)
+Cheese Swiss Sliced 192 Refrigerated,Refrigerator,NA,per Pack (6/24 Oz),$1.05,1,3,Low (single-store item)
+Chicken Tenderloin Jumbo,Refrigerator,NA,per Case (4/10 LB),$89.22,1,3,Low (single-store item)
+Egg Fresh Shell Med Usda Aa,Refrigerator,NA,per Flat (12 flats/case),$2.18,1,3,Low (single-store item)
+Margarine Spread Whipped Vegetable Oil 48% Portion Cup,Refrigerator,NA,per Case (648/14Gm),$56.03,1,3,Low (single-store item)
+Salad Pasta Italian Tri-Color Rotini Refrigerated,Refrigerator,NA,per Container (2/8 Lb),$11.97,1,3,Low (single-store item)
+Sauce Cocktail Cups Gf,Refrigerator,NA,per Case (100/1.5 OZ),$28.94,1,3,Low (single-store item)
+Almond,NA,BAG,10 BAGS,$13.75,NA,1,Low (single-store item)
+Appetizer Potato Ring Frozen,NA,BAG,6/4 Lb,$8.13,NA,1,Low (single-store item)
+Batter Mix,NA,BAG,per Bag (None),$2.50,1,4,Medium
+Batter Mix Pre-Dip Add Water Only,NA,BAG,6/5 Lb,$8.79,NA,1,Low (single-store item)
+Bean Green Whole Grade A Individually Quick Frozen,NA,BAG,12/2 Lb,$2.85,NA,1,Low (single-store item)
+"Beef Strip For Fajita 1/2"" Fully Cooked Frozen",NA,BAG,2/5 Lb,$47.16,NA,1,Low (single-store item)
+Beef Taco Filling Gluten Free Fully Cooked Frozen,NA,BAG,4/5 Lb,$14.97,NA,1,Low (single-store item)
+Broccoli Floret Premium Grade A Individually Quick Frozen,NA,BAG,12/2 Lb,$3.75,NA,1,Low (single-store item)
+Cabbage Chopped Fresh,NA,BAG,NA,$5.25,NA,1,Low (single-store item)
+Cashew,NA,BAG,10 BAGS,$13.75,NA,1,Low (single-store item)
+Cheese Cheddar Mild Fancy Shredded Refrigerated,NA,BAG,4/5lb,$14.11,NA,1,Low (single-store item)
+Chicken Breast 4 Ounce Grilled Fully Cooked Grill Marked Trans Fat Free Frozen,NA,BAG,2/5 Lb,$33.87,NA,1,Low (single-store item)
+Chicken Breast Fritter,NA,BAG,2/5Lb,$20.42,NA,1,Low (single-store item)
+Chicken Breast Spicy,NA,BAG,2/5Lb,$14.55,NA,1,Low (single-store item)
+Chicken Breast Strip Fajita Flame Broiled Fully Cooked Frozen,NA,BAG,2/5 Lb,$27.19,NA,1,Low (single-store item)
+Chicken Gizzards,NA,BAG,4/5Lb,$4.88,NA,1,Low (single-store item)
+Chicken Livers,NA,BAG,4/10Lb,$6.76,NA,1,Low (single-store item)
+Collards,NA,BAG,4 BAGS,$9.98,NA,1,Low (single-store item)
+Corn Super Sweet Fire Roasted Individually Quick Frozen,NA,BAG,6/2 Lb,$5.92,NA,1,Low (single-store item)
+Cornbread Mix,NA,BAG,6/5 Lb,$7.45,NA,1,Low (single-store item)
+Creole Marinade,NA,BAG,per Bag (None),$1.81,1,3,Low (single-store item)
+Dip Queso Blanco Frozen,NA,BAG,4/5 Lb,$0.00,NA,1,Low (single-store item)
+Dip Roasted Street Corn Mexican Style Frozen,NA,BAG,4/5 Lb,$1.00,NA,1,Low (single-store item)
+Flour,NA,BAG,1/25Lb,$11.03,NA,1,Low (single-store item)
+Flour Hotel & Restaurant All Purpose,NA,BAG,1/25 Lb,$12.43,NA,1,Low (single-store item)
+Flour Hotel & Restaurant Self Rising,NA,BAG,1/25 Lb,$12.72,NA,1,Low (single-store item)
+French Toast Stick Whole Grain Average 143 Pieces Bulk Frozen Meets School Grain Requirements,NA,BAG,2/5 Lb,$11.79,NA,1,Low (single-store item)
+"Fries 3/8"" Crinkle Cut Battered Highway 40 Seasoned Frozen",NA,BAG,6/5 Lb,$8.02,NA,1,Low (single-store item)
+Fries Potato Wedge Seasoned 8 Cut Frozen,NA,BAG,6/5 Lb,$10.17,NA,1,Low (single-store item)
+"Fries Straight Cut 5/16"" Thin Grade A Fancy Frozen",NA,BAG,6/5 Lb,$7.09,NA,1,Low (single-store item)
+Fritter Corn Jalapeno Frozen,NA,BAG,2/5 Lb,$14.35,NA,1,Low (single-store item)
+Gravy Mix Au Jus Instant,NA,BAG,16/3.3Oz,$2.14,NA,1,Low (single-store item)
+Gravy Mix Biscuit Pepper No Msg Added Bag,NA,BAG,6/24 Oz,$7.32,NA,1,Low (single-store item)
+Gravy Mix Peppered White,NA,BAG,6/24Oz,$4.47,NA,1,Low (single-store item)
+Green Beans,NA,BAG,6 BAGS,$7.85,NA,1,Low (single-store item)
+Grits,NA,BAG,4 BAGS,$10.80,NA,1,Low (single-store item)
+Grits White Quick Enriched,NA,BAG,8/5 Lb,$3.63,NA,1,Low (single-store item)
+Gumbo,NA,BAG,NA,$17.32,NA,1,Low (single-store item)
+Hushpuppy Original Buttermilk .66 Ounce,NA,BAG,4/5 Lb,$11.91,NA,1,Low (single-store item)
+Lettuce Iceberg Clean And Trim Fresh,NA,BAG,4/6 Cnt,$9.12,NA,1,Low (single-store item)
+"Lettuce Iceberg Shredded 1/8"" Fresh",NA,BAG,4/5 Lb,$5.80,NA,1,Low (single-store item)
+"Lettuce Shredded 1/8"" Fresh",NA,BAG,4/5 Lb,$6.44,NA,1,Low (single-store item)
+Mac & Cheese,NA,BAG,6 BAGS,$7.10,NA,1,Low (single-store item)
+Macaroni And Cheese Boil In Bag Frozen,NA,BAG,4/5 Lb,$10.12,NA,1,Low (single-store item)
+Mashed Potatoes,NA,BAG,4 BAGS,$9.64,1.00,3,Low (single-store item)
+Okra,NA,BAG,4/5Lb,$9.12,NA,1,Low (single-store item)
+Okra Breaded Lightly Trans Fat Free Frozen,NA,BAG,4/5 Lb,$7.96,NA,1,Low (single-store item)
+Okra Lightly Breaded Frozen,NA,BAG,4/5 Lb,$7.91,NA,1,Low (single-store item)
+Pancake Mix,NA,BAG,6/5Lb,$8.01,NA,1,Low (single-store item)
+Pecan,NA,BAG,10 BAGS,$13.75,NA,1,Low (single-store item)
+Pork Pulled With Barbecue Sauce Fully Cooked Heat In Bag Frozen,NA,BAG,2/5 Lb,$18.99,NA,1,Low (single-store item)
+Potato Mashed Deluxe Boil In Bag Refrigerated,NA,BAG,4/6 Lb,$10.12,NA,1,Low (single-store item)
+Potato Mashed Deluxe With Pepper Refrigerated,NA,BAG,4/5 Lb,$3.55,NA,1,Low (single-store item)
+Potato Wedge 8 Cut,NA,BAG,6/5Lb,$8.32,NA,1,Low (single-store item)
+Red Beans,NA,BAG,9 BAGS,$6.49,1.00,3,Low (single-store item)
+Rice,NA,BAG,NA,$4.18,NA,1,Low (single-store item)
+Sauce Alfredo Frozen,NA,BAG,4/64 Oz,$13.44,NA,1,Low (single-store item)
+Seasoned Corn,NA,BAG,6 BAGS,$6.18,1.00,3,Low (single-store item)
+Soup Chicken Tortilla Frozen,NA,BAG,4/4 Lb,$14.43,NA,1,Low (single-store item)
+Soup Chlil,NA,BAG,NA,$17.80,NA,1,Low (single-store item)
+Spicy Marinade,NA,BAG,per Bag (None),$5.27,1,4,Medium
+Squash,NA,BAG,12/3Lb,$4.09,NA,1,Low (single-store item)
+Squash Yellow Sliced Smooth Individually Quick Frozen,NA,BAG,12/32 Oz,$3.02,NA,1,Low (single-store item)
+Tomato Gravy,NA,BAG,#ERROR\!,$12.34,1.00,3,Low (single-store item)
+Vegetable Blend Fajita Onion Green Red Yellow Pepper Frozen,NA,BAG,6/4 Lb,$7.63,NA,1,Low (single-store item)
+Vegetable Blend Red & Green Pepper Onion Strip Roasted Frozen,NA,BAG,6/2.5 Lb,$7.02,NA,1,Low (single-store item)
+Vegetable Blend Southwest Fire Roasted Corn Black Bean Individually Quick Frozen,NA,BAG,6/2 Lb,$6.44,NA,1,Low (single-store item)
+Sausage Link Smk 4 Oz,NA,BAG/PACK,2/5Lb,$20.54,NA,1,Low (single-store item)
+Sausage Link Split 4In,NA,BAG/PACK,2/6Lb,$30.29,NA,1,Low (single-store item)
+Bag Fry Paper 4.5X3.5 White No Pfas,NA,BOX,1/2000,$22.41,NA,1,Low (single-store item)
+Bag Fry Paper 4.875X4 White Plain,NA,BOX,10/1000,$16.96,NA,1,Low (single-store item)
+Bag Sandwich Paper Dry Wax 6X.75X6.50 White Plain,NA,BOX,1/1000,$27.42,NA,1,Low (single-store item)
+Foil Aluminum Sheet 12X10.75 Interfold,NA,BOX,12/200,$12.56,NA,1,Low (single-store item)
+"Skewer Wooden 10""",NA,BOX,3/500Cnt,$13.24,NA,1,Low (single-store item)
+Cake Banana Foster 14 Cut David,NA,CAKE,1/2 Cnt,$40.02,NA,1,Low (single-store item)
+"Cake Chocolate Overload 10"" Round 115 Ounce 14 Slice Frozen",NA,CAKE,2/14 Sl,$38.44,NA,1,Low (single-store item)
+"Cake Coconut Cloud 10"" 80 Ounce Frozen",NA,CAKE,2/14 Sl,$38.44,NA,1,Low (single-store item)
+Cake Lemon Italian Cream Round 12 Slice Frozen,NA,CAKE,2/66 Oz,$38.24,NA,1,Low (single-store item)
+"Cake Limoncello Mascarpone 10"" 14 Sliced Frozen",NA,CAKE,2/3.5 Lb,$31.51,NA,1,Low (single-store item)
+"Cake Red Velvet Regal 9"" 14 Slice Frozen",NA,CAKE,2/72 Oz,$44.41,NA,1,Low (single-store item)
+Carlos Cake Slices,NA,CAKE,NA,$3.38,NA,1,Low (single-store item)
+Bean Baked Original Bacon Brown Sugar,NA,CAN,6/117 Oz,$8.13,NA,1,Low (single-store item)
+Beans Black Low Sodium All Natural Grade A,NA,CAN,6/#10Can,$5.73,NA,1,Low (single-store item)
+Beans Kidney Dark Red Heavy Packed In Sauce,NA,CAN,6/#10Can,$5.83,NA,1,Low (single-store item)
+Beans Refried Vegetarian With Vegetable Oil,NA,CAN,6/#10Can,$9.16,NA,1,Low (single-store item)
+Food Release Oil Base With Soy And Soy Lecithin,NA,CAN,6/17 Oz,$5.54,NA,1,Low (single-store item)
+Ketchup Can,NA,CAN,NA,$6.43,NA,1,Low (single-store item)
+Sauce Cheese Cheddar Trans Fat Free,NA,CAN,6/#10Can,$8.81,NA,1,Low (single-store item)
+Sauce Spaghetti,NA,CAN,6/#10 Can,$6.86,NA,1,Low (single-store item)
+"Tomato Diced 3/4"" In Juice Extra Standard",NA,CAN,6/#10Can,$5.13,NA,1,Low (single-store item)
+Tomato Diced With Green Chili,NA,CAN,12/28 Oz,$2.24,NA,1,Low (single-store item)
+Egg Liquid Whole Pasteurized With Citric Acid Carton Refrigerated,NA,CARTON,15/2 Lb,$3.06,NA,1,Low (single-store item)
+Eggs Liquid,NA,CARTON,15/2Lb,$3.80,NA,1,Low (single-store item)
+Appetizer Egg Roll Boudin With Cheese Par Fried Frozen,NA,CASE,100/2.8,$69.14,NA,1,Low (single-store item)
+Bacon 18-22 Single Sliced Double Smoked Gas Flushed Gold Right To Freezer - Shipped Ref/Immediately Fz,NA,CASE,NA,$71.09,NA,1,Low (single-store item)
+Bacon 18/22,NA,CASE,1/15Lb,$57.62,NA,1,Low (single-store item)
+Bacon Wrapped Jalapenos,NA,CASE,NA,$93.03,NA,1,Low (single-store item)
+Bean Lima Baby Individually Quick Frozen,NA,CASE,1/20 Lb,$33.60,NA,1,Low (single-store item)
+Beef Ground Patty 3-1 75/25 Au Jus Frozen,NA,CASE,60/5.3Oz,$83.95,NA,1,Low (single-store item)
+Beef Ground Patty 4-1 Breaded Country Steak Frozen,NA,CASE,40/4 Oz,$66.05,NA,1,Low (single-store item)
+Beef Patty,NA,CASE,60/5.33Oz,$46.31,NA,1,Low (single-store item)
+Beef Steak Fritter Chopped Frozen Formed Breaded With Black Pepper,NA,CASE,71/2.25,$62.52,NA,1,Low (single-store item)
+Boudin Ball With Pork Battered Frozen,NA,CASE,1/12 Lb,$60.78,NA,1,Low (single-store item)
+Breader Fish Fry Seasoned,NA,CASE,1/25 Lb,$32.93,NA,1,Low (single-store item)
+Brownie Chocolate Chip 24 Slice Tray Thaw & Serve Frozen,NA,CASE,48/4 Oz,$48.96,NA,1,Low (single-store item)
+Burrito Beef and Bean,NA,CASE,72/4Oz,$59.89,NA,1,Low (single-store item)
+Catfish,NA,CASE,NA,$150.13,NA,1,Low (single-store item)
+Catfish Fillet,NA,CASE,1/15Lb,$94.24,NA,1,Low (single-store item)
+Chicken 8 Pieces Cut 3-3.5 Pound Marinated Trimmed Refrigerated,NA,CASE,16/3.5av,$87.76,NA,1,Low (single-store item)
+Chicken Breast Hot n Spicy,NA,CASE,40/4Oz,$40.84,NA,1,Low (single-store item)
+Chicken Breast Patty Fritter Homestyle Ready To Cook Average 3.2 Ounce Red Label Frozen,NA,CASE,1/10 Lb,$24.79,NA,1,Low (single-store item)
+Chicken Cut 8 Pieces Marinated Trimmed Refrigerated,NA,CASE,16/3 Av,$74.88,NA,1,Low (single-store item)
+Chicken Tender Jumbo Clipped All Natural Controlled Vacuum Packaged Refrigerated,NA,CASE,4/10 Lb,$120.25,NA,1,Low (single-store item)
+Chicken Tenders,NA,CASE,4/10Lb,$86.63,NA,1,Low (single-store item)
+Chip Tortilla Corn Yellow 1/4 Cut Ready To Fry,NA,CASE,1/30 Lb,$26.33,NA,1,Low (single-store item)
+Churro Fries With Cinnamon Sugar Packet Frozen,NA,CASE,1/7 Lb,$46.00,NA,1,Low (single-store item)
+Corn Dog,NA,CASE,36/2.67Oz,$27.97,NA,1,Low (single-store item)
+Corn Dog Cheese Jalapeno With Bag Frozen,NA,CASE,36/4.25,$27.54,NA,1,Low (single-store item)
+Corn Dog Chicken Battered Honey Crunch On Stick Frozen,NA,CASE,72/4.25,$1.30,NA,1,Low (single-store item)
+Corn Dog Chili Lovers With Bag Frozen,NA,CASE,36/4.25,$29.18,NA,1,Low (single-store item)
+Crispito Buffalo Chicken and Cheese,NA,CASE,72/2.75Oz,$56.11,NA,1,Low (single-store item)
+Crispito Chicken And Cheese Frozen,NA,CASE,72/2.75,$2.00,NA,1,Low (single-store item)
+Crispito Chicken Cheese Buffalo Style Fully Cooked Frozen,NA,CASE,72/2.75,$0.75,NA,1,Low (single-store item)
+Crispito Chicken Cheese Fry Or Oven Or Microwave Average 72/2.75 Ounce Frozen,NA,CASE,72/2.75,$56.77,NA,1,Low (single-store item)
+Cutlery Kit Knife Fork Spoon Napkin Heavy Weight Polystyrene Salt & Pepper Heavy Weight Black,NA,CASE,1/250Cnt,$23.35,NA,1,Low (single-store item)
+Danish Pastries,NA,CASE,NA,$72.33,NA,1,Low (single-store item)
+Deer Burrito Cheddar,NA,CASE,NA,$241.68,NA,1,Low (single-store item)
+Deer Burrito Pepperjack,NA,CASE,NA,$253.08,NA,1,Low (single-store item)
+Donut Ring,NA,CASE,NA,$37.48,NA,1,Low (single-store item)
+Dough Biscuit,NA,CASE,168/3.17Oz,$53.87,NA,1,Low (single-store item)
+Dough Biscuit Southern Style Buttermilk Unsliced Easy Split Frozen,NA,CASE,168/3.17,$3.00,NA,1,Low (single-store item)
+Dough Cookie Chocolate Chunk Frozen,NA,CASE,160/2 Oz,$75.64,NA,1,Low (single-store item)
+Dough Cookie Oatmeal Raisin Frozen,NA,CASE,160/2 Oz,$0.30,NA,1,Low (single-store item)
+Dough Cookie Peanut Butter Pre-Portioned Reeses Decadent Bake & Serve Frozen,NA,CASE,80/4.5Oz,$86.36,NA,1,Low (single-store item)
+Dough Cookie Triple Chocolate Decadent Pre-Portioned Bake & Serve Frozen,NA,CASE,80/4.5Oz,$84.77,NA,1,Low (single-store item)
+Dough Roll Cinnamon Cinn-Sational Frozen,NA,CASE,108/5 Oz,$72.46,NA,1,Low (single-store item)
+Dressing Honey Mustard,NA,CASE,100/1.5Oz,$28.23,NA,1,Low (single-store item)
+Dressing Honey Mustard Portion Cup Refrigerated,NA,CASE,100/1.5,$1.21,NA,1,Low (single-store item)
+Dressing Ranch Packet,NA,CASE,60/1.5Oz,$18.39,NA,1,Low (single-store item)
+Dressing Ranch Portion Control Cup Refrigerated,NA,CASE,100/1.5,$1.00,NA,1,Low (single-store item)
+Egg Patty Fried Homestyle With Cracked Black Pepper Table Ready Frozen,NA,CASE,168/1.5,$45.74,NA,1,Low (single-store item)
+Eggroll Pork & Vegetable,NA,CASE,72/3Oz,$54.98,NA,1,Low (single-store item)
+Eggroll Pork And Vegetable Frozen,NA,CASE,72/3 Oz,$53.08,NA,1,Low (single-store item)
+Empanada Breakfast With Chorizo Egg Jalapeno Frozen,NA,CASE,48/3.75,$59.71,NA,1,Low (single-store item)
+Hot Pocket Pizza Stix Pepperoni Mozzarella Cheese Fry Or Oven Bulk Frozen,NA,CASE,48/3 Oz,$31.74,NA,1,Low (single-store item)
+Jelly Grape,NA,CASE,200/0.5Oz,$20.64,NA,1,Low (single-store item)
+Jelly Strawberry,NA,CASE,200/0.5Oz,$26.80,NA,1,Low (single-store item)
+Ketchup Dipping Cup,NA,CASE,250/1 Oz,$37.30,NA,1,Low (single-store item)
+Ketchup Pc,NA,CASE,1000/9Grm,$22.80,NA,1,Low (single-store item)
+Muffin Corn Frozen,NA,CASE,96/2.125,$40.70,NA,1,Low (single-store item)
+Muffin Cornbread,NA,CASE,96/2Oz,$31.89,NA,1,Low (single-store item)
+Muffin Cornbread Jalapeno Frozen,NA,CASE,96/2 Oz,$42.62,NA,1,Low (single-store item)
+Muffin Variety,NA,CASE,NA,$61.09,NA,1,Low (single-store item)
+Mustard Pc,NA,CASE,500/7Grm,$14.18,NA,1,Low (single-store item)
+Pancake Maple Turkey Wrap 100% Whole Grain On A Stick 2.85Oz,NA,CASE,56/2.85,$34.44,NA,1,Low (single-store item)
+Pangasius Fillet 5-7 Ounce Frozen,NA,CASE,1/15 Lb,$43.27,NA,1,Low (single-store item)
+Peas Field With Snap Frozen,NA,CASE,1/20 Lb,$37.24,NA,1,Low (single-store item)
+Pepper Bell Green Medium #1 Fresh,NA,CASE,1/5 Lb,$13.13,NA,1,Low (single-store item)
+Pork Chop 4 Ounce Boneless Center Cut Enhanced Frozen,NA,CASE,40/4 Oz,$34.13,NA,1,Low (single-store item)
+Pork Chop Boneless,NA,CASE,1/10Lb,$55.41,NA,1,Low (single-store item)
+Pork Chop Breaded,NA,CASE,40/4Oz,$55.46,NA,1,Low (single-store item)
+Pork Choppette Breaded Frozen,NA,CASE,40/4 Oz,$35.46,NA,1,Low (single-store item)
+Potato Idaho Russet 70 Count Baker Fresh,NA,CASE,1/50 Lb,$30.42,NA,1,Low (single-store item)
+Potato Jumbo Stuffed Tater Keg Cheddar Bacon Chives Frozen,NA,CASE,106/1.5,$39.78,NA,1,Low (single-store item)
+Pre-cooked Bacon,NA,CASE,NA,$48.08,NA,1,Low (single-store item)
+Pretzel King Size,NA,CASE,50/5.5Oz,$48.71,NA,1,Low (single-store item)
+Pretzel Soft King Baked With Salt Packet Frozen,NA,CASE,50/5 Oz,$33.58,NA,1,Low (single-store item)
+Puff Pastry Ham And Cheese Frozen,NA,CASE,48/6 Oz,$80.43,NA,1,Low (single-store item)
+Puff Pastry Taco Frozen,NA,CASE,48/6 Oz,$73.12,NA,1,Low (single-store item)
+Puff Pizza Pepperoni 6 Ounce Frozen,NA,CASE,NA,$69.35,NA,1,Low (single-store item)
+Sandwich Peanut Butter Jelly Grape Whole Grain Uncrustables Frozen Meets School Grain Requirements,NA,CASE,72/2.6Oz,$64.32,NA,1,Low (single-store item)
+Sandwich Peanut Butter Strawberry Wheat Whole Grain Uncrustable Frozen Meets School Grain Requirements,NA,CASE,72/2.6Oz,$64.27,NA,1,Low (single-store item)
+Sauce BBQ Pc,NA,CASE,100/1.5Oz,$26.03,NA,1,Low (single-store item)
+Sauce Hot Texas Pete,NA,CASE,200/7Grm,$15.33,NA,1,Low (single-store item)
+Sauce Sweet and Sour,NA,CASE,100/1Oz,$18.86,NA,1,Low (single-store item)
+Sauce Sweet And Sour Cup,NA,CASE,100/1 Oz,$25.64,NA,1,Low (single-store item)
+Sauce Tartar Portion Cup Refrigerated,NA,CASE,100/.75,$19.68,NA,1,Low (single-store item)
+Sauce Tarter,NA,CASE,100/1.5Oz,$31.31,NA,1,Low (single-store item)
+Sausage Link 4-1 Smoked Frozen,NA,CASE,40/4 Oz,$48.42,NA,1,Low (single-store item)
+Sausage Original Link Smoked Split Frozen,NA,CASE,64/2.5Oz,$49.81,NA,1,Low (single-store item)
+Sausage Patty 2 Oz Special Recipe,NA,CASE,80/2Oz,$47.18,NA,1,Low (single-store item)
+Sausage Patty Jimmy Dean,NA,CASE,108/1.5Oz,$42.35,NA,1,Low (single-store item)
+Sausage Patty Special Recipe Fully Cooked Frozen,NA,CASE,80/2 Oz,$51.95,NA,1,Low (single-store item)
+"Sausage Smokies Link 5"" Hickory Smoked Collagen Casing Frozen",NA,CASE,1/10 Lb,$48.57,NA,1,Low (single-store item)
+Sour Cream Packet Refrigerated,NA,CASE,100/1 Oz,$14.87,NA,1,Low (single-store item)
+Spicy Chicken Patty,NA,CASE,#ERROR\!,$52.87,1.00,3,Low (single-store item)
+Stuffed Nacho,NA,CASE,#ERROR\!,$37.28,1.00,3,Low (single-store item)
+Syrup Breakfast Maple Imitation 1.4 Ounce Portion Cup,NA,CASE,100/1.4,$16.18,NA,1,Low (single-store item)
+Syrup Maple Flavored Cup,NA,CASE,100/1.5,$19.73,NA,1,Low (single-store item)
+Tomato Red 5X6,NA,CASE,1/10 Lb,$14.27,NA,1,Low (single-store item)
+Tomato Red 5X6 2 Layer,NA,CASE,1/20 Lb,$26.22,NA,1,Low (single-store item)
+Tornado Breakfast Bacon Egg Cheese Frozen,NA,CASE,24/3 Oz,$23.42,NA,1,Low (single-store item)
+Tornado Breakfast Sausage Egg Cheese Frozen,NA,CASE,24/3 Oz,$23.03,NA,1,Low (single-store item)
+Tornado Chicken Southwest Frozen,NA,CASE,24/3 Oz,$23.03,NA,1,Low (single-store item)
+Tornado Steak Beef Cheese Ranchero Frozen,NA,CASE,24/3 Oz,$23.03,NA,1,Low (single-store item)
+Turnover Pie Crawfish Frozen,NA,CASE,36/3.75,$64.02,NA,1,Low (single-store item)
+Waffle Belgian Maple Thaw & Serve Frozen,NA,CASE,72/1.4Oz,$26.59,NA,1,Low (single-store item)
+Waffle Stuffed Sausage Egg Cheese Frozen,NA,CASE,36/4.6Oz,$82.33,NA,1,Low (single-store item)
+Wrappers,NA,CASE,NA,$50.00,NA,1,Low (single-store item)
+Garlic Powder,NA,CONTAINER,6/21 Oz,$18.03,NA,1,Low (single-store item)
+Sauce Chimichurri Frozen,NA,CONTAINER,3/30 Oz,$15.53,NA,1,Low (single-store item)
+Seasoning Blend Montreal Chicken Powder Grill Mates,NA,CONTAINER,6/23 Oz,$11.81,NA,1,Low (single-store item)
+Seasoning Blend Montreal Steak Grill Mates,NA,CONTAINER,6/29 Oz,$13.48,NA,1,Low (single-store item)
+Sugar Waffle Dust,NA,CONTAINER,6/8 Oz,$6.60,NA,1,Low (single-store item)
+Crooked Letter Cookies,NA,EACH,6/12 DOZEN,$1.90,1.00,3,Low (single-store item)
+Flan 4 Ounce Cup Individual Round Frozen,NA,EACH,12/4 Oz,$3.37,NA,1,Low (single-store item)
+Gelato,NA,EACH,NA,$45.00,NA,1,Low (single-store item)
+Italian Ice,NA,EACH,NA,$52.00,NA,1,Low (single-store item)
+Meatloaf,NA,EACH,12/21Oz,$7.49,NA,1,Low (single-store item)
+Egg Shell On White Medium Grade Aa Loose Pack Refrigerated,NA,FLAT,1/15 Dz,$6.37,NA,1,Low (single-store item)
+Eggs,NA,FLAT,NA,NA,NA,1,Low (single-store item)
+Eggs Fresh Shell,NA,FLAT,1/15Dzn,$5.28,NA,1,Low (single-store item)
+Dressing Ranch Buttermilk Western Refrigerated,NA,JUG,2/1 Gal,$20.17,NA,1,Low (single-store item)
+Dressing Roasted Red Pepper And Garlic,NA,JUG,2/1 Gal,$24.35,NA,1,Low (single-store item)
+Ice Cream Mix Chocolate Light Refrigerated,NA,JUG,9/64 Oz,$4.36,NA,1,Low (single-store item)
+Ice Cream Mix Vanilla Refrigerated,NA,JUG,4/1 Gal,$8.03,NA,1,Low (single-store item)
+Jug Plastic Gallon Clear With Lid,NA,JUG,48/1 Cnt,$1.10,NA,1,Low (single-store item)
+Oil Butter Flavor,NA,JUG,3/1 Gal,$13.38,NA,1,Low (single-store item)
+Peppers Jalapeno Nacho Slice Plastic Jar,NA,JUG,4/1 Gal,$11.06,NA,1,Low (single-store item)
+"Pickle Dill Chip Crinkle Cut Thin 1/8""",NA,JUG,4/1 Gal,$8.58,NA,1,Low (single-store item)
+Salsa Medium Thick And Chunky Jug,NA,JUG,4/1 Gal,$18.54,NA,1,Low (single-store item)
+Sauce Barbecue Original,NA,JUG,4/1 Gal,$14.30,NA,1,Low (single-store item)
+Sauce Sweet And Spicy,NA,JUG,6/20 Oz,$4.70,NA,1,Low (single-store item)
+Sauce Wing Kickin Bourbon Molasses Glaze,NA,JUG,4/64 Oz,$12.35,NA,1,Low (single-store item)
+Shortening Clear Liquid Fry,NA,JUG,1/35 Lb,$30.86,NA,1,Low (single-store item)
+Yogurt Mix Chocolate Classic No Fat Frozen,NA,JUG,6/.5 Gal,$5.65,NA,1,Low (single-store item)
+"Bread Texas Toast White 3/4"" 20 Slice Frozen",NA,LOAF,10/32 Oz,$3.65,NA,1,Low (single-store item)
+"Bread White Pullman 32 Ounce 1/2"" 30 Slice Baked Frozen",NA,LOAF,10/32 Oz,$3.37,NA,1,Low (single-store item)
+Bologna Chicken Pork Beef Slices For Biscuit Approximate 20 Count Per Pack Frozen,NA,PACK,6/2 Lb,$6.80,NA,1,Low (single-store item)
+Bun Hamburger 4 Inch,NA,PACK,8/12Ct,$3.11,NA,1,Low (single-store item)
+"Bun Hamburger 5"" Frozen",NA,PACK,6/6 Cnt,$5.39,NA,1,Low (single-store item)
+"Bun Hot Dog 6"" Hinged Slice Baked Frozen",NA,PACK,12/12Cnt,$2.99,NA,1,Low (single-store item)
+"Bun Plain 5"" Frozen",NA,PACK,64/3 Oz,$3.33,NA,1,Low (single-store item)
+Crawfish Boudin,NA,PACK,NA,$9.66,NA,1,Low (single-store item)
+Cutlery Teaspoon Smartstock,NA,PACK,20/40Ct,$2.67,NA,1,Low (single-store item)
+Guacamole Southwest Frozen,NA,PACK,12/1 Lb,$4.67,NA,1,Low (single-store item)
+Ham For Biscuit Slice 1.2 Ounce Frozen,NA,PACK,4/2.5 Lb,$12.69,NA,1,Low (single-store item)
+Hamburger Bun,NA,Pack,NA,$3.04,NA,1,Low (single-store item)
+Hot Dog Bun,NA,Pack,NA,NA,NA,1,Low (single-store item)
+Napkin Xpress 13X8.5 White 1/4 Folded 1 Ply N4 System,NA,PACK,12/500,$5.22,NA,1,Low (single-store item)
+Napkin Xpress 13X8.6 Natural 1/4 Folded For Xpressnap N4 System,NA,PACK,12/500,$4.55,NA,1,Low (single-store item)
+Pork Boudin,NA,PACK,NA,$9.12,NA,1,Low (single-store item)
+Pork Rib Spare St Louis Style 2.75Up 1 Pc/Bag 12 Bag Box Frozen,NA,PACK,12/3.6Lb,$11.75,NA,1,Low (single-store item)
+Pork Spare Ribs,NA,PACK,9/5.3Lb,$8.40,NA,1,Low (single-store item)
+Roll Dinner Hawaiian Sweet Frozen,NA,PACK,10/24Cnt,$6.06,NA,1,Low (single-store item)
+Sausage Pork Patty Fully Cooked Jalapeno Smoked Ched,NA,PACK,2/5 Lb,$24.98,NA,1,Low (single-store item)
+Shrimp Boudin,NA,PACK,NA,$9.22,NA,1,Low (single-store item)
+Tamale Beef 18 Bag Of 4 Frozen,NA,PACK,18/Pk,$4.64,NA,1,Low (single-store item)
+Tamale Chicken 18 Bag Of 4 Frozen,NA,PACK,18/Pk,$5.96,NA,1,Low (single-store item)
+"Tortilla Corn White 6"" Table Enchilada Or Soft Taco",NA,PACK,6/90 Cnt,$5.09,NA,1,Low (single-store item)
+"Tortilla Flour 12""",NA,PACK,8/12 Cnt,$3.59,NA,1,Low (single-store item)
+"Tortilla Flour 6""",NA,PACK,12/24Cnt,$2.39,NA,1,Low (single-store item)
+Glaze Donut Honey Dip,NA,PAIL,NA,$28.39,NA,1,Low (single-store item)
+"Pie Pecan 10"" 8 Slice Baked Thaw & Serve Frozen",NA,PIE,6/36 Oz,$10.50,NA,1,Low (single-store item)
+Beef Ground 73/27 Chub Fine Refrigerated,NA,ROLL,8/10 Lb,$41.50,NA,1,Low (single-store item)
+Cone Waffle Regular,NA,ROW/SLV,12/19 Ct,$5.60,NA,1,Low (single-store item)
+Pepper Black Ground Shaker Disposable,NA,SHAKER,48/1.5Oz,$1.40,NA,1,Low (single-store item)
+Spice Salt Shaker,NA,SHAKER,48/4 Oz,$0.43,NA,1,Low (single-store item)
+Container Foam 1 Compartment 6x6 Sandwich,NA,SLEEVE,4/125Ct,$7.51,NA,1,Low (single-store item)
+Container Foam 1 Compartment 9X6x3 Large Hinged White,NA,SLEEVE,2/100Cnt,$11.35,NA,1,Low (single-store item)
+Container Foam 1 Compartment Large,NA,SLEEVE,1/150Ct,$15.18,NA,1,Low (single-store item)
+Container Foam 1 Compartment Large Rectangle,NA,SLEEVE,1/150Ct,$14.45,NA,1,Low (single-store item)
+Container Foam 1 Compartment Sandwich Tray Black,NA,SLEEVE,4/125Ct,$11.05,NA,1,Low (single-store item)
+Container Foam 1 Compartment Sandwich Tray White,NA,SLEEVE,4/125Ct,$6.24,NA,1,Low (single-store item)
+Container Foam 12 Ounce Squat White Fits 20Jl,NA,SLEEVE,20/25Cnt,$1.49,NA,1,Low (single-store item)
+Container Foam 3 Compartment Lunch Plate,NA,SLEEVE,1/200Ct,$28.67,NA,1,Low (single-store item)
+Container Foam 4 Ounce Squat White Plain Lid-Rfs#79356,NA,SLEEVE,20/50Cnt,$1.38,NA,1,Low (single-store item)
+Container Foam 6 Ounce Squat White 12 Series Lid,NA,SLEEVE,20/50Cnt,$1.99,NA,1,Low (single-store item)
+container foam 8oz,NA,sleeve,NA,NA,NA,1,Low (single-store item)
+Container Foam Sandwich 1 Compartment Large 6X6x3 Hinged White Snap-It,NA,SLEEVE,4/125Cnt,$6.57,NA,1,Low (single-store item)
+Container Plastic 3 Compartment 9X9 Hinged Black Base Clear Top Polypropylene,NA,SLEEVE,2/60 Cnt,$2.00,NA,1,Low (single-store item)
+Container Plastic 6X6x3 Clear Hinged Polyethylene Terephthalate,NA,SLEEVE,4/125Cnt,$23.63,NA,1,Low (single-store item)
+Container Plastic 8 5/16X8 5/16X3 Clear Hinged Polystyrene,NA,SLEEVE,2/125Cnt,$28.07,NA,1,Low (single-store item)
+Container Plastic Combo 32 Ounce Rectangle Black Clear Polypropylene,NA,SLEEVE,3/50 Cnt,$18.25,NA,1,Low (single-store item)
+Cup Plastic Souffle 2 Ounce Translucent Polystyrene,NA,SLEEVE,10/250,$3.31,NA,1,Low (single-store item)
+Lid Container Polystyrene Translucent Vented For 12OZ,NA,SLEEVE,10/100,$3.01,NA,1,Low (single-store item)
+Lid Cup Plastic 16 Ounce Straw Slot Translucent Fits 12-24 Ounce 16 Series,NA,SLEEVE,10/100,$1.09,NA,1,Low (single-store item)
+Lid Cup Plastic 6 Ounce Vented White,NA,SLEEVE,10/100,$2.29,NA,1,Low (single-store item)
+Lid Cup Plastic Vented White For 4Oz,NA,SLEEVE,10/100,$1.84,NA,1,Low (single-store item)
+Lid Souffle Cup 1.5-2 Ounce Polyethylene Terephthalate Fits 1.5 And 2 Ounce Portion Cup,NA,SLEEVE,20/125,$1.46,NA,1,Low (single-store item)
+Napkin For Dispenser 6.5X8.4 White Interfold 2 Ply Advanced Fit,NA,SLEEVE,6/720Cnt,$6.93,NA,1,Low (single-store item)
+"Plate Foam 3 Compartment 9"" White Laminated",NA,SLEEVE,4/125Cnt,$7.35,NA,1,Low (single-store item)
+"Shell Taco Yellow Whole Grain 5"" Meets School Grain Requirements",NA,SLEEVE,8/25 Cnt,$2.89,NA,1,Low (single-store item)
+32oz Peanut Cup,NA,NA,#ERROR\!,$10.22,1.00,2,Low (single-store item)
+Bayou Blend Alligator,NA,NA,#ERROR\!,$9.89,1.00,2,Low (single-store item)
+Bayou Blend Crawfish,NA,NA,#ERROR\!,$9.10,1,2,Low (single-store item)
+Bayou Blend Pork,NA,NA,#ERROR\!,$7.48,1,2,Low (single-store item)
+Bayou Blend Shrimp,NA,NA,#ERROR\!,$8.08,1.00,2,Low (single-store item)
+Beef Sausage Dogs,NA,NA,#ERROR\!,$20.34,1.00,2,Low (single-store item)
+Chicken Fajita,NA,NA,#ERROR\!,$57.99,1.00,2,Low (single-store item)
+Chili,NA,NA,per Sleeve (None),$17.80,1,2,Low (single-store item)
+Cream Cheese King Cake,NA,NA,#ERROR\!,$28.00,1,2,Low (single-store item)
+Deer Burrito,NA,NA,#ERROR\!,$449.00,1.00,2,Low (single-store item)
+Donut Apple,NA,NA,per Case (None),$33.26,1,1,Low (single-store item)
+Gizzards,NA,NA,#ERROR\!,$19.80,1.00,2,Low (single-store item)
+Imperial,NA,NA,NA,NA,NA,2,Low (single-store item)
+Jalapeno Cheddar Kolache,NA,NA,#ERROR\!,$69.77,1,2,Low (single-store item)
+Kolache Boudin Link Org,NA,NA,#ERROR\!,$69.77,1.00,2,Low (single-store item)
+Kolache Sausage Egg & Cheese,NA,NA,#ERROR\!,$69.77,1.00,2,Low (single-store item)
+Lettuce Head,NA,NA,per Each (None),$3.99,1,2,Low (single-store item)
+Livers,NA,NA,#ERROR\!,$14.78,1.00,2,Low (single-store item)
+Mac And Cheese,NA,NA,#ERROR\!,$7.10,1,2,Low (single-store item)
+Peanut Cup Lid,NA,NA,#ERROR\!,$5.01,1.00,2,Low (single-store item)
+Pecan Praline King Cake,NA,NA,#ERROR\!,$30.00,1.00,2,Low (single-store item)
+Salad Bowl BLT,NA,NA,per Each (6/4Oz),$0.47,1,3,Low (single-store item)
+Shrimp Raw P&d White 31-40 Ct,NA,NA,per Bag (5/2 LB),$12.63,1,1,Low (single-store item)
+Soup Cream of Mushroom,NA,NA,per Can (None),$5.79,1,2,Low (single-store item)
+Strawberry/Blueberry Cream Cheese King Cake,NA,NA,#ERROR\!,$31.00,1.00,2,Low (single-store item)
+Tomato,NA,NA,per Each (None),$2.49,1,2,Low (single-store item)
+Topping M&M's Plain Chopped Refrigerated,NA,NA,per Bag (2/4 Lb),$10.78,1,1,Low (single-store item)
+Traditional King Cake,NA,NA,#ERROR\!,$26.00,1.00,2,Low (single-store item)
+Wrap Jalapeno Popper,NA,NA,#ERROR\!,$93.03,1.00,2,Low (single-store item)
