@@ -485,7 +485,7 @@
   <!-- Voice Section -->
   <div class="voice-section">
     <div class="orb-wrap">
-      <div class="orb" id="orb" onclick="toggleVoice()" title="Click to speak">
+      <div class="orb" id="orb" onclick="toggleVoice()" title="Tap to start recording, tap again to stop">
         <div class="orb-inner">
           <span id="orbIcon">🎤</span>
           <span class="orb-label" id="orbLabel">Tap to speak</span>
@@ -493,7 +493,7 @@
       </div>
     </div>
     <div class="transcript-bubble" id="transcriptBubble">Say an item name or description...</div>
-    <div class="shortcut-hint">Press <kbd>Space</kbd> to toggle voice · numbers you say auto-save</div>
+    <div class="shortcut-hint">Press <kbd>Space</kbd> to start/stop recording · numbers you say auto-save</div>
   </div>
 
   <!-- Confirm Card (already auto-saved; lets you fine-tune the qty) -->
@@ -542,8 +542,10 @@ const STORAGE_KEY = 'deliInventoryState';
 let items = INVENTORY.map(i => ({...i}));
 let currentItem = null;
 let pendingQty = 1;
-let recognition = null;
-let listening = false;
+let mediaRecorder = null;
+let audioChunks = [];
+let recording = false;
+let transcribing = false;
 let activeFilter = 'All';
 let updatedRows = new Set();
 
@@ -612,56 +614,101 @@ function findMatches(query) {
   return getScoredMatches(query).slice(0, 6).map(x => x.item);
 }
 
-// ── VOICE ────────────────────────────────────────────────────────────────────
+// ── VOICE (MediaRecorder → OpenAI Whisper via /api/transcribe) ──────────────
 function toggleVoice() {
-  if (listening) {
-    stopListening();
-  } else {
-    startListening();
+  if (recording) {
+    stopRecording();
+  } else if (!transcribing) {
+    startRecording();
   }
 }
 
-function startListening() {
-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    showToast('Voice not supported in this browser. Try Chrome.', true);
+async function startRecording() {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || typeof MediaRecorder === 'undefined') {
+    showToast('Microphone recording not supported in this browser.', true);
     return;
   }
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  recognition = new SR();
-  recognition.continuous = false;
-  recognition.interimResults = true;
-  recognition.lang = 'en-US';
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioChunks = [];
+    const mimeType = MediaRecorder.isTypeSupported('audio/webm') ? 'audio/webm' : '';
+    mediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
 
-  recognition.onstart = () => {
-    listening = true;
+    mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) audioChunks.push(e.data); };
+    mediaRecorder.onstop = () => {
+      stream.getTracks().forEach(t => t.stop());
+      handleRecordingStop();
+    };
+
+    mediaRecorder.start();
+    recording = true;
     document.getElementById('orb').classList.add('listening');
     document.getElementById('orbIcon').textContent = '🔴';
-    document.getElementById('orbLabel').textContent = 'Listening...';
+    document.getElementById('orbLabel').textContent = 'Listening... tap to stop';
     setTranscript('Listening...', true);
-  };
-
-  recognition.onresult = (e) => {
-    let interim = '';
-    let final = '';
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      if (e.results[i].isFinal) final += e.results[i][0].transcript;
-      else interim += e.results[i][0].transcript;
-    }
-    setTranscript(final || interim, true);
-    if (final) processVoiceInput(final.trim());
-  };
-
-  recognition.onerror = () => stopListening();
-  recognition.onend = () => stopListening();
-  recognition.start();
+  } catch (err) {
+    showToast('Microphone access denied or unavailable.', true);
+  }
 }
 
-function stopListening() {
-  listening = false;
-  if (recognition) { try { recognition.stop(); } catch(e){} recognition = null; }
+function stopRecording() {
+  if (mediaRecorder && recording) {
+    try { mediaRecorder.stop(); } catch (e) {}
+  }
+  recording = false;
   document.getElementById('orb').classList.remove('listening');
+}
+
+async function handleRecordingStop() {
+  if (audioChunks.length === 0) {
+    resetOrb();
+    return;
+  }
+  transcribing = true;
+  document.getElementById('orbIcon').textContent = '⏳';
+  document.getElementById('orbLabel').textContent = 'Transcribing...';
+  setTranscript('Transcribing...', true);
+
+  try {
+    const blob = new Blob(audioChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
+    const base64 = await blobToBase64(blob);
+    const res = await fetch('/api/transcribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ audio: base64, mimeType: blob.type })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Transcription failed');
+
+    const text = (data.text || '').trim();
+    if (!text) {
+      setTranscript("Didn't catch that — try again", false);
+      showToast('No speech detected.', true);
+    } else {
+      setTranscript(text, true);
+      processVoiceInput(text);
+    }
+  } catch (err) {
+    showToast('Transcription error: ' + err.message, true);
+    setTranscript('Say an item name or description...', false);
+  } finally {
+    transcribing = false;
+    resetOrb();
+  }
+}
+
+function resetOrb() {
   document.getElementById('orbIcon').textContent = '🎤';
   document.getElementById('orbLabel').textContent = 'Tap to speak';
+}
+
+function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
 }
 
 function setTranscript(text, active) {
