@@ -510,7 +510,7 @@
   <!-- Confirm Card (already auto-saved; lets you fine-tune the qty) -->
   <div class="confirm-card" id="confirmCard">
     <div class="confirm-item-name" id="confirmName"></div>
-    <div class="confirm-item-meta"><span id="confirmSection"></span> · <span id="confirmCategory"></span> · <span id="confirmUnit"></span></div>
+    <div class="confirm-item-meta"><span id="confirmSection"></span> · <span id="confirmCategory"></span> · <span id="confirmUnit"></span><span id="confirmBek"></span></div>
     <div class="qty-row">
       <div class="qty-label">Saved on hand:</div>
       <div class="qty-controls">
@@ -837,6 +837,7 @@ function openConfirm(item, qty = 1) {
   document.getElementById('confirmSection').textContent = item.section;
   document.getElementById('confirmCategory').textContent = item.category || 'N/A';
   document.getElementById('confirmUnit').textContent = item.unit || '';
+  document.getElementById('confirmBek').textContent = item.bek ? ` · BEK# ${item.bek}` : '';
   document.getElementById('qtyInput').value = pendingQty;
   document.getElementById('confirmCard').classList.add('visible');
   document.getElementById('matchesCard').classList.remove('visible');
@@ -872,10 +873,11 @@ function openMatchesPicker(matches, qty) {
   matches.forEach(item => {
     const div = document.createElement('div');
     div.className = 'match-item';
+    const matchMeta = [item.category || '', item.bek ? `BEK# ${item.bek}` : ''].filter(Boolean).join(' · ');
     div.innerHTML = `
       <div>
         <div class="match-name">${item.desc}</div>
-        <div class="match-bek">${item.category || ''}</div>
+        <div class="match-bek">${matchMeta}</div>
       </div>
       <div class="match-storage">${item.section || '—'}</div>`;
     div.onclick = () => openConfirm(item, qty);
@@ -937,8 +939,11 @@ function renderList() {
       row.id = `row-${item.id}`;
       row.className = 'item-row' + (updatedRows.has(item.id) ? ' updated' : '');
       const qtyClass = item.on_hand > 0 ? 'nonzero' : '';
+      const catText = item.category && item.category !== 'General' ? item.category : '';
+      const bekText = item.bek ? `BEK# ${item.bek}` : '';
+      const metaText = [catText, bekText].filter(Boolean).join(' · ');
       row.innerHTML = `
-        <div class="item-desc">${item.desc}<div class="item-cat">${item.category && item.category !== 'General' ? item.category : ''}</div></div>
+        <div class="item-desc">${item.desc}<div class="item-cat">${metaText}</div></div>
         <div class="item-unit">${item.unit || ''}</div>
         <input type="number" min="0" step="0.1" inputmode="decimal" class="item-qty-input ${qtyClass}" id="qty-${item.id}" value="${item.on_hand}">`;
       container.appendChild(row);
