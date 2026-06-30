@@ -1,0 +1,542 @@
+unit	itemNum	packSize	brand	itemName	tempZone	category	each	price	weeklyAvg	special
+Case	530572	1 / 15 LB	Smithfield	Bacon Layout 18/22	Frozen	Meat, Poultry, Seafood		47.82		0	
+Pack	183715	2 / 1.25 LB	Smithfield	Bacon Precooked 300 Slice	Frozen	Meat, Poultry, Seafood		43.19		0	
+Case	191379	1 / 2000 CT	Mcnairn	Bag French Fry 4.5 X 4.5	Dry	Equipment & Supplies		41.39		0	
+Case	875153	1 / 2000 CT	Mcnairn	Bag Hot Dog 3x2x9 Plain White	Dry	Equipment & Supplies		52.36		0	
+Case	207757	1 / 1000 CT	Great Western Products	Bag Hot Dog Paper	Dry	Equipment & Supplies		35.06		0	
+Case	212180	1 / 200 CT	Inteplast	Bag Paper 14x10x15.75	Dry	Equipment & Supplies		27.87		0	
+Case	172439	1 / 500 CT	Metro Bag Llc	Bag Paper Brown 4 Lb	Dry	Equipment & Supplies		14.06		0	
+Case	101006	1 / 500 CT	Ecocraft	Bag Paper Cookie 5x1.5x7	Dry	Equipment & Supplies		41.94		0	
+Case	114426	1 / 500 CT	Duro Bag Mfg Co.	Bag Paper Groc Brn 2#	Dry	Equipment & Supplies		9.91		0	
+Case	114427	1 / 500 CT	Duro Bag Mfg Co.	Bag Paper Groc Brn 4#	Dry	Equipment & Supplies		13.29		0	
+Case	114428	1 / 500 CT	Duro Bag Mfg Co.	Bag Paper Groc Brn 6#	Dry	Equipment & Supplies		17.20		0	
+Case	114429	1 / 500 CT	Duro Bag Mfg Co.	Bag Paper Groc Brn 8#	Dry	Equipment & Supplies		19.99		0	
+Case	152347	1 / 1000 CT	Mcnairn	Bag Paper Nat W/window	Dry	Equipment & Supplies		69.11		0	
+Case	186006	1 / 1000 CT	Bunzl	Bag Plas Thank You (t-shirt)	Dry	Equipment & Supplies		31.35		0	
+Case	201902	1 / 1000 CT	Essentials	Bag Plas T-shirt Eleo White	Dry	Equipment & Supplies		28.31		0	
+Case	129707	1 / 250 CT	Essentials	Bag Reclosable 1 Gal 10.5x10.5	Dry	Equipment & Supplies		16.76		0	
+Case	129708	1 / 100 CT	Essentials	Bag Reclosable 2 Gal 13x15.5	Dry	Equipment & Supplies		15.26		0	
+Case	180359	1 / 2000 CT	Elkay Plastics	Bag Sandwich 6.5x7x1.75	Dry	Equipment & Supplies		18.58		0	
+Case	875138	1 / 2000 CT	Mcnairn	Bag Sandwich 6x.75x6.75 1side	Dry	Equipment & Supplies		44.53		0	
+Case	875021	1 / 2000 CT	Mcnairn	Bag Silverware 2.75x10 White	Dry	Equipment & Supplies		51.42		0	
+Case	303441	1 / 1000 CT	Inteplast	Bag T-shirt Thank You	Dry	Equipment & Supplies		17.31		0	
+Pack	556868	12 / 33.5 oz	Reed Food Technology	Batter Mix	Dry	Grocery		30.90		0	
+Pack	546259	2 / 6-8 LB	Austin Blues	Bbq Beef Brisket Sliced	Frozen	Meat, Poultry, Seafood		14.67 LB		0	
+Pack	546505	4 / 5 LB	Smokehouse	Bbq Pork Pulled	Retail Ready Item Frozen	Meat, Poultry, Seafood		107.52		0	
+Pack	546495	2 / 5 LB	Saucy Blues	Bbq Pork Pulled With Sauce	Frozen	Meat, Poultry, Seafood		58.91		0	
+Pack	204980	2 / 5 LB	Cades	Bbq Pork Pulled With Sauce	Frozen	Meat, Poultry, Seafood		55.96		0	
+Case	334153	1 / 20 LB	Markon First Crop	Bean Baby Lima	Frozen	Fruit, Vegetables, Herbs		35.91		0	
+Can	190557	6 / #10 CAN	Bush's Best	Bean Baked Original	Dry	Fruit, Vegetables, Herbs		51.75		0	
+Can	650058	6 / #10 CAN	Bush's Best	Bean Black Low Sodium	Dry	Fruit, Vegetables, Herbs		38.66		0	
+Bag	334302	12 / 2 LB	Markon First Crop	Bean Green Regular Cut	Frozen	Fruit, Vegetables, Herbs		33.41		0	
+Bag	334618	12 / 2 LB	Markon First Crop	Bean Green Whole	Frozen	Fruit, Vegetables, Herbs		40.43		0	
+Can	650110	6 / #10 CAN	Allens	Bean Kidney Dark Red Fancy	Retail Ready Item Dry	Fruit, Vegetables, Herbs		35.53		0	
+Can	782002	6 / #10 CAN	Allens	Bean Refried	Retail Ready Item Dry	Fruit, Vegetables, Herbs		51.06		0	
+Bag	106952	2 / 5 LB	Gran Sabor	Beef Fajita Strip Cooked	Frozen	Meat, Poultry, Seafood		129.02		0	
+Bag	509041	2 / 5 LB	John Soules	Beef Fajita Strip Seas Ckd	Frozen	Meat, Poultry, Seafood		104.15		0	
+Pack	506475	8 / 10 LB	Ellington Farms	Beef Ground Fine 73/27	Refrigeration	Meat, Poultry, Seafood		4.20 LB		0	
+Pack	506511	8 / 10 LB	Ellington Farms	Beef Ground Fine 81/19	Refrigeration	Meat, Poultry, Seafood		5.17 LB		0	
+Pack	106334	8 / 10 LB	Excel	Beef Ground Fine 81/19	Refrigeration	Meat, Poultry, Seafood		5.24 LB		0	
+Pack	187727	5 / 5 LB	Certified Tender	Beef Ground Taco Meat	Frozen	Meat, Poultry, Seafood		83.33		0	
+Case	506121	60 / 5.33 OZ	Tnt	Beef Patty 3/1 Thick N Tender	Frozen	Meat, Poultry, Seafood		88.78		0	
+Pack	142973	2 / 9 LB	Hormel Natural Choice	Beef Pot Roast Cooked	Frozen	Meat, Poultry, Seafood		9.45 LB		0	
+Pack	118355	2 / 1 PC	Hormel	Beef Prime Rib Rare	Frozen	Meat, Poultry, Seafood		13.88 LB		0	
+Case	188915	40 / 4 OZ	Philly	Beef Sandwich Steak Philly	Frozen	Grocery		55.08		0	
+Case	508655	64 / 2.5 OZ	Apf Blue Label	Beef Steak For Biscuit	Frozen	Meat, Poultry, Seafood		64.24		0	
+Case	010036	71 / 2.25 OZ	Apf Blue Label	Beef Steak For Biscuit Ctrysty	Frozen	Meat, Poultry, Seafood		66.17		0	
+Case	188849	40 / 4 OZ	Chefs Exclusive	Beef Steak Fritter Raw Breaded	Frozen	Meat, Poultry, Seafood		66.23		0	
+Case	188850	72 / 2.5 OZ	Chefs Exclusive	Beef Steak Fritter Raw Breaded	Frozen	Meat, Poultry, Seafood		65.29		0	
+Pack	557259	6 / 2 lb	Frosty Morn	Biscuit Bologna	Frozen	Grocery		39.95		0	
+Pack	228851	8 / 12 OZ	Kelley Foods Manufacturing	Bologna Pork/beef Sl 12 Oz	Refrigeration	Meat, Poultry, Seafood		28.37		0	
+Pack	204979	10 / 16 OZ	Cades	Bologna Smk Thick Slice 4 Oz	Frozen	Meat, Poultry, Seafood		30.93		0	
+case	117197	132 / 1.45 OZ	Errols Cajun Foods	Boudin Balls Breaded	Frozen	Meat, Poultry, Seafood		60.24		0	
+case	019275	1 / 500 CT	Southern Champion Tray	Box Carry-out Snack 7x4.5x2.75	Dry	Equipment & Supplies		84.36		0	
+case	170610	1 / 400 CT	Vox Printing	Box Chicken White 9x6x3	Dry	Grocery		65.14		0	
+pack	189661	10 / 24 OZ	Fresh From Keith's	Bread Texas Toast White	Dry	Grocery		26.36		0	
+pack	189668	10 / 24 OZ	Fresh From Keith's	Bread Texas Toast White Frozen	Frozen	Grocery		26.36		0	
+pack	021175	10 / 24 OZ	Flowers Food Specialty Group	Bread White Pullman 28 Sl 24oz	Frozen	Grocery		35.53		0	
+pack	224713	6 / 5 LB	Superior Catfish Products	Breading Catfish Superior	Dry	Grocery		71.48		0	
+case	693014	1 / 25 LB	Louisiana Fish Fry Products	Breading Fish Fry New Orleans	Dry	Grocery		31.66		0	
+case	693037	1 / 25 LB	Louisiana Fish Fry Products	Breading Seasoned Fish Fry	Dry	Grocery		31.66		0	
+case	693334	1 / 50 LB	Louisiana Fish Fry Products	Breading Shrimp Fry	Dry	Grocery		56.64		0	
+pack	080091	4 / 3 LB	Markon Ready Set Serve	Broccoli Floret Iceless	Refrigeration	Fruit, Vegetables, Herbs		26.52		0	
+pack	025518	8 / 2 LB	St Clair	Broccoli Rice and Cheese	Frozen	Grocery		45.20		0	
+case	414356	60 / 3 OZ	Aphrodite Divine Confections	Brownie 7 Layer	Frozen	Desserts		69.88		0	
+case	414307	48 / 4 OZ	David's Cookies	Brownie Blondie	Frozen	Desserts		47.36		0	
+case	414312	48 / 4 OZ	David's Cookies	Brownie Chocolate Chip	Frozen	Desserts		47.36		0	
+packs	333105	12 / 2 LB	Markon First Crop	Brussels Sprouts Medium	Frozen	Fruit, Vegetables, Herbs		55.91		0	
+case	394690	64 / 3.5 OZ	European Bakers	Bun Hamburger 5 In Sliced	Frozen	Grocery		32.28		0	
+packs	189663	8 / 12 CT	Fresh From Keith's	Bun Hamburger White 4 In	Dry	Grocery		25.45		0	
+packs	189667	8 / 8 CT	Fresh From Keith's	Bun Hamburger White 4.5 In Fzn	Frozen	Grocery		22.45		0	
+packs	189664	8 / 12 CT	Fresh From Keith's	Bun Hot Dog 6 In Frozen	Frozen	Grocery		25.45		0	
+case	385084	72 / 4 OZ	Fernando's	Burrito Beef & Bean	Frozen	Grocery		61.25		0	
+case	201071	12 / 8 OZ	Claras Kitchen	Burrito Breakfast Bacon	Frozen	Grocery		38.18		0	
+case	201074	12 / 8 OZ	Claras Kitchen	Burrito Breakfast Sausage	Frozen	Grocery		38.18		0	
+pack	189580	36 / 1 LB	Golden Harvest	Butter Blend Unsalted	Refrigeration	Dairy & Eggs		55.79		0	
+case	115730	720 / 5 GRM	Grassland Dairy	Butter Pc Cup Whipped	Refrigeration	Dairy & Eggs		31.71		0	
+pack	389120	36 / 1 LB	Plugra	Butter Unsalted European Style	Refrigeration	Dairy & Eggs		108.07		0	
+pack	300009	4 / 5 LB	Packer	Cabbage Fine Diced  W/sep Colo	Refrigeration	Fruit, Vegetables, Herbs		19.61		0	
+pack	142728	4 / 5 LB	Taylor Farms	Cabbage Green Chunk	Refrigeration	Fruit, Vegetables, Herbs		37.26		0	
+pack	122540	4 / 5 LB	Packer	Cabbage Green Shred Fine	Refrigeration	Fruit, Vegetables, Herbs		37.26		0	
+pack	018044	4 / 46 OZ	Dean's Cake House, Inc	Cake Carrot 2 Layer	Frozen	Desserts		76.99		0	
+pack	181014	4 / 40 OZ	Cakes N Candy	Cake Chocolate Two Layer	Frozen	Desserts		51.14		0	
+pack	116574	2 / 66 OZ	Diannes	Cake Italian Lemon Creme	Frozen	Desserts		75.78		0	
+pack	173490	4 / 5 LB	Albanese	Candy Gummy Worm Mini	Dry	Grocery		54.57		0	
+pack	800298	2 / 5 LB	Tr Toppers	Candy Heath Bar Stir-in	Refrigeration	Grocery		65.27		0	
+case	800010	1 / 25 LB	Mars Foods	Candy M&m Minis	Refrigeration	Grocery		118.81		0	
+pack	551246	6 / 5 lb	Nerds	Candy Nerd Rainbow	Dry	Grocery		107.38		0	
+case	227396	1 / 10 LB	Tr Toppers	Candy Rainbow Sprinkle	Dry	Grocery		31.13		0	
+case	800036	1 / 25 LB	Hershey	Candy Reeses Mini Pieces	Refrigeration	Grocery		96.06		0	
+pack	800112	2 / 5 LB	Tr Toppers	Candy Stir In Butterfinger	Refrigeration	Grocery		51.94		0	
+pack	800033	2 / 4 LB	Tr Toppers	Candy Stir In M&m Plain Chopd	Refrigeration	Grocery		43.31		0	
+pack	800088	2 / 5 LB	Tr Toppers	Candy Stir In Reeses Pb Cup	Frozen	Grocery		58.41		0	
+pack	372064	4 / 4.75 LB	St Clair	Casserole Broccoli Rice Cheese	Frozen	Grocery		50.81		0	
+pack	143885	4 / 4.5 LB	Savannah Foods	Casserole Hashbrown	Frozen	Grocery		61.43		0	
+p	111579	8 / 2 LB	St Clair	Casserole Potato Baked	Frozen	Grocery		43.18		0	
+p	372098	4 / 4.75 LB	St Clair	Casserole Potato Baked	Frozen	Grocery		49.78		0	
+p	372131	4 / 4.75 LB	St Clair	Casserole Sweet Potato	Frozen	Grocery		54.86		0	
+c	453005	1 / 15 LB	Heartland Catfish	Catfish Fillet Split 3-5 Oz	Frozen	Meat, Poultry, Seafood		98.03		0	
+p	102140	2 / 5 LB	Buds Fresh Cut Produce	Celery Diced 1/8 Inch	Refrigeration	Fruit, Vegetables, Herbs		32.34		0	
+p	555246	4 / 4 lb	Carnival	Cereal Grits Buttered	Frozen	Grocery		32.44		0	
+p	799424	8 / 5 LB	Quaker	Cereal Grits Quick White	Dry	Grocery		42.88		0	
+p	735025	4 / 5 LB	Golden Harvest	Cheese American Sliced 120 Ct	Refrigeration	Dairy & Eggs		54.23		0	
+p	121802	4 / 5 LB	Schreiber	Cheese American Yellow 184 Sl	Retail Ready Item Refrigeration	Dairy & Eggs		56.23		0	
+p	016063	4 / 5 LB	Schreiber	Cheese Cheddar Mild Shrd	Retail Ready Item Refrigeration	Dairy & Eggs		59.72		0	
+p	742002	10 / 3 LB	Golden Harvest	Cheese Cream Loaf Grade A	Refrigeration	Dairy & Eggs		71.28		0	
+pack	151722	12 / 1 LB	Golden Harvest	Cheese Pepper Jack Slice .73oz	Retail Ready Item Refrigeration	Dairy & Eggs		48.14		0	
+pack	184643	6 / #10 CAN	Keith Valley	Cheese Sauce Cheddar	Dry	Grocery		64.78		0	
+pack	219654	6 / 2 LB	Golden Crisp	Cheese Stick Mozzarella	Frozen	Appetizers		39.80		0	
+pack	175003	4 / 5 LB	Schreiber	Cheese Swiss American 120sl	Refrigeration	Dairy & Eggs	Y	16.79		0	
+pack	139372	4 / 5 LB	Golden Harvest	Cheese Swiss American 160 Sl	Retail Ready Item Refrigeration	Dairy & Eggs		54.23		0	
+pack	118162	6 / 1.5 LB	Golden Harvest	Cheese Swiss Sl Big Eye .75oz	Refrigeration	Dairy & Eggs		42.72		0	
+case	186414	1 / 10 LB	Tyson Red Label	Chicken Breast Breaded 5.2 Oz	Frozen	Meat, Poultry, Seafood		41.60		0	
+pack	488339	2 / 5 LB	Tyson Red Label	Chicken Breast Chunk Frtr Ckd	Frozen	Appetizers		32.96		0	
+pack	006522	2 / 5 LB	Tyson Red Label	Chicken Breast Fil Hot'n'spcy	Frozen	Meat, Poultry, Seafood		29.79		0	
+pack	006505	2 / 5 LB	Tyson Red Label	Chicken Breast Filets Brd	Frozen	Meat, Poultry, Seafood		29.79		0	
+case	151017	40 / 4 OZ	Brakebush	Chicken Breast Flame Grilled	Frozen	Meat, Poultry, Seafood		60.70		0	
+pack	122974	2 / 5 LB	Tyson Red Label	Chicken Breast Fritter Cn 4/1	Frozen	Meat, Poultry, Seafood		41.06		0	
+case	109198	40 / 4 OZ	Tyson Red Label	Chicken Breast Hot N Spicy Ckd	Frozen	Meat, Poultry, Seafood		41.06		0	
+pack	550108	4 / 10 LB	Koch Foods	Chicken Breast Random Blsl	Refrigeration	Meat, Poultry, Seafood		70.67		0	
+pack	487153	2 / 5 LB	Tyson Red Label	Chicken Breast Spicy Brd 4oz	Frozen	Meat, Poultry, Seafood		29.79		0	
+pack	165580	16 / 3-3.5 LB	Marjac Poultry	Chicken Cut 8pc Mar 3-3.50lb	Refrigeration	Meat, Poultry, Seafood		1.62 LB		0	
+pack	106944	2 / 5 LB	Gran Sabor	Chicken Fajita Strip Cooked	Frozen	Meat, Poultry, Seafood		50.35		0	
+pack	159735	4 / 5 LB	Marjac Poultry	Chicken Gizzard Random Fresh	Refrigeration	Meat, Poultry, Seafood		19.80		0	
+case	550091	1 / 40 LB	Tyson	Chicken Leg Quarter Random	Refrigeration	Meat, Poultry, Seafood		29.36		0	
+pack	159734	4 / 5 LB	Marjac Poultry	Chicken Liver Random Fresh	Refrigeration	Meat, Poultry, Seafood		14.78		0	
+pack	228982	8 / 5 LB	Marjac Poultry	Chicken Livers Cvp	Frozen	Meat, Poultry, Seafood		0.00		0	
+pack	138142	2 / 5 LB	Tyson Red Label	Chicken Patty Breaded Raw	Frozen	Meat, Poultry, Seafood		23.56		0	Yes
+pack	550400	4 / 10 LB	Wayne Farms	Chicken Tenderloin Jumbo	Refrigeration	Meat, Poultry, Seafood		83.10		0	
+pack	161378	4 / 10 LB	Sanderson Farms	Chicken Tenders Clipped Cvp	Frozen	Meat, Poultry, Seafood		0.00		0	
+pack	025513	4 / 5 LB	St Clair	Chicken With Dumplings	Frozen	Meat, Poultry, Seafood		56.70		0	
+case	774034	1 / 18 OZ	Mccormick	Chili Powder Ground Light	Dry	Grocery		11.56		0	
+pack	699408	30 / 3 OZ	Gehls	Chip Tortilla Tray Pac	Dry	Grocery		32.68		0	
+case	774060	1 / 18 OZ	Spice Classics	Cinnamon Ground	Dry	Grocery		7.61		0	
+pack	416047	4 / 6 LB	Good Old Days	Cobbler Apple	Frozen	Desserts		40.91		0	
+pack	416059	4 / 5 LB	Good Old Days	Cobbler Blackberry	Frozen	Desserts		57.20		0	
+pack	416072	4 / 5 LB	Good Old Days	Cobbler Cherry	Frozen	Desserts		46.59		0	
+paCK	416094	4 / 5 LB	Good Old Days	Cobbler Peach	Frozen	Desserts		44.60		0	
+pack	416043	4 / 5 LB	Good Old Days	Cobbler Pecan	Frozen	Desserts		69.06		0	
+pack	100007	6 / 100 CT	Joy Cone	Cone Cake Cup No Jacket	Dry	Desserts		70.73		0	
+pack	170716	12 / 16 CT	Joy Cone	Cone Waffle Large	Dry	Desserts		0.00		0	
+pack	553241	14 / 16 ct	Joy Cone	Cone Waffle Large Classic	Dry	-		73.59		0	
+pack	172112	12 / 19 CT	Joy Cone	Cone Waffle Regular  6228	Dry	Desserts		0.00		0	
+pack	870030	20 / 25 CT	Dart	Cont Foam 12 Oz Squat	Dry	Equipment & Supplies		37.71		0	
+pack	870020	20 / 50 CT	Dart	Cont Foam 8 Oz Extra Squat	Dry	Equipment & Supplies		62.38		0	
+pack	819351	4 / 125 CT	Gen Pak	Cont Foam Hinged Black Sandwich	Dry	Equipment & Supplies		47.71		0	
+pack	116602	4 / 125 CT	Essentials	Cont Foam Hngd 1-c 6in Sand	Dry	Equipment & Supplies		26.99		0	
+pack	872336	4 / 125 CT	Dart	Cont Foam Hngd 1-c 6x6 Sand	Dry	Equipment & Supplies		35.01		0	
+pack	823009	4 / 125 CT	Dart	Cont Foam Hngd 1-c Hoagie	Dry	Equipment & Supplies		50.52		0	
+case	872976	1 / 150 CT	Pactiv	Cont Foam Hngd 1-c Lg Rect Wht	Dry	Equipment & Supplies		16.85		0	
+case	116604	1 / 150 CT	Essentials	Cont Foam Hngd 1-c Lg White	Dry	Equipment & Supplies		17.71		0	
+pack	158734	4 / 125 CT	Gen Pak	Cont Foam Hngd 1-c Sand White	Dry	Equipment & Supplies		26.95		0	
+pack	872992	5 / 100 CT	Pactiv	Cont Foam Hngd 1-c Sm White	Dry	Equipment & Supplies		70.24		0	
+pack	872089	2 / 100 CT	Dart	Cont Foam Hngd 3-c	Dry	Equipment & Supplies		30.96		0	
+case	116601	1 / 150 CT	Essentials	Cont Foam Hngd 3-c Lg White	Dry	Equipment & Supplies		17.71		0	
+case	872205	1 / 200 CT	Dart	Cont Foam Hngd 3-c White	Dry	Equipment & Supplies		33.45		0	
+pal	019929	2 / 100 CT	Gen Pak	Cont Foam Hngd 3-c Wht	Dry	Equipment & Supplies		23.26		0	
+pack	104586	20 / 50 CT	Karat	Cont Paper 12oz White	Dry	Equipment & Supplies		70.00		0	
+case	816010	1 / 1000 CT	Karat	Cont Paper 8 Oz White	Dry	Equipment & Supplies		58.53		0	
+case	218096	1 / 300 CT	Dart	Cont Plas Hngd 1-c Clear 6 In	Dry	Equipment & Supplies		58.91		0	
+case	187682	1 / 450 CT	Sabert	Cont Plas Hngd 1-c Clear 6x6	Dry	Equipment & Supplies		75.47		0	
+case	218097	1 / 150 CT	Dart	Cont Plas Hngd 1-c Clear 9 In	Dry	Equipment & Supplies		56.19		0	
+case	187684	1 / 180 CT	Sabert	Cont Plas Hngd 1-c Clear 9x9	Dry	Equipment & Supplies		54.34		0	
+pack	872385	2 / 125 CT	Dart	Cont Plas Hngd 1-c Pie Wedge	Dry	Equipment & Supplies		58.28		0	
+case	872439	4 / 125 CT	Dart	Cont Plas Hngd 1-c Sandwich	Dry	Equipment & Supplies		68.09		0	
+caSE	166529	1 / 132 CT	Earthchoice	Cont Plas Hngd 3-c Black Clear	Dry	Equipment & Supplies		90.40		0	
+PACK	128656	2 / 56 CT	Sabert	Cont Plas Hngd 3-c Black Clear	Dry	Equipment & Supplies		61.62		0	
+case	772060	1 / 25 LB	Oreo	Cookie Oreo Small Crushed	Dry	Desserts		106.01		0	
+pack	012733	12 / 3 LB	Bd&k Foods Inc	Corn Creamed Boilnbag F/c Frz	Frozen	Fruit, Vegetables, Herbs		53.38		0	
+pack	338480	1 / 20 LB	Roastworks	Corn Cut Fire Roasted	Frozen	Fruit, Vegetables, Herbs		42.24		0	Yes
+case	370154	36 / 2.67 OZ	State Fair	Corn Dog All Meat w/Bags	Frozen	Grocery		28.60		0	
+case	370008	72 / 4 OZ	Foster Farms	Corn Dog Chicken	Frozen	Grocery		43.77		0	
+case	370013	36 / 4 OZ	Foster Farms	Corn Dog Chicken Jalapeno	Frozen	Grocery		27.31		0	
+case	370049	36 / 4 OZ	Foster Farms	Corn Dog Chili Cheese	Frozen	Grocery		28.13		0	
+pack	338836	6 / 2 LB	Golden Crisp	Corn Nugget Sweet Battered	Retail Ready Item Frozen	Appetizers		38.35		0	
+pack	012319	12 / 2.5 LB	Packer	Corn Whole Kernal Cut 12/2.5#	Frozen	Fruit, Vegetables, Herbs		35.40		0	
+pack	110120	6 / 5 LB	Pioneer	Cornbread Mix Deluxe Complete	Retail Ready Item Dry	Grocery		43.97		0	
+case	301270	1 / 25 LB	Packer	Cornmeal Yellow Self Rising	Dry	Grocery		25.69		0	
+case	178740	1 / 1 LB	Packer	Crab Claw Fingers Blue	Frozen	Meat, Poultry, Seafood		22.40		0	
+pack	010933	6 / 18 CT	Jones Dairy Farm	Crab Stuffed 2oz.bayou Sp Frz	Frozen	Meat, Poultry, Seafood		68.85		0	
+case	127990	72 / 2.75 OZ	State Fair	Crispito Buffalo Chkn & Chs	Frozen	Grocery		57.39		0	
+case	385211	72 / 2.75 OZ	State Fair	Crispito Chicken & Cheese	Frozen	Grocery		57.39		0	
+casde	201782	80 / 2 OZ	Pillsbury(r)	Croissant Bun Sliced  2 Oz	Frozen	Grocery		68.13		0	
+pack	173209	20 / 25 CT	Dart	Cup Foam 20 Oz Insulated	Dry	Equipment & Supplies		42.41		0	
+pack	114792	25 / 16 CT	Dart	Cup Foam 32 Oz Pedestal	Dry	Equipment & Supplies		64.65		0	
+pack	153416	20 / 50 CT	Karat	Cup Plas 16 Oz Clear Pet	Dry	Equipment & Supplies		53.82		0	
+pack	206316	25 / 20 CT	Clearware	Cup Plas 9 Oz Clear	Dry	Equipment & Supplies		68.02		0	
+pack	815813	10 / 250 CT	Essentials	Cup Plas Souffle 1 Oz Trans	Dry	Equipment & Supplies		29.39		0	
+case	186616	1 / 1000 CT	Max Packaging	Cutlery Fork Black Hw	Dry	Equipment & Supplies		41.68		0	
+case	165389	1 / 1000 CT	Wallace Packaging Llc	Cutlery Fork Black Hw Iw	Dry	Equipment & Supplies		22.35		0	
+case	160633	24 / 40 CT	Smartstock	Cutlery Fork Blk Mw Refill	Dry	Equipment & Supplies		52.86		0	
+case	136286	1 / 250 CT	Amercare	Cutlery Kit K F S Napkin S&p	Dry	Equipment & Supplies		28.69		0	
+case	169410	1 / 1000 CT	Wallace Packaging Llc	Cutlery Knife Black Hw	Dry	Equipment & Supplies		20.00		0	
+case	186626	1 / 1000 CT	Max Packaging	Cutlery Knife Blk Hw	Dry	Equipment & Supplies		41.61		0	
+case	160634	24 / 40 CT	Smartstock	Cutlery Knife Blk Mw Refill	Dry	Equipment & Supplies		52.75		0	
+case	871190	1 / 3000 CT	Dart	Cutlery Spoon Taster 3 In Wht	Dry	Equipment & Supplies		89.04		0	
+case	165399	1 / 1000 CT	Wallace Packaging Llc	Cutlery Spoon White Mw Iw	Dry	Equipment & Supplies		14.12		0	
+case	186627	1 / 1000 CT	Max Packaging	Cutlery Teaspoon Blk Hw	Dry	Equipment & Supplies		41.60		0	
+case	160632	20 / 40 CT	Smartstock	Cutlery Teaspoon Blk Mw Refill	Dry	Equipment & Supplies		52.86		0	
+case	418223	50 / 1.25 OZ	Chef Pierre	Danish Assorted Demi Variety	Retail Ready Item Frozen	Grocery		37.05		0	
+casde	418016	48 / 4 OZ	Chef Pierre	Danish Pastry Elite ASST	Retail Ready Item Frozen	Grocery		77.33		0	
+pack	885025	4 / 1 GAL	Essentials	Degreaser Cleaner Yes	Dry	Equipment & Supplies		52.60		0	
+pack	190390	4 / 5 LB	Jtm Food Group	Dip Street Corn Mexican Style	Frozen	Grocery		67.24		0	
+case	186336	36 / 2.87 OZ	Dots Original	Donut Apple Filled Dots	Frozen	Grocery		34.01		0	
+case	419055	108 / 1.2 OZ	Rich's	Donut Glazed Yeast Raised	Frozen	Grocery		56.00		0	
+case	177974	36 / 2.12 OZ	Europastry	Donut Pink Icing Dot	Frozen	Grocery		29.99		0	
+case	228975	84 / 2.1 OZ	Rich's	Donut Ring Yeast Homestyle	Frozen	Grocery		36.53		0	
+case	225292	60 / 3.7 OZ	Pillsbury(r)	Dough Apple Turnover	Frozen	Grocery		61.06		0	
+case	412862	168 / 3.17 OZ	Pillsbury(r)	Dough Biscuit 3 In Sliced	Frozen	Grocery		53.87		0	
+case	412861	120 / 4.5 OZ	Pillsbury(r)	Dough Biscuit Large	Frozen	Grocery		65.64		0	
+case	412443	108 / 5 OZ	Rich's	Dough Cinnamon Roll Gourmet	Frozen	Grocery		78.99		0	
+case	412597	60 / 6.5 OZ	Pillsbury(r)	Dough Cinnamon Roll Raw	Frozen	Grocery		70.67		0	
+case	155249	80 / 4.5 OZ	David's Cookies	Dough Cookie Chaos Decadent	Frozen	Desserts		83.90		0	
+case	167145	80 / 4.5 OZ	David's Cookies	Dough Cookie Lemon Blubry	Frozen	Desserts		88.42		0	
+case	168115	107 / 3 OZ	David's Cookies	Dough Cookie Macadamia	Frozen	Desserts		78.09		0	
+case	106993	80 / 4.5 OZ	David's Cookies	Dough Cookie Red Velvet	Frozen	Desserts		82.30		0	
+case	417099	45 / 4.5 OZ	David's Cookies	Dough Cookie Reeses Pntbtr Cup	Frozen	Desserts		46.55		0	
+case	412997	80 / 4.5 OZ	David's Cookies	Dough Cookie Smores	Frozen	Desserts		90.90		0	
+case	432367	107 / 3 OZ	Chippery	Dough Cookie Sugar	Frozen	Desserts		80.76		0	
+case	417098	45 / 4.5 OZ	David's Cookies	Dough Cookie Triple Chocolate	Frozen	Desserts		46.22		0	
+case	412499	240 / 1 OZ	Pennant Foods	Dough Roll Dinner White	Frozen	Grocery		37.56		0	
+case	148512	54 / 3 OZ	Aphrodite Divine Confections	Dough Scone Toga Blubry Lemon	Frozen	Desserts		50.92		0	
+case	153819	100 / 1.5 OZ	Ken's	Dressing Pc Buttermilk Ranch	Dry	Grocery		29.74		0	
+case	674189	100 / 1.5 OZ	Ken's	Dressing Pc Honey Mustard Cup	Refrigeration	Grocery		28.88		0	Yes
+case	674216	100 / 1.5 OZ	Ken's	Dressing Pc Ranch Cup	Refrigeration	Grocery		27.20		0	Yes
+case	164879	60 / 1.5 OZ	Ellington Farms	Dressing Pc Thousand Island	Dry	Grocery		19.27		0	
+case	142363	1 / 15 DZN	Ellington Farms	Egg Fresh Shell Lg Usda Aa	Refrigeration	Dairy & Eggs		13.43		0	
+case	142365	1 / 30 DZN	Ellington Farms	Egg Fresh Shell Med Usda Aa	Refrigeration	Dairy & Eggs		25.47		0	
+case	106188	168 / 1.5 OZ	Papettis	Egg Patty Homestyle Fried	Frozen	Dairy & Eggs		51.31		0	
+case	016522	153 / 1.25 OZ	Echo Lake Foods	Egg Patty Scrambled Round	Frozen	Dairy & Eggs		41.31		0	
+dcase	155453	100 / 2.8 OZ	Frenchys Sausage Company Inc	Egg Roll Boudin W/ppr Jack Chs	Frozen	Dairy & Eggs		69.55		0	
+case	168534	100 / 2.5 OZ	The Eggroll Factory	Egg Roll Cheesecake Dessert	Frozen	Appetizers		73.74		0	
+case	171854	100 / 3 OZ	Vip	Egg Roll Chicken Sw Style	Frozen	Grocery		79.34		0	
+case	380237	72 / 3 OZ	Minh	Egg Roll Pork & Vegetable	Frozen	Appetizers		56.23		0	
+pack	144582	4 / 5 LB	Sunny Fresh	Egg Scrambled Cooked	Frozen	Dairy & Eggs		85.16		0	
+PACK	393106	12 / 1.85 LB	Papettis	Egg Scrambled Cooked W/butter	Refrigeration	Dairy & Eggs		63.57		0	
+pack	190102	15 / 2 LB	Ellington Farms	Egg Whole Easy Eggs w/Citric	Refrigeration	Dairy & Eggs		58.38		0	
+case	127834	24 / 3 OZ	El Monterey	Empanada Beef And Cheese	Frozen	Grocery		31.88		0	
+case	127833	24 / 3 OZ	El Monterey	Empanada Chicken And Cheese	Frozen	Grocery		31.88		0	
+case	370434	48 / 3.75 OZ	Natchitoches Meat Pie Co	Empanada Chorizo Egg Jalapeno	Frozen	Grocery		59.72		0	
+case	777028	1 / 32 OZ	Mccormick	Extract Vanilla Imitation	Dry	Grocery		7.72		0	
+case	185657	1 / 1 ROLL	Cling Wrap	Film 18x2000 Clear	Dry	Equipment & Supplies		17.69		0	
+case	197297	1 / 1 ROLL	Atx Packaging	Film 18x2000 Clear Wrap	Dry	Equipment & Supplies		18.35		0	
+case	302858	1 / 2000 CT	Western Plastics	Film 18x2000 Pvc Slide Cutter	Dry	Equipment & Supplies		20.56		0	
+case	888042	1 / 40 LB	Magnesol	Filter Powder Magnesol	Dry	Equipment & Supplies		110.64		0	
+case	119164	1 / 25 LB	Ellington Farms	Flour Hotel & Restaurant	Dry	Grocery		8.82		0	
+case	119166	1 / 25 LB	Ellington Farms	Flour Self Rising	Dry	Grocery		11.72		0	
+case	191857	1 / 1 ROLL	Atx Packaging	Foil 18 X 1000 Standard	Dry	Equipment & Supplies		67.08		0	
+pack	194431	4 / 500 CT	Western Plastics	Foil Sand Wrap 10.5x14 Cushion	Dry	Equipment & Supplies		82.06		0	
+pack	876013	12 / 200 CT	Durable Packaging	Foil Sheet 12x10.75 In	Dry	Equipment & Supplies		175.06		0	
+pack	202527	6 / 500 CT	Atx Packaging	Foil Sheet 12x10.75 In Pop Up	Dry	Equipment & Supplies		102.04		0	
+pack	202526	6 / 500 CT	Atx Packaging	Foil Sheet 9x10.75 In Pop Up	Dry	Equipment & Supplies		83.53		0	
+case	121867	1 / 10 LB	Texas Chili Company	Frank All Beef 6/1 6 In Angus	Frozen	Meat, Poultry, Seafood		52.46		0	
+case	536303	60 / 2.67 OZ	Farmland	Frank All Beef 6/1 Black Angus	Frozen	Meat, Poultry, Seafood		55.43		0	
+pack	208075	6 / 5 LB	Lambs Seasoned	French Fries Cc 3/8 In Seas	Frozen	Grocery		68.23		0	
+pack	353042	6 / 5 LB	Lamb Weston	French Fries SC 5/16 in	Frozen	Grocery		68.33		0	
+pack	401194	2 / 5 LB	Bake Crafters	French Toast Stick Wg 1.1 Oz	Frozen	Grocery		25.15		0	
+case	204296	32 / 3.35 OZ	Rich's	Fritter Apple Glazed	Frozen	Grocery		40.51		0	
+pack	774374	6 / 32 OZ	Italian Rose	Garlic Chopped In Water	Refrigeration	Fruit, Vegetables, Herbs		40.64		0	
+case	774715	1 / 25 OZ	Spice Classics	Garlic Granulated	Dry	Grocery		11.40		0	
+case	774024	1 / 16 OZ	Spice Classics	garlic	Dry	Grocery		7.70		0	
+case	774229	1 / 38 OZ	Spice Classics	Garlic Salt No Msg	Dry	Grocery		7.31		0	
+case	766106	1 / 24 LB	Rich's	Glaze Honey Dip Heat & Ice	Dry	Grocery		60.18		0	
+pack	147158	10 / 100 CT	Handgards	Glove Nitrile Xxl Pf Black	Dry	Equipment & Supplies		52.28		0	
+pack	166859	10 / 100 CT	Foodhandler	Glove Vinyl Large Pf	Dry	Equipment & Supplies		43.05		0	
+pack	167562	10 / 100 CT	Job Select	Glove Vinyl Medium Pf	Dry	Equipment & Supplies		43.05		0	
+pack	166860	10 / 100 CT	Job Select	Glove Vinyl Xl Pf	Dry	Equipment & Supplies		43.05		0	
+pack	797023	6 / #10 CAN	Chef Mate	Gravy Country Sausage	Dry	Grocery		94.43		0	
+pack	157477	12 / 3.7 OZ	Knorr	Gravy Mix Au Jus	Dry	Grocery		43.67		0	
+pack	797011	6 / 13 OZ	Pioneer	Gravy Mix Brown	Retail Ready Item Dry	Grocery		28.76		0	
+pack	797032	6 / 14 OZ	Shawnee Milling Co	Gravy Mix Brown	Dry	Grocery		16.69		0	
+pack	797060	6 / 14 OZ	Pioneer	Gravy Mix Chicken	Retail Ready Item Dry	Grocery		28.95		0	
+pack	797230	6 / 24 OZ	Pioneer	Gravy Mix Pepper Biscuit	Retail Ready Item Dry	Grocery		27.40		0	
+pack	197845	4 / 2.5 LB	Mr Browns Foods Llc	Gravy Tomato	Frozen	Grocery		57.95		0	
+pack	113975	6 / #10 CAN	Margaret Holmes	Greens Turnip Chopped Seasoned	Retail Ready Item Dry	Fruit, Vegetables, Herbs		39.11		0	
+pack	105991	6 / 3 LB	Harvest Fresh	Guacamole Western Style Frozen	Frozen	Grocery		63.70		0	Yes
+case	002046	128 / 1.25 OZ	Clifty Farm Country Meats	Ham Country Cured Boneless	Refrigeration	Meat, Poultry, Seafood		73.77		0	
+pack	197805	2 / 6 LB	Cloverdale Foods	Ham Patty 2 Oz 3.5 In	Frozen	Meat, Poultry, Seafood		52.59		0	
+pack	206112	4 / 2.5 LB	Ellington Farms	Ham Sliced Smoked .67 Oz	Frozen	Meat, Poultry, Seafood		53.37		0	
+pack	002117	12 / 1 LB	D. L. Lee & Sons, Llc	Ham Slices Smoked Center Cut	Refrigeration	Meat, Poultry, Seafood		4.82 LB		0	
+case	361069	120 / 2.2 OZ	Oreida	Hashbrown Golden Patty	Frozen	Grocery		37.07		0	
+pack	361109	6 / 5 LB	Traditional	Hashbrown Patty	Frozen	Grocery		70.06		0	
+pack	145358	6 / 5 LB	Mccain	Hashbrown Rounds 1.27 oz	Frozen	Grocery		66.03		0	
+pack	139130	6 / 12 OZ	Mike's Hot Honey	Honey Mikes Hot Retail Bottle	Dry	Grocery		43.35		0	
+case	677091	200 / 9 GRM	Kraft	Honey Pc Pouch	Dry	Grocery		26.39		0	
+case	677217	200 / 0.5 OZ	Smucker's	Honey Pc Pure Cup	Dry	Grocery		41.75		0	
+pack	151683	12 / 12 OZ	Busybee Honey	Honey Pure Bears	Dry	Grocery		42.10		0	
+pack	109014	2 / 5 LB	Savannah Foods	Hushpuppy Corn Sweet	Frozen	Appetizers		27.35		0	
+pack	152353	2 / 5 LB	Savannah Foods	Hushpuppy Corn Sweet Jalapeno	Frozen	Appetizers		27.85		0	
+pack	189261	6 / 64 OZ	Dairy Star	Ice Cream Mix Choc 5%	Refrigeration	Dairy & Eggs		35.94		0	
+pack	164222	6 / 64 OZ	Fresh From Keith's	Ice Cream Mix Van 5%	Refrigeration	Dairy & Eggs		33.06		0	
+pack	691585	2 / 11 LB	Gold Medal	Icing Chocolate Fudge Rtu	Dry	Grocery		84.41		0	
+case	102950	1 / 16 LB	Rich's	Icing Cream Cheese	Dry	Grocery		59.47		0	
+pack	160538	4 / 4 LB	Anchor	Jalapeno Stuffed W/chdr Chs	Retail Ready Item Frozen	Appetizers		92.15		0	
+case	677082	200 / 0.5 OZ	Smucker's	Jelly Pc Apple	Dry	Grocery		15.63		0	
+case	677079	200 / 0.5 OZ	Smucker's	Jelly Pc Assorted Plastic Cup	Dry	Grocery		17.61		0	
+case	190754	200 / 0.5 OZ	Welchs	Jelly Pc Grape Pouch	Dry	Grocery		21.11		0	
+case	677086	200 / 0.5 OZ	Portion Pac Inc	Jelly Pc Strawberry	Dry	Grocery		21.22		0	
+case	190753	200 / 0.5 OZ	Welchs	Jelly Pc Strawberry Pouch	Dry	Grocery		27.41		0	
+pack	156186	6 / #10 CAN	1906	Ketchup Fancy 33% Solids	Dry	Grocery		37.11		0	
+case	146968	1000 / 9 GRM	1906	Ketchup Individual 9 Gram Pc	Dry	Grocery		23.32		0	
+pack	383460	4 / 96 OZ	Stouffer's	Lasagna Meat	Frozen	Grocery		101.23		0	
+pack	123145	4 / 6 CT	Markon First Crop	Lettuce Iceberg Trimmed Only	Retail Ready Item Refrigeration	Fruit, Vegetables, Herbs	Y	24.71		0	
+pack	123073	4 / 5 LB	Markon Ready Set Serve	Lettuce Shred 1/8 In   K	Retail Ready Item Refrigeration	Fruit, Vegetables, Herbs		32.82		0	
+pack	123076	2 / 5 LB	Markon Ready Set Serve	Lettuce Shred 1/8 Inch	Refrigeration	Fruit, Vegetables, Herbs		22.10		0	
+pack	815814	25 / 100 CT	Essentials	Lid Plas 1 Oz Clear	Dry	Equipment & Supplies		19.61		0	
+pack	104435	10 / 100 CT	Ultra Clear	Lid Plas 12-24 Oz Straw Slot	Dry	Equipment & Supplies		38.31		0	
+pack	860042	10 / 100 CT	Dart	Lid Plas 12jl White Vented	Dry	Equipment & Supplies		29.40		0	
+pack	860055	10 / 100 CT	Dart	Lid Plas 16sl Trans Slotted	Dry	Equipment & Supplies		31.13		0	
+pack	870025	10 / 100 CT	Dart	Lid Plas 20jl Trans Vented	Dry	Equipment & Supplies		39.00		0	
+pack	840179	10 / 100 CT	Dart	Lid Plas 20sl Trans Slotted	Dry	Equipment & Supplies		49.89		0	
+pack	188154	10 / 100 CT	Dart	Lid Plas 32sl Trans Straw Slot	Dry	Equipment & Supplies		77.46		0	
+pack	104427	10 / 100 CT	Dart	Lid Plas 9-12-20 Oz Straw Slot	Dry	Equipment & Supplies		52.13		0	
+pack	150012	20 / 50 CT	Karat	Lid Plas Clear 12-24oz Slotted	Dry	Equipment & Supplies		29.71		0	
+pack	012732	12 / 3 LB	Bd&k Foods Inc	Macaroni & Cheese Boilnbag F/c	Frozen	Appetizers		56.94		0	
+pack	131091	4 / 5 LB	Rons Home Style Foods	Macaroni & Cheese Homestyle	Frozen	Grocery		52.75		0	
+pack	162149	4 / 5 LB	St Clair	Macaroni And Cheese	Frozen	Appetizers		43.36		0	
+pack	183935	4 / 5 LB	Stouffer's	Macaroni And Cheese Trad	Frozen	Grocery		53.18		0	
+pack	119451	4 / 1 GAL	Ellington Farms	Mayonnaise Extra Heavy Duty	Retail Ready Item Dry	Grocery		57.18		0	
+pack	182377	200 / 9 GRM	Ellington Farms	Mayonnaise Pc Poly Pouch	Dry	Grocery		17.09		0	
+pack	104323	48 / 3.75 OZ	Natchitoches Meat Pie Co	Meat Pie Crawfish	Frozen	Grocery		69.02		0	
+pack	374344	48 / 3.75 OZ	Natchitoches Meat Pie Co	Meat Pie Original Beef & Pork	Frozen	Grocery		55.27		0	
+pack	374345	48 / 3.75 OZ	Natchitoches Meat Pie Co	Meat Pie Spicy Bulk	Frozen	Grocery		55.73		0	
+pack	010008	12 / 21 OZ	King's Command Foods	Meatloaf F/c Pull Apart 12ct	Frozen	Grocery		97.25		0	
+pack	557959	3 / 5 lb	Travis Meat	Meatloaf Ready To Cook	Frozen	Grocery		90.42		0	
+pack	184833	24 / 0.5 PNT	Sealtest	Milk Chocolate  1/2 Pint	Refrigeration	Dairy & Eggs		15.63		0	
+pack	184724	4 / 1 GAL	Sealtest	Milk Whole Vitamin D	Refrigeration	Dairy & Eggs		27.56		0	
+pack	121396	8 / 40 OZ	Tony Chacheres	Mix Creole Jambalaya	Dry	Grocery		59.18		0	
+pack	407256	96 / 2.25 OZ	Otis Spunkmeyer	Muffin Asst Bulk Pack	Frozen	Grocery		87.81		0	
+pack	556865	96 / 2 oz	Ezytime Food Products	Muffin Cornbread Jalapeno	Frozen	Grocery		44.99		0	
+pack	021480	96 / 2 OZ	Ezytime Food Products	Muffin Cornbread Reg	Frozen	Grocery		37.03		0	
+pack	173619	96 / 2 OZ	Muffin Town	Muffin Cornbread Regular	Frozen	Grocery		32.61		0	
+pack	139942	12 / 6 OZ	David's Cookies	Muffin Cranberry Orange	Frozen	Grocery		15.97		0	
+pack	664012	4 / 105 OZ	French's	Mustard Classic Yellow	Dry	Grocery		23.86		0	
+pack	160130	500 / 7 GRM	French's	Mustard Pc Packet 500 Ct	Dry	Grocery		14.50		0	
+pack	170887	200 / 5.5 GRM	Ellington Farms	Mustard Pc Pouch 200 Ct	Dry	Grocery		7.85		0	
+pack	228897	200 / .25 OZ	Caseys	Mustard Yellow Pc  Caseys	Dry	Grocery		7.67		0	
+pack	223585	6 / 2 LB	Golden Crisp	Nacho Cheese Triangles Breaded	Frozen	Appetizers		59.48		0	
+pack	880050	12 / 500 CT	Mini Mornap	Napkin 13x12 White Mini Mornap	Dry	Equipment & Supplies		66.53		0	
+pack	880037	12 / 250 CT	Tork	Napkin Dinner 17x17 1 Ply	Dry	Equipment & Supplies		70.04		0	
+pack	880348	12 / 500 CT	Tork	Napkin Express Nap White	Dry	Equipment & Supplies		72.00		0	
+pack	552930	36 / 120 ct	Tork	Napkin Expressnap 2 Ply White	Dry	Equipment & Supplies		40.94		0	
+pack	779116	3 / 1 GAL	Whirl	Oil Whirl	Dry	Grocery		45.74		0	
+pack	066051	1 / 35 LB	Whirl	Oil Whirl Butter Flavored	Dry	Grocery		52.73		0	
+pack	226619	4 / 5 LB	Stilwell	Okra Cut Lightly Breaded	Frozen	Fruit, Vegetables, Herbs		37.30		0	
+pack	396202	6 / 2 LB	Frost Sweet	Onion Diced 3/8 In	Frozen	Fruit, Vegetables, Herbs		17.45		0	
+pack	167486	1 / 20 LB	Packer	Onion Diced 3/8 In	Frozen	Fruit, Vegetables, Herbs		25.91		0	
+pack	774131	1 / 18 OZ	Mccormick	Onion Granulated	Dry	Grocery		10.95		0	
+pack	774137	1 / 20 OZ	Mccormick	Onion Powder	Dry	Grocery		9.97		0	
+pack	326604	4 / 2.5 LB	Tavern Traditions	Onion Ring Beer Battered 5/8 in	Retail Ready Item Frozen	Appetizers		38.14		0	
+pack	152027	1 / 25 LB	Packer	Onion White Jumbo	Refrigeration	Fruit, Vegetables, Herbs		16.66		0	
+pack	147881	1 / 5 LB	Packer	Onion Yellow Diced 1/4 In	Refrigeration	Fruit, Vegetables, Herbs		13.64		0	
+pack	155063	1 / 10 LB	Fresh From Keith's	Onion Yellow Jumbo	Refrigeration	Fruit, Vegetables, Herbs		12.21		0	
+pack	026761	1 / 5 LB	Packer	Onion Yellow Jumbo Fresh 5lb	Refrigeration	Fruit, Vegetables, Herbs		9.82		0	
+pack	980008	1 / 20 CT	Scotch-brite	Pad Scour/scrub Blue 5.5 X 3.9	Dry	Equipment & Supplies		17.63		0	
+pack	130573	1 / 40 CT	Disco	Pad Scouring Green	Dry	Equipment & Supplies		13.11		0	
+pack	888075	1 / 15 CT	Essentials	Pad Scouring Nylon 6x9in	Dry	Equipment & Supplies		10.35		0	
+pack	223860	6 / 17 OZ	Ellington Farms	Pan Spray Coating GF	Dry	Grocery		25.93		0	
+pack	223861	6 / 17 OZ	Keith Valley	Pan Spray Food Release GF	Dry	Grocery		25.53		0	
+pack	698007	6 / 17 OZ	Pam	Pan Spray Pam Saute & Grill	Retail Ready Item Dry	Grocery		28.92		0	
+pack	217229	144 / 1.2 OZ	Echo Lake Foods	Pancake Buttermilk Iqf	Frozen	Grocery		23.93		0	
+pack	691188	6 / 5 LB	Krusteaz	Pancake Mix Sweet Cream	Refrigeration	Grocery		49.17		0	
+pack	214370	10 / 500 CT	Us Business Products Inc	Paper Copy 8.5x11 Bright White	Dry	Equipment & Supplies		51.76		0	
+pack	150782	12 / 500 CT	Mcnairn	Paper Deli Interfold 8	Dry	Equipment & Supplies	Y	7.74		0	
+pack	875102	12 / 500 CT	Dixie	Paper Waxed Deli 12x10.75	Dry	Equipment & Supplies		100.24		0	
+pack	774726	1 / 2 OZ	Mccormick	Parsley Flakes	Dry	Grocery		5.80		0	
+pack	205593	2 / 10 LB	Bellacibo Primo	Pasta Fettuccini 10 In	Dry	Grocery		27.19		0	
+pack	700150	2 / 10 LB	Barilla	Pasta Penne Rigate Regular	Dry	Grocery		29.09		0	
+pack	205590	2 / 10 LB	Bellacibo Primo	Pasta Spaghetti 10 In	Dry	Grocery		27.19		0	
+pack	012376	12 / 3 LB	Packer	Pea Field W/snaps Bags Iqf	Frozen	Fruit, Vegetables, Herbs		57.03		0	
+pack	650276	6 / #10 CAN	Allens	Pea Field With Snaps	Retail Ready Item Dry	Fruit, Vegetables, Herbs		36.86		0	
+pack	165041	1 / 5 LB	Markon	Pepper Bell Green	Refrigeration	Fruit, Vegetables, Herbs		14.65		0	
+pack	178829	2 / 5 LB	Lipman	Pepper Bell Green Diced	Refrigeration	Fruit, Vegetables, Herbs		29.38		0	
+pack	012382	6 / 2 LB	Packer	Pepper Green Diced Bags Iqf	Frozen	Fruit, Vegetables, Herbs		18.68		0	
+pack	685002	4 / 1 GAL	Cajun Chef	Pepper Jalapeno Whole	Dry	Fruit, Vegetables, Herbs		45.78		0	
+pack	774080	1 / 28 OZ	Mccormick	Pepper Lemon Seasoning	Dry	Grocery		16.68		0	
+pack	162167	3 / 1000 CT	N'joy	Pepper Pc Packets	Dry	Grocery		21.33		0	
+pack	214902	3 / 1000 CT	Keith	Pepper Pc Pouch	Dry	Grocery		18.74		0	
+pack	555631	4 / 1 gal	Mount Olive	Pickle Chip Dill Thin 1/8"	Dry	Grocery		97.24		0	
+pack	015053	4 / 1 GAL	Kaiser Pickles Llc	Pickle Dill Relish	Dry	Grocery		35.91		0	
+pack	187397	1 / 5 LB	Markon Ready Set Serve	Pico De Gallo 5 Lb	Refrigeration	Fruit, Vegetables, Herbs		13.57		0	
+pack	221024	8 / 7 OZ	Cyrus	Pie Banana Cream Mini	Frozen	Desserts		21.19		0	
+pack	221022	8 / 7 OZ	Cyrus	Pie Chocolate Cream Mini	Frozen	Desserts		21.19		0	
+pack	221023	8 / 7 OZ	Cyrus	Pie Coconut Cream Mini	Frozen	Desserts		21.19		0	
+pack	430121	6 / 36 OZ	Chef Pierre	Pie Pecan Sliced 10 In	Retail Ready Item Frozen	Desserts		77.95		0	
+pack	430115	6 / 36 OZ	Chef Pierre	Pie Pecan Southern 10 in	Retail Ready Item Frozen	Desserts		72.67		0	
+pack	221021	8 / 7 OZ	Cyrus	Pie Strawberry Shortcake Mini	Frozen	Desserts		21.19		0	
+pack	384952	48 / 6 OZ	Iltaco	Pizza Puff Ham & Cheese	Frozen	Grocery		80.63		0	
+pack	384951	48 / 6 OZ	Iltaco	Pizza Puff Pepperoni	Frozen	Grocery		70.91		0	
+pack	160977	48 / 6 OZ	Iltaco	Pizza Puff Taco	Frozen	Grocery		71.82		0	
+pack	370955	48 / 3 OZ	Hot Pockets	Pizza Stick Pepperoni	Frozen	Grocery		32.73		0	
+pack	558369	4 / 8 lb	Country Ranch Foods	Pork Bbq with Sauce	Frozen	Meat, Poultry, Seafood		121.20		0	
+pack	534047	40 / 4 OZ	Pierre Zartic	Pork Chop Boneless Breaded	Frozen	Meat, Poultry, Seafood		56.31		0	
+pack	534111	40 / 4 OZ	Chicago Meat Authority	Pork Chop Boneless Center Cut	Frozen	Meat, Poultry, Seafood		46.11		0	
+pack	145464	1 / 10 LB	Kelley Foods Manufacturing	Pork Chop Cc Bnls 4oz	Frozen	Meat, Poultry, Seafood		54.71		0	
+pack	001011	4 / 21 LB	Swift	Pork Loin Bone In Light Frzn	Frozen	Meat, Poultry, Seafood		1.57 LB		0	
+pack	224330	2 / 5 LB	Cade Cove	Pork Pulled Hickory Smk	Frozen	Meat, Poultry, Seafood		60.98		0	
+pack	544356	2 / 5 LB	Farmland	Pork Pulled Smoked Seas	Frozen	Meat, Poultry, Seafood		50.47		0	
+pack	532432	40 / 4 OZ	Holten	Pork Rib Patty Raw	Frozen	Meat, Poultry, Seafood		61.53		0	
+pack	001190	5 / 3 PK	Swift	Pork Rib St Louis 2.75-3.0	Frozen	Meat, Poultry, Seafood		4.06 LB		0	
+pack	556011	5 / 2 pc	Frontier	Pork Rib St. Louis Style 3 lb and Down	Frozen	Meat, Poultry, Seafood		8.43 LB		0	
+pack	185431	4 / 10 LB	Hatfield	Pork Spare Ribs	Frozen	Meat, Poultry, Seafood		2.69 LB		0	
+pack	001238	9 / 5.3 LB	Swift	Pork Spareribs Light Frozen	Frozen	Meat, Poultry, Seafood		2.37 LB		0	
+pack	363433	4 / 6 LB	Simply Potatoes	Potato Mashed Deluxe	Refrigeration	Grocery		42.97		0	
+pack	199496	6 / 4 LB	Mccain	Potato Ring Three Bite	Frozen	Grocery		56.98		0	
+pack	194943	6 / 5 LB	Ellington Farms	Potato Tater Tots Grade A	Frozen	Grocery		52.06		0	
+pack	216830	6 / 5 LB	Golden Phoenix	Potato Wedge 8 Cut Seasoned	Frozen	Grocery		51.08		0	
+pack	402210	50 / 5.5 OZ	Super Pretzel	Pretzel King Size 5 Oz	Frozen	Grocery		49.82		0	
+pack	182376	200 / 9 GRM	Ellington Farms	Relish Sweet Pc Poly	Dry	Grocery		16.00		0	
+pack	301052	1 / 25 LB	Producers Rice Mill, Inc	Rice Parboiled	Dry	Grocery		13.61		0	
+pack	887092	2 / 1 GAL	Ssdc	Rinse Aid Fast Dry	Dry	Equipment & Supplies		93.59		0	
+pack	398411	10 / 24 CT	Kings Hawaiian Bakery	Roll Dinner Hawaiian	Frozen	Grocery		59.20		0	
+pack	398669	10 / 6 CT	Alpha Baking	Roll Hoagie 6 Inch Sliced	Frozen	Grocery		37.67		0	
+pack	301979	2 / 7 LB	Resers Fine Foods	Salad Dixie Slaw	Refrigeration	Fruit, Vegetables, Herbs		31.05		0	
+pack	768640	2 / 12 LB	Golden Harvest	Salad Pasta Macaroni	Refrigeration	Grocery		61.23		0	
+pack	150312	2 / 12 LB	St Clair	Salad Potato Baked	Refrigeration	Grocery		59.80		0	
+pack	768056	1 / 12 LB	St Clair	Salad Potato Deviled Egg	Refrigeration	Grocery		34.01		0	
+pack	157575	2 / 12 LB	St Clair	Salad Potato Mustard	Refrigeration	Grocery		52.30		0	
+pack	142223	24 / 26 OZ	Flavor House	Salt Iodized Table	Dry	Grocery		15.26		0	
+pack	162165	3 / 1000 CT	N'joy	Salt Pc Packs	Dry	Grocery		9.65		0	
+pack	134252	48 / 4 OZ	N'joy	Salt Shaker Disposable	Dry	Grocery		19.53		0	
+pack	885909	2 / 1 GAL	Ssdc	Sanitizer Chlorine Dish Snap	Dry	Equipment & Supplies		45.60		0	
+pack	148661	4 / 1250 ML	Ssdc	Sanitizer Hand Mystic Nexa	Dry	Equipment & Supplies		82.19		0	
+pack	885911	2 / 1 GAL	Ssdc	Sanitizer Sani-quad Sinkrite	Dry	Equipment & Supplies		87.26		0	
+pack	122730	4 / 80 OZ	Nestle	Sauce Alfredo Pouch	Frozen	Grocery		47.73		0	
+pack	111922	4 / 1 GAL	Sweet Baby Ray's	Sauce Bbq Sweet Baby Rays	Dry	Grocery	Y	17.34		0	Yes
+pack	107049	4 / 5 LB	Jtm Food Group	Sauce Cheese Queso Blanco	Frozen	Grocery		57.09		0	
+pack	301629	100 / 1.5 OZ	Ken's	Sauce Cocktail Cups Gf	Refrigeration	Grocery		28.94		0	
+pack	556056	4 / 32 OZ	Heinz	Sauce Creamy Chimichurri	Dry	Grocery		44.74		0	
+pack	661095	24 / 6 OZ	Texas Pete	Sauce Hot Texas Pete	Dry	Grocery		33.95		0	
+pack	107535	100 / 1.5 OZ	Sweet Baby Ray's	Sauce Pc Bbq Original Cups	Dry	Grocery		26.63		0	Yes
+pack	674170	200 / 7 GRM	Texas Pete	Sauce Pc Hot Texas Pete	Dry	Grocery		15.68		0	
+pack	674816	60 / 2 OZ	Heinz	Sauce Pc Marinara Cup	Dry	Grocery		37.92		0	
+pack	674147	200 / 0.5 OZ	Del Sol	Sauce Pc Picante Salsa Del Sol	Dry	Grocery		27.69		0	
+pack	115983	100 / 1 OZ	Ken's	Sauce Pc Sweet N Sour Cup	Refrigeration	Grocery		20.31		0	Yes
+pack	674626	100 / 1.5 OZ	Ken's	Sauce Pc Tartar Cup	Refrigeration	Grocery		32.02		0	Yes
+pack	007252	6 / #10 CAN	Red Gold	Sauce Spaghetti #10	Dry	Grocery		42.10		0	
+pack	111921	4 / 1 GAL	Sweet Baby Ray's	Sauce Sweet Red Chili	Dry	Grocery		69.97		0	Yes
+pack	193494	100 / 0.75 OZ	Ken's	Sauce Tartar	Dry	Grocery		0.00		0	
+pack	015187	6 / #10 CAN	Red Gold	Sauce Tomato Fancy	Dry	Grocery		35.66		0	
+pack	112784	4 / 1 GAL	Sweet Baby Ray's	Sauce Wing Buffalo	Dry	Grocery		62.10		0	Yes
+pack	112786	4 / 64 OZ	Sweet Baby Ray's	Sauce Wing Kickin Bourbon	Dry	Grocery		48.77		0	
+pack	228934	2 / 6 LB	Kelley Foods Manufacturing	Sausage Link 4 In Split Smk	Frozen	Meat, Poultry, Seafood		63.11		0	
+pack	162490	1 / 10 LB	Country Meat Packers	Sausage Link 4 Oz	Frozen	Meat, Poultry, Seafood		45.53		0	
+pack	166478	1 / 10 LB	Country Pleasin	Sausage Link Green Onion	Frozen	Meat, Poultry, Seafood		46.89		0	
+pack	229926	2 / 5 LB	Kelley Foods Manufacturing	Sausage Link Jalapeno & Cheddar 4/1	Refrigeration	Meat, Poultry, Seafood		52.50		0	
+pack	184857	1 / 10 LB	Country Pleasin	Sausage Link Pineapple	Refrigeration	Meat, Poultry, Seafood		54.70		0	
+pack	168310	14 / 12 OZ	Country Pleasin	Sausage Link Pineapple	Refrigeration	Meat, Poultry, Seafood		60.42		0	
+pack	153064	1 / 10 LB	Country Pleasin	Sausage Link Pineapple	Frozen	Meat, Poultry, Seafood		51.37		0	
+pack	143545	40 / 4 OZ	Country Pleasin	Sausage Link Pork 4oz	Frozen	Meat, Poultry, Seafood		38.25		0	
+pack	003011	2 / 5 LB	Kelley Foods Manufacturing	Sausage Link Smk 4 Oz	Refrigeration	Meat, Poultry, Seafood		50.96		0	
+pack	184380	1 / 10 LB	Country Pleasin	Sausage Link Smoked Split 2.5 oz	Frozen	Meat, Poultry, Seafood		48.52		0	
+pack	111468	80 / 2 OZ	Special Recipe	Sausage Patty 2 Oz Cooked	Frozen	Meat, Poultry, Seafood		48.46		0	
+pack	540075	96 / 2 OZ	Keith Valley	Sausage Patty 2 Oz Cooked	Frozen	Meat, Poultry, Seafood		37.03		0	
+pack	105930	80 / 2 OZ	Hormel Natural Choice	Sausage Patty 2 Oz Cooked	Frozen	Meat, Poultry, Seafood		46.28		0	
+pack	540124	108 / 1.5 OZ	Jimmy Dean	Sausage Patty Cooked	Frozen	Meat, Poultry, Seafood		43.67		0	
+pack	197373	2 / 5 LB	Hatfield	Sausage Patty Ex Sage 2oz Fc	Frozen	Meat, Poultry, Seafood		35.85		0	
+pack	556849	2 / 5 lb	Frontier	Sausage Patty Pork Jalapeno FC	Frozen	-		50.16		0	
+pack	191055	1 / 10 LB	Country Pleasin	Sausage Smokies 5 In	Frozen	Meat, Poultry, Seafood		47.54		0	
+pack	300712	6 / 12 CT	3m Corporation	Scrubber Stainless Steel	Dry	Equipment & Supplies		87.25		0	
+pack	115570	4 / 8 LB	Tony Chacheres	Seasoning Creole Original	Dry	Grocery	Y	25.29		0	
+case	774450	1 / 23 OZ	Mccormick	Seasoning Montreal Chicken	Dry	Grocery		12.91		0	
+case	774492	1 / 29 OZ	Mccormick	Seasoning Montreal Steak	Dry	Grocery		14.01		0	
+case	779123	1 / 35 LB	Keith's Homestyle	Shortening Clear Fry Liquid	Dry	Grocery		35.62		0	
+pack	470543	12 / 6 OZ	Mrs Fridays	Shrimp Brd 31-40 Ct Butterfly	Frozen	Meat, Poultry, Seafood		0.00		0	
+pack	158888	5 / 2 LB	Pacific Treasure	Shrimp Raw P&d White 31-40 Ct	Frozen	Meat, Poultry, Seafood		63.17		0	
+pack	115112	5 / 2 LB	Admiral Of The Fleet	Shrimp Raw P&d White 31-40 Ct	Retail Ready Item Frozen	Meat, Poultry, Seafood		66.45		0	
+pack	118170	10 / 100 CT	Handgards	Skewer Wooden 10 In	Dry	Equipment & Supplies		21.78		0	
+pack	887029	8 / 38 OZ	Dawn Professional	Soap Dawn Liq Dishwashing	Dry	Equipment & Supplies		50.16		0	
+pack	887035	4 / 1 GAL	Dawn Professional	Soap Dawn Liq Dishwashing	Dry	Equipment & Supplies		74.59		0	
+pack	189064	2 / 1 GAL	Dawn Professional	Soap Dawn Pot & Pan Hd	Dry	Equipment & Supplies		47.01		0	
+pack	887006	4 / 1 GAL	Essentials	Soap Dish Blue Liquid	Dry	Equipment & Supplies		91.45		0	
+pack	887037	4 / 1 GAL	Ssdc	Soap Pot & Pan Cool Blue	Dry	Equipment & Supplies		78.81		0	
+pack	885582	2 / 1 GAL	Ssdc	Soap Super Rave Sinkrite	Dry	Equipment & Supplies		107.04		0	
+pack	773505	6 / 6 LB	Frostline	Soft Serve Chocolate	Dry	Dairy & Eggs		80.60		0	
+pack	205269	6 / 4.74 LB	Frostline	Soft Serve Mix Chocolate	Dry	Dairy & Eggs		86.72		0	
+pack	018070	6 / 6 LB	Frostline	Soft Serve Mix Van Non Dairy	Dry	Dairy & Eggs		78.19		0	
+pack	205270	6 / 4.74 LB	Frostline	Soft Serve Mix Vanilla	Dry	Dairy & Eggs		85.13		0	
+pack	773504	4 / 4.4 LB	Dole	Soft Serve Pineapple Mix	Dry	Dairy & Eggs		84.49		0	
+pack	123623	4 / 4.5 LB	Dole	Soft Serve Strawberry Mix	Dry	Dairy & Eggs		84.49		0	
+pack	123886	12 / 50 OZ	Ellington Farms	Soup Cream Of Chicken	Retail Ready Item Dry	Grocery		69.27		0	
+pack	669005	100 / 1 OZ	Daisy Brands	Sour Cream Pc	Refrigeration	Dairy & Eggs		13.98		0	
+pack	345102	12 / 2 LB	Markon First Crop	Squash Yellow Sliced	Frozen	Fruit, Vegetables, Herbs		29.32		0	
+pack	170174	12 / 3 LB	Fineline	Squash Yellow Sliced	Frozen	Fruit, Vegetables, Herbs		50.41		0	
+pack	205883	4 / 300 CT	Karat	Straw 10.25 In Giant Red	Dry	Equipment & Supplies		16.18		0	
+pack	206753	4 / 300 CT	Diamond Straw	Straw 10.25 In Giant Red	Dry	Equipment & Supplies		21.09		0	
+pack	780046	1 / 25 LB	Domino Foodservice	Sugar Granulated Extra Fine	Dry	Grocery		22.24		0	
+pack	780007	1 / 50 LB	Imperial Sugar	Sugar Granulated Fine 50 Lb	Dry	Grocery		37.86		0	
+pack	180845	1 / 15 LB	Tidal Zone	Swai Fillet  5-7 Oz	Frozen	Meat, Poultry, Seafood		34.43		0	
+pack	791007	24 / 24 OZ	Hershey	Syrup Chocolate Squeeze	Dry	Beverages		106.64		0	
+pack	008128	100 / 1.5 OZ	Hartleys	Syrup Pc Pancake Maple Premium	Dry	Beverages		18.85		0	
+pack	546594	4 / 5 LB	Texas Chili Company	Taco Meat Beef Fully Cooked	Frozen	Meat, Poultry, Seafood		0.00		0	
+pack	177871	4 / 5 LB	Gran Sabor	Taco Meat Seasoned Cooked	Frozen	Meat, Poultry, Seafood		63.06		0	
+pack	385680	568 / 0.45 OZ	Posada	Taco Mini Chicken	Retail Ready Item Frozen	Grocery		89.40		0	
+pack	699026	8 / 25 CT	Mission Foods	Taco Shell 5 In Yellow	Dry	Grocery		24.49		0	
+pack	203362	40 / 5 OZ	Los Cabos	Tamale Beef	Frozen	Grocery		64.38		0	
+pack	176026	60 / 6 CT	Hot Tamale Heaven	Tamale Beef Delta Style	Frozen	Grocery		277.56		0	
+pack	557170	40 / 5 oz	Los Cabos	Tamale Chicken Salsa Verde	Frozen	Grocery		62.01		0	
+pack	182900	1 / 50 CT	Amercare	Tape Register Roll Thermal	Dry	Equipment & Supplies		80.59		0	
+pack	890935	1 / 30 CT	National Checking	Tape Register Roll Thermal	Dry	Equipment & Supplies		44.47		0	Yes
+pack	134006	1 / 50 CT	Maxwell Paper Products	Tape Register Therm 3 1/8x230'	Dry	Equipment & Supplies		63.79		0	
+pack	126922	1 / 10 LB	Tater Kegs	Tater Keg Bacon Cheddar Chive	Frozen	Grocery		38.72		0	
+pack	162741	106 / 1.5 OZ	Tater Kegs	Tater Keg Pot Jal Chs Bacon	Frozen	Grocery		38.72		0	
+pack	882002	8 / 1000 FT	Acclaim	Toilet Tissue 2 Ply Jumbo Jr	Dry	Equipment & Supplies		44.12		0	
+pack	882035	12 / 1 ROLL	Tork	Toilet Tissue 2 Ply Jumbo Mini	Dry	Equipment & Supplies		52.27		0	
+pack	189574	1 / 12 CT	Right Choice	Toilet Tissue Jumbo 2 Ply	Dry	Equipment & Supplies		44.14		0	
+pack	115847	8 / 1000 CT	Essentials	Toilet Tissue Jumbo 2 Ply Wht	Dry	Equipment & Supplies		34.41		0	
+pack	210025	1 / 10 LB	Markon First Crop	Tomato 5x6 1 Layer	Refrigeration	Fruit, Vegetables, Herbs		19.49		0	
+pack	125654	6 / #10 CAN	Ellington Farms	Tomato Diced In Juice	Dry	Fruit, Vegetables, Herbs		30.42		0	
+pack	650547	12 / 28 OZ	Red Gold	Tomato Diced W/green Chilies	Dry	Fruit, Vegetables, Herbs		26.76		0	
+pack	792054	6 / #5 CAN	Lyons Magnus	Topping Caramel	Dry	Grocery		72.34		0	
+pack	792088	12 / 17 OZ	Lyons Magnus	Topping Dessert Design Caramel	Dry	Grocery		41.99		0	
+pack	385960	24 / 3 OZ	Tornados	Tornado Bacon Egg Chs & Salsa	Frozen	Grocery		21.38		0	
+pack	385964	24 / 3 OZ	Tornados	Tornado Beef Steak Ranchero	Frozen	Grocery		21.38		0	
+pack	385966	24 / 3 OZ	Tornados	Tornado Cheesy Pepper Jack	Frozen	Grocery		21.38		0	
+pack	385962	24 / 3 OZ	Tornados	Tornado French Toast & Sausage	Frozen	Grocery		22.93		0	
+pack	385970	24 / 3 OZ	Tornados	Tornado Saus Egg & Cheese	Frozen	Grocery		21.38		0	
+pack	385967	24 / 3 OZ	Tornados	Tornado Southwest Chicken	Frozen	Grocery		21.38		0	
+pack	130838	1 / 30 LB	La Banderita	Tortilla Chip Corn Yel 4 Cut	Dry	Grocery		28.27		0	
+pack	106051	12 / 12 CT	Gran Sabor	Tortilla Flour Pressed 12 In	Refrigeration	Grocery		43.93		0	
+pack	408603	12 / 24 CT	La Banderita	Tortilla Flour Pressed 6 Inch	Dry	Grocery		27.40		0	
+pack	152643	12 / 410 CT	Tork	Towel Hand White	Dry	Equipment & Supplies		71.14		0	
+pack	881096	1 / 6 CT	Enmotion	Towel Roll Premium Enmotion	Dry	Equipment & Supplies		72.00		0	
+pack	881054	1 / 6 CT	Sofpull	Towel Roll White Center Pull	Dry	Equipment & Supplies		62.41		0	
+pack	157213	6 / 135 CT	Dixie	Towel Wiper Refill Surf Systm	Dry	Equipment & Supplies		70.35		0	
+pack	555390	16 / 140 ct	Tork	Towel Wiper Windshield Blue	Dry	Equipment & Supplies		52.62		0	
+pack	198210	4 / 250 CT	Essentials	Tray Food 2 Lb  200 Red Plaid	Dry	Equipment & Supplies		30.75		0	
+pack	198211	2 / 250 CT	Essentials	Tray Food 3 Lb  300 Red Plaid	Dry	Equipment & Supplies		22.99		0	
+pack	198212	2 / 250 CT	Essentials	Tray Food 5 Lb  500 Red Plaid	Dry	Equipment & Supplies		38.71		0	
+pack	872938	1 / 500 CT	Southern Champion Tray	Tray Paper Footlong Hotdog Wht	Dry	Equipment & Supplies		74.58		0	
+pack	004648	4 / 5 LB	Harvest Provisions	Turkey Pot Roast W/beef Gravy	Frozen	Meat, Poultry, Seafood		145.63 LB		0	
+pack	349505	6 / 2.5 LB	Roastworks	Vegetable Blend Corn & Pepper	Retail Ready Item Frozen	Fruit, Vegetables, Herbs		39.52		0	
+pack	349504	6 / 2.5 LB	Roastworks	Vegetable Blend Corn BLK Bean	Retail Ready Item Frozen	Fruit, Vegetables, Herbs		35.81		0	Yes
+pack	349493	6 / 2 LB	Markon First Crop	Vegetable Blend Fajita	Frozen	Fruit, Vegetables, Herbs		27.93		0	
+pack	349916	4 / 3 LB	Minh	Vegetable Blend Fried Rice	Frozen	Grocery		45.89		0	
+pack	349808	6 / 2.5 LB	Roastworks	Vegetable Blend Pepper & Onion	Retail Ready Item Frozen	Fruit, Vegetables, Herbs		41.40		0	
+pack	012427	6 / 2 LB	Savor Imports	Vegetable Fajita Blend On&ppr	Frozen	Fruit, Vegetables, Herbs		23.88		0	
+pack	125736	6 / #10 CAN	Ellington Farms	Vegetable Mixed Fancy	Dry	Fruit, Vegetables, Herbs		45.14		0	
+pack	175031	72 / 1.4 OZ	Pillsbury(r)	Waffle Belgian Maple Flavored	Frozen	Grocery		30.39		0	
+pack	157929	36 / 4.6 OZ	Pillsbury(r)	Waffle Stuffed Sau Egg Chs	Frozen	Grocery		84.97		0	Yes
+pack	880427	12 / 90 CT	Sani Professional	Wipe Cleaning Pouch	Dry	Equipment & Supplies		0.00		0	
+pack	020760	1 / 150 CT	Atlantic Mills	Wipes White 13.5 X 24	Dry	Equipment & Supplies		77.64		0	
+pack	890430	1 / 25 LB	Cold Iron	Wood Chip Hickory	Dry	Equipment & Supplies		51.18		0	
